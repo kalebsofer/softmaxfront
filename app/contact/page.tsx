@@ -1,5 +1,6 @@
 import { Header } from '@/components/Header'
 import { Button } from '@/components/ui/button'
+import { Footer } from '@/components/Footer'
 
 export default function Contact() {
   return (
@@ -26,11 +27,7 @@ export default function Contact() {
           <Button type="submit">Send Message</Button>
         </form>
       </main>
-      <footer className="bg-gray-800 text-white py-8">
-        <div className="container mx-auto px-4">
-          <p>© 2023 Softmax. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
 
 export default function Company() {
   return (
@@ -10,11 +11,7 @@ export default function Company() {
           Softmax is a leading data science and machine learning company, dedicated to helping businesses harness the power of their data. Our team of experts combines deep technical knowledge with industry experience to deliver tailored solutions that drive real-world impact.
         </p>
       </main>
-      <footer className="bg-gray-800 text-white py-8">
-        <div className="container mx-auto px-4">
-          <p>© 2023 Softmax. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

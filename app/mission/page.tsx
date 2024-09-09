@@ -1,4 +1,5 @@
 import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
 
 export default function Mission() {
   return (
@@ -10,11 +11,7 @@ export default function Mission() {
           At Softmax, our mission is to empower organizations with data-driven insights and cutting-edge machine learning solutions. We strive to make complex data analysis accessible to anyone with a dataset and a question, enabling better decision-making and innovation across industries.
         </p>
       </main>
-      <footer className="bg-gray-800 text-white py-8">
-        <div className="container mx-auto px-4">
-          <p>© 2023 Softmax. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

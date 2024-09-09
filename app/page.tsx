@@ -1,6 +1,9 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
+import { ServerStackIcon, ChartBarIcon, CpuChipIcon } from '@heroicons/react/24/outline'
 
 export default function Home() {
   return (
@@ -14,8 +17,12 @@ export default function Home() {
               <h1 className="text-5xl font-bold mb-6">Softmax</h1>
               <p className="text-xl mb-8">For anyone with a dataset and a question</p>
               <div className="flex space-x-4">
-                <Button size="lg">Demo</Button>
-                <Button size="lg" variant="outline">Contact</Button>
+                <Link href="/demo">
+                  <Button size="lg">Demo</Button>
+                </Link>
+                <Link href="/contact">
+                  <Button size="lg" variant="outline">Contact</Button>
+                </Link>
               </div>
             </div>
             <div className="w-1/3">
@@ -30,21 +37,21 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               <div className="text-center group">
                 <div className="mb-4 flex justify-center transition-transform duration-300 ease-in-out transform group-hover:scale-110">
-                  <Image src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/data-infrastructure-F1xxsDKEv6Vo6rfETC7AIgWtGUGOYg.png" alt="Data Infrastructure Icon" width={64} height={64} />
+                  <ServerStackIcon className="h-16 w-16 text-blue-500" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Data Infrastructure and Engineering</h3>
                 <p className="text-gray-600">Build robust data pipelines and infrastructure to support your analytics and machine learning needs.</p>
               </div>
               <div className="text-center group">
                 <div className="mb-4 flex justify-center transition-transform duration-300 ease-in-out transform group-hover:scale-110">
-                  <Image src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/data-analysis-F1xxsDKEv6Vo6rfETC7AIgWtGUGOYg.png" alt="Data Analysis Icon" width={64} height={64} />
+                  <ChartBarIcon className="h-16 w-16 text-green-500" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Data Analysis</h3>
                 <p className="text-gray-600">Uncover insights from your data with advanced analytics techniques and visualization tools.</p>
               </div>
               <div className="text-center group">
                 <div className="mb-4 flex justify-center transition-transform duration-300 ease-in-out transform group-hover:scale-110">
-                  <Image src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/machine-learning-F1xxsDKEv6Vo6rfETC7AIgWtGUGOYg.png" alt="Machine Learning Icon" width={64} height={64} />
+                  <CpuChipIcon className="h-16 w-16 text-purple-500" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Machine Learning</h3>
                 <p className="text-gray-600">Leverage state-of-the-art machine learning models to solve complex problems and make predictions.</p>
@@ -54,23 +61,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="bg-gray-800 text-white py-8">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center">
-            <div>
-              <Image src="/placeholder.svg?height=40&width=40" alt="Softmax Logo" width={40} height={40} />
-              <p className="mt-2">© 2023 Softmax. All rights reserved.</p>
-            </div>
-            <nav>
-              <ul className="flex space-x-4">
-                <li><a href="#" className="hover:text-gray-300">Privacy</a></li>
-                <li><a href="#" className="hover:text-gray-300">Terms</a></li>
-                <li><a href="#" className="hover:text-gray-300">Contact</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
