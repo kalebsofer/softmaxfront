@@ -1,17 +1,71 @@
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { ChartBarIcon, CpuChipIcon, LightBulbIcon, PresentationChartLineIcon } from '@heroicons/react/24/outline'
 
 export default function Mission() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8">Our Mission</h1>
-        <p className="text-xl mb-8">
-          At Softmax, our mission is to empower organizations with data-driven insights and cutting-edge machine learning solutions. We strive to make complex data analysis accessible to anyone with a dataset and a question, enabling better decision-making and innovation across industries.
-        </p>
+      <main className="flex-grow">
+        <div className="bg-gray-50">
+          <div className="container mx-auto px-4 py-16">
+            <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center">Our Mission</h1>
+            <p className="text-xl mb-12 text-center max-w-3xl mx-auto">
+              We want to democratize advanced analytics by making deep learning accessible to organizations of all shapes and sizes.
+            </p>
+            <p className="text-xl mb-12 text-center max-w-3xl mx-auto">
+              We believe in empowering businesses, regardless of their data literacy, by leveraging cutting-edge open-source technology.
+            </p>
+          </div>
+        </div>
+
+        <div className="container mx-auto px-4 py-16">
+          <h2 className="text-3xl font-semibold mb-12 text-center">We achieve this by:</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {missionPoints.map((point, index) => (
+              <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="flex items-center mb-4">
+                  {point.icon}
+                  <h3 className="text-xl font-semibold ml-4">{point.title}</h3>
+                </div>
+                <p className="text-gray-600">{point.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="bg-gray-100 py-16">
+          <div className="container mx-auto px-4">
+            <p className="text-xl text-center max-w-3xl mx-auto">
+              Our commitment is to enable businesses to unlock the value of their data and become leaders in their respective industries through analytics and machine learning.
+            </p>
+          </div>
+        </div>
       </main>
       <Footer />
     </div>
   )
 }
+
+const missionPoints = [
+  {
+    icon: <LightBulbIcon className="w-8 h-8 text-gray-600" />,
+    title: "Demonstrating Impactful AI Use Cases",
+    description: "We bridge the gap between data complexity and practical use in environments with traditionally low data literacy."
+  },
+  {
+    icon: <PresentationChartLineIcon className="w-8 h-8 text-gray-600" />,
+    title: "Expert Consultation",
+    description: "We offer guidance on data strategy, efficient scaling, and engineering best practices to ensure long-term success."
+  },
+  {
+    icon: <CpuChipIcon className="w-8 h-8 text-gray-600" />,
+    title: "Comprehensive Solutions",
+    description: "We implement solutions as either an integrated part of your team or as a standalone partner, driving your data transformation."
+  },
+  {
+    icon: <ChartBarIcon className="w-8 h-8 text-gray-600" />,
+    title: "Empowering Organizations",
+    description: "We provide advanced data visualization tools, giving access to leading-edge technologies for efficient, data-driven decision-making."
+  }
+]

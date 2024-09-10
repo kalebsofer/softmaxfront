@@ -1,19 +1,19 @@
 'use client';
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { PlaceholderIcon } from './PlaceholderIcon'
 
 export function Header() {
   const pathname = usePathname()
 
   return (
-    <header className="flex items-center justify-between p-4 bg-white">
-      <Link href="/" className="flex items-center space-x-4">
-        <Image src="/placeholder.svg?height=40&width=40" alt="Softmax Logo" width={40} height={40} />
-        <span className="text-xl font-bold">Softmax</span>
-      </Link>
-      <nav>
+    <header className="bg-white shadow-sm">
+      <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
+        <Link href="/" className="flex items-center">
+          <PlaceholderIcon width={40} height={40} className="mr-2" />
+          <span className="text-xl font-bold">Softmax</span>
+        </Link>
         <ul className="flex space-x-4">
           <li>
             <Link
@@ -27,12 +27,12 @@ export function Header() {
           </li>
           <li>
             <Link
-              href="/company"
+              href="/team"
               className={`transition-colors ${
-                pathname === '/company' ? 'text-gray-900 font-semibold' : 'text-gray-600 hover:text-gray-900'
+                pathname === '/team' ? 'text-gray-900 font-semibold' : 'text-gray-600 hover:text-gray-900'
               }`}
             >
-              Company
+              Team
             </Link>
           </li>
           <li>
