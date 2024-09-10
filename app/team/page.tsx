@@ -38,13 +38,18 @@ export default function Team() {
         <h1 className="text-4xl font-bold mb-12 text-center">Our Team</h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
-            <div key={index} className={`flex flex-col items-center ${index === 3 ? 'md:col-start-2' : ''}`}>
+            <div 
+              key={index} 
+              className={`flex flex-col items-center p-6 bg-gray-50 border border-gray-200 rounded-lg shadow-md 
+                transition-transform duration-300 ease-in-out hover:scale-105 
+                ${index === 3 ? 'md:col-start-2' : ''}`}
+            >
               <div className="w-48 h-48 mb-4">
                 <PlaceholderIcon width={192} height={192} className="rounded-full" />
               </div>
               <h2 className="text-2xl font-semibold mb-2">{member.name}</h2>
               <h3 className="text-xl text-gray-600 mb-4">{member.role}</h3>
-              <p className="text-center">{member.description}</p>
+              <p className="text-center text-sm">{member.description}</p>
             </div>
           ))}
         </div>
