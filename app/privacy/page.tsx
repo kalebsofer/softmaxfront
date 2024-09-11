@@ -7,13 +7,17 @@ export default function Privacy() {
       <Header />
       <main className="flex-grow container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl font-bold mb-12 text-center">Privacy Policy</h1>
+          <h1 className="text-4xl font-bold mb-8 text-center">Privacy Policy</h1>
           
-          <p className="text-lg mb-12">
-            Softmax is fully committed to the protection of your privacy at all times. This Privacy Statement explains what happens to any Personal Data (any information relating to an identifiable living person who can be directly or indirectly identified in particular by reference to an identifier) that you provide to us, or that we collect from you whilst you visit our site. Please read this information carefully in order to fully understand how we treat such Personal Data. We do update this Policy from time to time so please review it regularly.
+          <p className="text-lg mb-8">
+            <strong>Effective Date</strong>: {new Date().toLocaleDateString()}
+          </p>
+          
+          <p className="mb-6">
+            Softmax is fully committed to the protection of your privacy at all times. This Privacy Statement explains what happens to any Personal Data that you provide to us, or that we collect from you whilst you visit our site.
           </p>
 
-          <h2 className="text-2xl font-semibold mt-12 mb-6">Change to the Data Protection Law</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">Change to the Data Protection Law</h2>
           <p className="mb-4">
             The law in relation to data protection has changed from May 2018. This Privacy Notice has been written to reflect your new rights and to explain how we process your personal data.
           </p>
@@ -24,7 +28,7 @@ export default function Privacy() {
             We are dedicated to keeping your data safe and complying with applicable data protection legislation.
           </p>
 
-          <h2 className="text-2xl font-semibold mt-12 mb-6">Your Rights</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">Your Rights</h2>
           <p className="mb-4">
             By law, you have a number of rights when it comes to your personal data. Further information and advice about your rights can be obtained from the data protection regulator in your country, in the UK this is the Information Commissioner&apos;s Office (ICO). These rights include:
           </p>
@@ -70,7 +74,7 @@ export default function Privacy() {
             Please consider your request responsibly before submitting it. We&apos;ll respond as soon as we can. Generally this will be within 1 month from when we receive your request but, if the request is going to take longer to deal with, we&apos;ll come back to you and let you know within the 1 month period.
           </p>
 
-          <h2 className="text-2xl font-semibold mt-12 mb-6">Information we collect</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">Information we collect</h2>
           <p className="mb-4">
             In running and maintaining our website we may collect and process the following data about you:
           </p>
@@ -88,7 +92,7 @@ export default function Privacy() {
             <li>Information that you provide when you communicate with us - by any means</li>
           </ul>
 
-          <h2 className="text-2xl font-semibold mt-12 mb-6">Use of your information</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">Use of your information</h2>
           <p className="mb-4">
             We use the information that we collect from you to provide our services to you. In addition to this we may use the information for one or more of the following purposes:
           </p>
@@ -101,7 +105,7 @@ export default function Privacy() {
             <li>To inform you of any changes to our website or services</li>
           </ul>
 
-          <h2 className="text-2xl font-semibold mt-12 mb-6">Storing and sharing your personal data</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">Storing and sharing your personal data</h2>
           <p className="mb-4">
             In operating our website and supplying you with our service, it may become necessary to transfer data that we collect from you to locations outside of the European Economic Area (EEA) for processing and storing.
           </p>
@@ -133,7 +137,7 @@ export default function Privacy() {
             It is important that the personal information we hold about you is accurate and current. Please get in touch with us if your personal information changes during your relationship with us.
           </p>
 
-          <h2 className="text-2xl font-semibold mt-12 mb-6">Legal basis for processing your personal data</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">Legal basis for processing your personal data</h2>
           <p className="mb-4">
             In most cases, it is in our legitimate interests to collect and use the personal data referred to above (see &quot;Information We Collect&quot; above) so that we can provide you with a service and better understand our customer base so that we can improve our services and marketing activities (which could also benefit you).
           </p>
@@ -141,7 +145,7 @@ export default function Privacy() {
             As previously mentioned, we will process your data for the purpose of sending you marketing communication after obtaining your consent to do so.
           </p>
 
-          <h2 className="text-2xl font-semibold mt-12 mb-6">Data retention period</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">Data retention period</h2>
           <p className="mb-4">
             Where Softmax is legally obliged to retain personal data for a specified minimum or maximum period by law, regulation, court order or otherwise, Softmax shall retain the required personal data for that minimum or maximum period.
           </p>
@@ -149,12 +153,12 @@ export default function Privacy() {
             Subject to the above, Softmax shall retain personal data as long as is necessary for the purpose for which the personal data was collected, subject to the valid exercise of any data subject right, including to withdraw consent (and there is no other legal basis to process the personal data), to object to processing, to require restriction of processing or erasure of the personal data, and there is no ground on which to refuse the exercise of such right.
           </p>
 
-          <h2 className="text-2xl font-semibold mt-12 mb-6">Third party links</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">Third party links</h2>
           <p className="mb-4">
             On occasion we include links to third parties on this website. Where we provide a link it does not mean that we endorse or approve that site&apos;s policy towards visitor privacy. You should review their privacy policy before sending them any personal data.
           </p>
 
-          <h2 className="text-2xl font-semibold mt-12 mb-6">Use of cookies</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">Use of cookies</h2>
           <p className="mb-4">
             Cookies provide information regarding the computer used by a visitor. We may use cookies where appropriate to gather information about your computer in order to assist us in improving our website.
           </p>
@@ -165,12 +169,12 @@ export default function Privacy() {
             You can adjust the settings on your computer to decline any cookies if you wish. This can easily be done by activating the &quot;reject cookies&quot; setting on your computer.
           </p>
 
-          <h2 className="text-2xl font-semibold mt-12 mb-6">Contacting us</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">Contacting us</h2>
           <p className="mb-4">
             Please do not hesitate to contact us regarding any matter relating to this Privacy Notice and your personal data at <a href="mailto:hello@softmax.com" className="text-blue-600 hover:underline">hello@softmax.com</a>.
           </p>
 
-          <h2 className="text-2xl font-semibold mt-12 mb-6">Our details</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">Our details</h2>
           <p className="mb-4">
             This website is owned and operated by Softmax Ltd
           </p>
