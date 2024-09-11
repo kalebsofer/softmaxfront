@@ -9,12 +9,9 @@ export default function Mission() {
       <main className="flex-grow">
         <div className="bg-gray-50">
           <div className="container mx-auto px-4 py-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center">Our Mission</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center">Mission</h1>
             <p className="text-xl mb-12 text-center max-w-3xl mx-auto">
-              We want to democratize advanced analytics by making deep learning accessible to organizations of all shapes and sizes.
-            </p>
-            <p className="text-xl mb-12 text-center max-w-3xl mx-auto">
-              We believe in empowering businesses, regardless of their data literacy, by leveraging cutting-edge open-source technology.
+              Our goal is to democratize deep learning by integrating cutting-edge AI with your existing data and infrastructure.
             </p>
           </div>
         </div>
@@ -37,7 +34,7 @@ export default function Mission() {
         <div className="bg-gray-100 py-16">
           <div className="container mx-auto px-4">
             <p className="text-xl text-center max-w-3xl mx-auto">
-              Our commitment is to enable businesses to unlock the value of their data and become leaders in their respective industries through analytics and machine learning.
+              Our commitment is to open-source, collaboration and transparency. 
             </p>
           </div>
         </div>

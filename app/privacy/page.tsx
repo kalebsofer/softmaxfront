@@ -26,12 +26,12 @@ export default function Privacy() {
 
           <h2 className="text-2xl font-semibold mt-12 mb-6">Your Rights</h2>
           <p className="mb-4">
-            By law, you have a number of rights when it comes to your personal data. Further information and advice about your rights can be obtained from the data protection regulator in your country, in the UK this is the Information Commissioner's Office (ICO). These rights include:
+            By law, you have a number of rights when it comes to your personal data. Further information and advice about your rights can be obtained from the data protection regulator in your country, in the UK this is the Information Commissioner&apos;s Office (ICO). These rights include:
           </p>
 
           <ol className="list-decimal list-outside ml-6 mb-4 space-y-4">
             <li>
-              <strong>Right to be informed:</strong> You have the right to be provided with clear, transparent and easily understandable information about how we use your personal data and your rights. This is why we're providing you with the information in this Notice.
+              <strong>Right to be informed:</strong> You have the right to be provided with clear, transparent and easily understandable information about how we use your personal data and your rights. This is why we&apos;re providing you with the information in this Notice.
             </li>
             <li>
               <strong>Right of access:</strong> You have the right to access your personal data and supplementary information. This allows you to be aware of and verify the lawfulness of the processing.
@@ -40,7 +40,7 @@ export default function Privacy() {
               <strong>Right to rectification:</strong> You are entitled to have your data corrected if it is inaccurate or incomplete.
             </li>
             <li>
-              <strong>Right to erasure:</strong> The right to erasure is also known as 'the right to be forgotten'. It enables you to request the deletion or removal of your personal data where there's no compelling reason for us to keep processing it. This is not a general right to erasure; under certain circumstances we will need to continue processing your data in spite of a request for its deletion.
+              <strong>Right to erasure:</strong> The right to erasure is also known as &apos;the right to be forgotten&apos;. It enables you to request the deletion or removal of your personal data where there&apos;s no compelling reason for us to keep processing it. This is not a general right to erasure; under certain circumstances we will need to continue processing your data in spite of a request for its deletion.
             </li>
             <li>
               <strong>Right to restrict processing:</strong> You have the right to request the restriction or suppression of your personal data. However, this is not an absolute right and only applies in certain circumstances. When processing is restricted, we can still store your personal data, but may not use it further.
@@ -58,7 +58,7 @@ export default function Privacy() {
               <strong>Right to lodge a complaint:</strong> You have the right to lodge a complaint about the way we handle or process your personal data with your national data protection regulator.
             </li>
             <li>
-              <strong>Right to withdraw consent:</strong> If you have given your consent to anything we do with your personal data, you have the right to withdraw your consent at any time (although It's important to note that the withdrawal of consent does not affect the lawfulness of processing based on consent before its withdrawal). This includes your right to withdraw consent to us using your personal data for marketing purposes.
+              <strong>Right to withdraw consent:</strong> If you have given your consent to anything we do with your personal data, you have the right to withdraw your consent at any time (although It&apos;s important to note that the withdrawal of consent does not affect the lawfulness of processing based on consent before its withdrawal). This includes your right to withdraw consent to us using your personal data for marketing purposes.
             </li>
           </ol>
 
@@ -67,7 +67,7 @@ export default function Privacy() {
           </p>
 
           <p className="mb-4">
-            Please consider your request responsibly before submitting it. We'll respond as soon as we can. Generally this will be within 1 month from when we receive your request but, if the request is going to take longer to deal with, we'll come back to you and let you know within the 1 month period.
+            Please consider your request responsibly before submitting it. We&apos;ll respond as soon as we can. Generally this will be within 1 month from when we receive your request but, if the request is going to take longer to deal with, we&apos;ll come back to you and let you know within the 1 month period.
           </p>
 
           <h2 className="text-2xl font-semibold mt-12 mb-6">Information we collect</h2>
@@ -135,7 +135,7 @@ export default function Privacy() {
 
           <h2 className="text-2xl font-semibold mt-12 mb-6">Legal basis for processing your personal data</h2>
           <p className="mb-4">
-            In most cases, it is in our legitimate interests to collect and use the personal data referred to above (see "Information We Collect" above) so that we can provide you with a service and better understand our customer base so that we can improve our services and marketing activities (which could also benefit you).
+            In most cases, it is in our legitimate interests to collect and use the personal data referred to above (see &quot;Information We Collect&quot; above) so that we can provide you with a service and better understand our customer base so that we can improve our services and marketing activities (which could also benefit you).
           </p>
           <p className="mb-4">
             As previously mentioned, we will process your data for the purpose of sending you marketing communication after obtaining your consent to do so.
@@ -151,7 +151,7 @@ export default function Privacy() {
 
           <h2 className="text-2xl font-semibold mt-12 mb-6">Third party links</h2>
           <p className="mb-4">
-            On occasion we include links to third parties on this website. Where we provide a link it does not mean that we endorse or approve that site's policy towards visitor privacy. You should review their privacy policy before sending them any personal data.
+            On occasion we include links to third parties on this website. Where we provide a link it does not mean that we endorse or approve that site&apos;s policy towards visitor privacy. You should review their privacy policy before sending them any personal data.
           </p>
 
           <h2 className="text-2xl font-semibold mt-12 mb-6">Use of cookies</h2>
@@ -159,10 +159,10 @@ export default function Privacy() {
             Cookies provide information regarding the computer used by a visitor. We may use cookies where appropriate to gather information about your computer in order to assist us in improving our website.
           </p>
           <p className="mb-4">
-            We may gather information about your general Internet use by using the cookie. Where used, these cookies are downloaded to your computer and stored on the computer's hard drive. Such information will not identify you personally. It is statistical data. This statistical data does not identify any personal details whatsoever.
+            We may gather information about your general Internet use by using the cookie. Where used, these cookies are downloaded to your computer and stored on the computer&apos;s hard drive. Such information will not identify you personally. It is statistical data. This statistical data does not identify any personal details whatsoever.
           </p>
           <p className="mb-4">
-            You can adjust the settings on your computer to decline any cookies if you wish. This can easily be done by activating the "reject cookies" setting on your computer.
+            You can adjust the settings on your computer to decline any cookies if you wish. This can easily be done by activating the &quot;reject cookies&quot; setting on your computer.
           </p>
 
           <h2 className="text-2xl font-semibold mt-12 mb-6">Contacting us</h2>

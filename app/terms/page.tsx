@@ -15,7 +15,7 @@ export default function Terms() {
           </p>
           
           <p className="text-lg mb-12">
-            Welcome to <strong>Softmax Ltd</strong> ("we," "us," or "our"). These Terms of Service ("Terms") govern your use of our website at <a href="https://softmaxco.io" className="text-blue-600 hover:underline">softmaxco.io</a> and the services we offer, including data infrastructure, engineering, analytics, and machine learning services (collectively, the "Services").
+            Welcome to <strong>Softmax Ltd</strong> (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). These Terms of Service (&quot;Terms&quot;) govern your use of our website at <a href="https://softmaxco.io" className="text-blue-600 hover:underline">softmaxco.io</a> and the services we offer, including data infrastructure, engineering, analytics, and machine learning services (collectively, the &quot;Services&quot;).
           </p>
           
           <p className="text-lg mb-12">
@@ -48,7 +48,7 @@ export default function Terms() {
 
           <h2 className="text-2xl font-semibold mt-12 mb-6">5. Limitation of Liability</h2>
           <p className="mb-4">
-            While we strive to offer high-quality and accurate Services, <strong>Softmax Ltd</strong> will not be held liable for any indirect, incidental, or consequential damages arising from your use of our Services. The Services are provided "as is," and we make no warranties, either express or implied, regarding the accuracy or reliability of the data or services provided.
+            While we strive to offer high-quality and accurate Services, <strong>Softmax Ltd</strong> will not be held liable for any indirect, incidental, or consequential damages arising from your use of our Services. The Services are provided &quot;as is,&quot; and we make no warranties, either express or implied, regarding the accuracy or reliability of the data or services provided.
           </p>
 
           <h2 className="text-2xl font-semibold mt-12 mb-6">6. Privacy and Data Collection</h2>

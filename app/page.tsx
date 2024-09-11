@@ -15,7 +15,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="w-full md:w-2/3 md:pr-8 mb-8 md:mb-0">
               <h1 className="text-4xl md:text-5xl font-bold mb-4 md:mb-6">Softmax</h1>
-              <p className="text-lg md:text-xl mb-6 md:mb-8">For anyone with a dataset and a question.</p>
+              <p className="text-lg md:text-xl mb-6 md:mb-8">Data-driven success, accessible for all – with strategy built to last.</p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                 <Link href="/demo">
                   <Button 
