@@ -14,8 +14,14 @@ export default function Home() {
         <div className="container mx-auto px-4 py-8 md:py-16">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="w-full md:w-2/3 md:pr-8 mb-8 md:mb-0">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4 md:mb-6">Softmax</h1>
-              <p className="text-lg md:text-xl mb-6 md:mb-8">Data-driven success, accessible for all – with strategy built to last.</p>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Softmax</h1>
+              <p className="text-lg md:text-xl mb-6">Data-driven success, accessible for all – with strategy built to last.</p>
+              
+              {/* Mobile logo */}
+              <div className="md:hidden mb-6">
+                <PlaceholderIcon width={200} height={200} className="mx-auto" />
+              </div>
+
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                 <Link href="/demo">
                   <Button 
@@ -36,6 +42,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
+            {/* Desktop logo */}
             <div className="w-full md:w-1/3 hidden md:block">
               <PlaceholderIcon width={300} height={300} className="rounded-full mx-auto" />
             </div>
