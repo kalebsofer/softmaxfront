@@ -1,4 +1,4 @@
-# Softmax Corporate Website
+# Softmax Website
 
 ![Softmax Logo](https://path-to-your-logo.png)
 
@@ -8,7 +8,7 @@ This repository contains the source code for the Softmax corporate website. Buil
 
 ## Table of Contents
 
-- [Softmax Corporate Website](#softmax-corporate-website)
+- [Softmax Website](#softmax-website)
   - [Overview](#overview)
   - [Table of Contents](#table-of-contents)
   - [Getting Started](#getting-started)
