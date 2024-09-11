@@ -16,8 +16,6 @@ This repository contains the source code for the Softmax corporate website. Buil
     - [Installation](#installation)
   - [Project Structure](#project-structure)
   - [Development](#development)
-    - [Code Style](#code-style)
-    - [Commit Messages](#commit-messages)
     - [Branch Naming](#branch-naming)
   - [Deployment](#deployment)
     - [Staging](#staging)
@@ -78,14 +76,6 @@ softmax-website/
 
 ## Development
 
-### Code Style
-
-We follow the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript). Please ensure your code adheres to these standards.
-
-### Commit Messages
-
-Follow the [Conventional Commits](https://www.conventionalcommits.org/) specification for commit messages.
-
 ### Branch Naming
 
 Use the following format for branch names:
@@ -94,7 +84,7 @@ Use the following format for branch names:
 
 ## Deployment
 
-Our CI/CD pipeline automatically deploys changes to the `main` branch to our staging environment. Production deployments are manually triggered after QA approval.
+Our CI/CD pipeline automatically deploys changes to the `main` branch to our staging environment. Production deployments are manually triggered.
 
 ### Staging
 - URL: https://staging.softmaxco.io
