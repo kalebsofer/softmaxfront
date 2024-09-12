@@ -9,43 +9,24 @@ export function Header() {
 
   return (
     <header className="bg-white shadow-sm">
-      <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center">
+      <nav className="container mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between">
+        <Link href="/" className="flex items-center mb-4 sm:mb-0">
           <PlaceholderIcon width={40} height={40} className="mr-2" />
           <span className="text-xl font-bold">Softmax</span>
         </Link>
-        <ul className="flex space-x-4">
-          <li>
+        <div className="flex space-x-4">
+          {['Mission', 'Team', 'Contact'].map((item) => (
             <Link
-              href="/mission"
+              key={item}
+              href={`/${item.toLowerCase()}`}
               className={`transition-colors ${
-                pathname === '/mission' ? 'text-gray-900 font-semibold' : 'text-gray-600 hover:text-gray-900'
+                pathname === `/${item.toLowerCase()}` ? 'text-gray-900 font-semibold' : 'text-gray-600 hover:text-gray-900'
               }`}
             >
-              Mission
+              {item}
             </Link>
-          </li>
-          <li>
-            <Link
-              href="/team"
-              className={`transition-colors ${
-                pathname === '/team' ? 'text-gray-900 font-semibold' : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              Team
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/contact"
-              className={`transition-colors ${
-                pathname === '/contact' ? 'text-gray-900 font-semibold' : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
+          ))}
+        </div>
       </nav>
     </header>
   )
