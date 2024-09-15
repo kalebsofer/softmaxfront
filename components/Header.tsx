@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { PlaceholderIcon } from './PlaceholderIcon'
 
 export function Header() {
   const pathname = usePathname()
@@ -11,7 +11,13 @@ export function Header() {
     <header className="bg-white shadow-sm">
       <nav className="container mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between">
         <Link href="/" className="flex items-center mb-4 sm:mb-0">
-          <PlaceholderIcon width={40} height={40} className="mr-2" />
+          <Image
+            src="/images/logo.png"
+            alt="Softmax Logo"
+            width={40}
+            height={40}
+            className="mr-2"
+          />
           <span className="text-xl font-bold">Softmax</span>
         </Link>
         <div className="flex space-x-4">

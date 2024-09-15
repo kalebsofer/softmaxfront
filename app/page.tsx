@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { ServerStackIcon, ChartBarIcon, CpuChipIcon } from '@heroicons/react/24/outline'
-import { PlaceholderIcon } from '@/components/PlaceholderIcon'
+import AnimatedLogo from '@/components/AnimatedLogo'
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
               
               {/* Mobile logo */}
               <div className="md:hidden mb-6">
-                <PlaceholderIcon width={200} height={200} className="mx-auto" />
+                <AnimatedLogo width={200} height={200} />
               </div>
 
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
@@ -44,7 +44,7 @@ export default function Home() {
             </div>
             {/* Desktop logo */}
             <div className="w-full md:w-1/3 hidden md:block">
-              <PlaceholderIcon width={300} height={300} className="rounded-full mx-auto" />
+              <AnimatedLogo width={300} height={300} />
             </div>
           </div>
         </div>
