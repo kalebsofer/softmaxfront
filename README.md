@@ -1,5 +1,7 @@
 # Softmax Website
 
+### [softmaxco.io](https://softmaxco.io)
+
 ## Overview
 
 This repository contains the source code for the Softmax corporate website. Built with Next.js and React, it serves as the primary online presence for Softmax Ltd, showcasing our services, terms, and privacy policy.
@@ -7,6 +9,7 @@ This repository contains the source code for the Softmax corporate website. Buil
 ## Table of Contents
 
 - [Softmax Website](#softmax-website)
+    - [softmaxco.io](#softmaxcoio)
   - [Overview](#overview)
   - [Table of Contents](#table-of-contents)
   - [Getting Started](#getting-started)

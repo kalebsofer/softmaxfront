@@ -13,19 +13,17 @@ const AnimatedLogo: React.FC<{ width: number; height: number }> = ({ width, heig
 
   useEffect(() => {
     const animationSequence = async () => {
-      await new Promise(resolve => setTimeout(resolve, 3000)); // Wait 3 seconds
+      await new Promise(resolve => setTimeout(resolve, 7000)); 
       setIsFollowing(true);
-      await new Promise(resolve => setTimeout(resolve, 2000)); // Follow for 2 seconds before dilating
+      await new Promise(resolve => setTimeout(resolve, 2000)); 
       setIsDilated(true);
-      await new Promise(resolve => setTimeout(resolve, 5000)); // Continue following for 5 more seconds
+      await new Promise(resolve => setTimeout(resolve, 5000));
       setIsFollowing(false);
-      // Return to start position
       targetPosition.current = startPosition;
-      await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for centering
+      await new Promise(resolve => setTimeout(resolve, 1000)); 
       setIsDilated(false);
-      await new Promise(resolve => setTimeout(resolve, 2000)); // Wait 2 seconds
+      await new Promise(resolve => setTimeout(resolve, 2000));
       
-      // Repeat the sequence
       animationSequence();
     };
 
@@ -45,25 +43,21 @@ const AnimatedLogo: React.FC<{ width: number; height: number }> = ({ width, heig
         const y = e.clientY - centerY;
         
         // Create an elliptical boundary
-        const a = rect.width * 0.2; // horizontal radius
-        const b = rect.height * 0.25; // vertical radius
+        const a = rect.width * 0.2; 
+        const b = rect.height * 0.25; 
         
-        // Adjust the ellipse to restrict top movement
         let adjustedX = x;
         let adjustedY = y;
-        if (y < 0) { // Top half
-          adjustedX *= 0.5; // Reduce horizontal movement
-          adjustedY *= 1.5; // Reduce vertical movement
+        if (y < 0) {
+          adjustedX *= 0.5;
+          adjustedY *= 1.5;
         }
         
-        // Calculate the distance from the center to the ellipse boundary
         const angle = Math.atan2(adjustedY, adjustedX);
         const maxDistance = (a * b) / Math.sqrt(Math.pow(b * Math.cos(angle), 2) + Math.pow(a * Math.sin(angle), 2));
         
-        // Additional top restriction
         const topRestriction = Math.max(0, -Math.sin(angle)) * rect.height * 0.2;
         
-        // Calculate the actual distance and clamp it to the maxDistance
         const distance = Math.min(Math.sqrt(adjustedX*adjustedX + adjustedY*adjustedY), maxDistance - topRestriction);
         
         targetPosition.current = {
