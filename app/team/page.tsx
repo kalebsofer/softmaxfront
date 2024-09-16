@@ -8,7 +8,7 @@ const teamMembers = [
     name: "Kaleb",
     role: "Founder, Engineer",
     image: "/images/kaleb.jpg",
-    description: "Initially trained as an aerospace engineer, Kaleb transitioned into data in 2018 inspired by AlphaZero and YOLOv3. Since then, he has taken on engineering and consultancy roles with Deliveroo, Santander, and the UK Ministry of Justice."
+    description: "Initially trained as an aerospace engineer, Kaleb transitioned to Data in 2018 inspired by AlphaZero and YOLOv3. Since then, he has taken on engineering and consultancy roles with Deliveroo, Santander, and the UK Ministry of Justice."
   },
   {
     name: "Margaux",

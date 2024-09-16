@@ -3,7 +3,6 @@ import { Button } from '@/components/ui/button'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { ServerStackIcon, ChartBarIcon, CpuChipIcon } from '@heroicons/react/24/outline'
-import AnimatedLogo from '@/components/AnimatedLogo'
 
 export default function Home() {
   return (
@@ -13,15 +12,10 @@ export default function Home() {
       <main className="flex-grow">
         <div className="container mx-auto px-4 py-8 md:py-16">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="w-full md:w-2/3 md:pr-8 mb-8 md:mb-0">
+            <div className="w-full md:w-2/3 mb-8 md:mb-0">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Softmax</h1>
               <p className="text-lg md:text-xl mb-6">Data-driven success, accessible for all – with strategy built to last.</p>
               
-              {/* Mobile logo */}
-              <div className="md:hidden mb-6">
-                <AnimatedLogo width={200} height={200} />
-              </div>
-
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                 <Link href="/demo">
                   <Button 
@@ -42,10 +36,6 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            {/* Desktop logo */}
-            <div className="w-full md:w-1/3 hidden md:block">
-              <AnimatedLogo width={300} height={300} />
-            </div>
           </div>
         </div>
 
@@ -64,7 +54,7 @@ export default function Home() {
                 <div className="mb-4 flex justify-center transition-transform duration-300 ease-in-out transform group-hover:scale-110">
                   <ChartBarIcon className="h-16 w-16 text-green-500" />
                 </div>
-                <h3 className="text-xl font-semibold mb-4">Data Analysis</h3>
+                <h3 className="text-xl font-semibold mb-4">Data Analysis and Visualisation</h3>
                 <p className="text-gray-600">Uncover insights from your data with advanced analytics techniques and visualization tools.</p>
               </div>
               <div className="text-center group">

@@ -46,23 +46,23 @@ export default function Mission() {
 
 const missionPoints = [
   {
-    icon: <LightBulbIcon className="w-8 h-8 text-gray-600" />,
-    title: "Demonstrating Impactful AI Use Cases",
-    description: "We bridge the gap between data complexity and practical use in environments with traditionally low data literacy."
-  },
-  {
     icon: <PresentationChartLineIcon className="w-8 h-8 text-gray-600" />,
     title: "Expert Consultation",
-    description: "We offer guidance on data strategy, efficient scaling, and engineering best practices to ensure long-term success."
+    description: "We offer guidance on data strategy, scaling infrastructure and engineering best practice to help deliver growth."
   },
   {
+    icon: <LightBulbIcon className="w-8 h-8 text-gray-600" />,
+    title: "Demonstrating Impactful AI Use Cases",
+    description: "If you know what you need, great, if not we have tonnes of ideas about how AI can improve your business."
+    },
+  {
     icon: <CpuChipIcon className="w-8 h-8 text-gray-600" />,
-    title: "Comprehensive Solutions",
-    description: "We implement solutions as either an integrated part of your team or as a standalone partner, driving your data transformation."
+    title: "Integrated Solutions",
+    description: "We design and build as either an integrated part of your team or as a standalone partner, driving your data transformation."
   },
   {
     icon: <ChartBarIcon className="w-8 h-8 text-gray-600" />,
     title: "Empowering Organizations",
-    description: "We provide advanced data visualization tools, giving access to leading-edge technologies for efficient, data-driven decision-making."
+    description: "Our long-term planning means you'll continue to benefit from data-driven decision-making beyond our work with you."
   }
 ]
