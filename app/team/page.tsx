@@ -5,25 +5,25 @@ import Image from 'next/image'
 
 const teamMembers = [
   {
-    name: "Kaleb",
+    name: <Link href="https://www.linkedin.com/in/kalebsofer/" className="text-black hover:underline">Kaleb</Link>,
     role: "Founder, Engineer",
     image: "/images/kaleb.jpg",
     description: "Initially trained as an aerospace engineer, Kaleb transitioned to Data in 2018 inspired by AlphaZero and YOLOv3. Since then, he has taken on engineering and consultancy roles with Deliveroo, Santander, and the UK Ministry of Justice."
   },
   {
-    name: "Margaux",
+    name: <Link href="https://www.linkedin.com/in/margaux-dowland-69962529b/" className="text-black hover:underline">Margaux</Link>,
     role: "AI",
-    image: "/images/margaux.jpg",
+    image: "/images/margaux.jpg", 
     description: "After completing her masters from Imperial College London with distinction, Margaux was awarded prize-winner for the best MSc Pure Mathematics Project in 2023. She currently works as an ML engineer for Oak Academy, developing AI applications in Education."
   },
   {
-    name: "Luka",
+    name: <Link href="https://www.linkedin.com/in/luka-vlaskalic-bba5988a/" className="text-black hover:underline">Luka</Link>,
     role: "Product",
-    image: "/images/luka.jpg",
+    image: "/images/luka.jpg", 
     description: "Luka holds a Master's degree with distinction in Physics from The University of Manchester. With over five years of experience managing products and leading technical teams in the renewable energy sector, he is currently working at Amp X, an innovative digital energy platform driving disruption in the industry."
   },
   {
-    name: "Izaak",
+    name: <Link href="https://www.linkedin.com/in/izaakrogan/" className="text-black hover:underline">Izaak</Link>,
     role: "Advisor",
     image: "/images/izaak.png",
     description: (

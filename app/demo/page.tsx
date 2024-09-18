@@ -7,7 +7,7 @@ export default function Demo() {
       <Header />
       <main className="flex-grow container mx-auto px-4 py-16">
         <p className="text-xl mb-8">
-          Bare with, we&apos;re still working on this page.
+          Bare with, this page is under construction.
         </p>
       </main>
       <Footer />
