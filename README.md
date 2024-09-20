@@ -15,7 +15,6 @@ This repository contains the source code for the Softmax corporate website. Buil
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
-  - [Project Structure](#project-structure)
   - [Development](#development)
     - [Branch Naming](#branch-naming)
   - [Deployment](#deployment)
@@ -54,26 +53,6 @@ This repository contains the source code for the Softmax corporate website. Buil
    ```
    npm run dev
    ```
-
-## Project Structure
-
-softmax-website/
-├── app/
-│ ├── components/
-│ ├── layout.tsx
-│ ├── page.tsx
-│ ├── privacy/
-│ │ └── page.tsx
-│ └── terms/
-│ └── page.tsx
-├── public/
-├── styles/
-├── .gitignore
-├── next.config.js
-├── package.json
-├── README.md
-└── tsconfig.json
-
 
 ## Development
 
