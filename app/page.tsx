@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link'
+import Image from 'next/image';
 import { Button } from '@/components/ui/button'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
-import { ServerStackIcon, ChartBarIcon, CpuChipIcon } from '@heroicons/react/24/outline'
 import { TypeAnimation } from 'react-type-animation';
 
 export default function Home() {
@@ -67,7 +67,13 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full md:w-1/2 flex justify-center">
-              <img src="/svg/home.svg" alt="Home Illustration" className="w-full max-w-4xl"/>
+              <Image 
+                src="/svg/home.svg" 
+                alt="Home Illustration" 
+                width={800} 
+                height={600} 
+                className="w-full max-w-4xl"
+              />
             </div>
           </div>
         </div>
@@ -77,17 +83,17 @@ export default function Home() {
             <h2 className="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-center">Services</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
               <div className="text-center bg-white p-8 rounded-lg shadow-md transition-transform transform hover:scale-105">
-                <img src="/svg/timeline.svg" alt="Infrastructure and Engineering" className="mx-auto mb-4 h-32 w-32" />
+                <Image src="/svg/timeline.svg" alt="Infrastructure and Engineering" width={128} height={128} className="mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-4">Infrastructure and Engineering</h3>
                 <p className="text-gray-600">Provision infrastructure and build robust data pipelines to support your business.</p>
               </div>
               <div className="text-center bg-white p-8 rounded-lg shadow-md transition-transform transform hover:scale-105">
-                <img src="/svg/analytics.svg" alt="Analysis and Visualisation" className="mx-auto mb-4 h-32 w-32" />
+                <Image src="/svg/analytics.svg" alt="Analysis and Visualisation" width={128} height={128} className="mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-4">Analysis and Visualisation</h3>
                 <p className="text-gray-600">Deploy insightful visual tools for analysis and support ongoing services.</p>
               </div>
               <div className="text-center bg-white p-8 rounded-lg shadow-md transition-transform transform hover:scale-105">
-                <img src="/svg/ml.svg" alt="Machine Learning" className="mx-auto mb-4 h-32 w-32" />
+                <Image src="/svg/ml.svg" alt="Machine Learning" width={128} height={128} className="mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-4">Machine Learning</h3>
                 <p className="text-gray-600">Leverage state-of-the-art machine learning models to inform data-driven decision-making.</p>
               </div>
