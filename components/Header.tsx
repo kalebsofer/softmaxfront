@@ -18,9 +18,19 @@ export function Header() {
             height={40}
             className="mr-2"
           />
-          <span className="text-xl font-bold">Softmax</span>
+          <span className="text-xl font-bold">
+            Softmax.
+          </span>
         </Link>
         <div className="flex space-x-4">
+          <Link
+            href="/"
+            className={`transition-colors ${
+              pathname === '/' ? 'text-gray-900 font-semibold' : 'text-gray-600 hover:text-gray-900'
+            }`}
+          >
+            Home
+          </Link>
           {['Mission', 'Team', 'Contact'].map((item) => (
             <Link
               key={item}
