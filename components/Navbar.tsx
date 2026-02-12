@@ -43,8 +43,9 @@ export default function Navbar() {
           <Image
             src="/images/logo.png"
             alt="Softmax Logo"
-            width={32}
+            width={26}
             height={32}
+            className="object-contain"
           />
           <span className="text-lg font-bold tracking-tight text-foreground">
             Softmax

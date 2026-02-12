@@ -39,7 +39,7 @@ export default function TractionFeatures() {
           className="max-w-md mb-16"
         >
           <h2 className="text-2xl md:text-3xl font-bold text-foreground tracking-tight">
-            Everything you need, nothing you don&apos;t.
+            Plan what matters today,<br /> track it all in one place.
           </h2>
           <p className="mt-3 text-muted-foreground">
             Four core screens designed to keep you moving without burning out.
