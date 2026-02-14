@@ -81,7 +81,7 @@ export default function Contact() {
                     rows={4}
                     required
                     className="w-full px-4 py-2.5 rounded-lg border border-border bg-surface text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/30 transition-shadow resize-none"
-                    placeholder="Tell us about your project\u2026"
+                    placeholder="Tell us about your project"
                   />
                 </div>
                 <Magnetic strength={0.12}>

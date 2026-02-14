@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import TractionFeatures from "@/components/TractionFeatures";
 import HowItWorks from "@/components/HowItWorks";
 import Studio from "@/components/Studio";
-import CaseStudies from "@/components/CaseStudies";
 import Team from "@/components/Team";
 import Principles from "@/components/Principles";
 import Contact from "@/components/Contact";
@@ -20,7 +19,6 @@ export default function Home() {
       <SectionReveal><TractionFeatures /></SectionReveal>
       <HowItWorks />
       <SectionReveal><Studio /></SectionReveal>
-      <SectionReveal><CaseStudies /></SectionReveal>
       <SectionReveal><Team /></SectionReveal>
       <SectionReveal><Principles /></SectionReveal>
       <SectionReveal><Contact /></SectionReveal>

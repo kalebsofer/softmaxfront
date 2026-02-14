@@ -6,21 +6,27 @@ import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-
 const steps = [
   {
     num: '01',
-    title: 'Capture',
+    title: 'Create',
     description:
-      'Dump everything on your mind into Traction. Tasks, ideas, commitments — get it out of your head in seconds.',
+      'Break your goals down into actionable tasks and habits - assign target values, cadences and reminders.',
   },
   {
     num: '02',
-    title: 'Commit',
+    title: 'Sync',
     description:
-      'Pick the 3–5 things that actually matter today. Traction helps you be realistic about what you can finish.',
+      'Sync Traction with your calendar app to fit habits around your work-life balance and view everything in one place.',
   },
   {
     num: '03',
-    title: 'Reflect',
+    title: 'Action',
     description:
-      'End your day with a one-minute review. See what you accomplished, log your energy, and carry forward what\'s next.',
+      'Some Habits Traction will detect in the background, for others end your day with a quick swipe.',
+  },
+  {
+    num: '04',
+    title: 'Review',
+    description:
+      'Build momentum and review your progress to see what is working and where to adjust.',
   },
 ];
 
@@ -34,12 +40,12 @@ export default function HowItWorks() {
   });
 
   useMotionValueEvent(scrollYProgress, 'change', (v) => {
-    const step = Math.min(2, Math.floor(v * 3));
+    const step = Math.min(3, Math.floor(v * 4));
     setActiveStep(step);
   });
 
   return (
-    <section ref={containerRef} id="how-it-works" className="relative" style={{ height: '300vh' }}>
+    <section ref={containerRef} id="how-it-works" className="relative" style={{ height: '400vh' }}>
       <div className="sticky top-0 h-screen flex items-center bg-secondary/40 overflow-hidden">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -49,10 +55,10 @@ export default function HowItWorks() {
                 How it works
               </p>
               <h2 className="text-2xl md:text-3xl font-bold text-foreground tracking-tight mb-3">
-                Three daily steps.
+                Four simple steps
               </h2>
               <p className="text-muted-foreground mb-12">
-                Less than ten minutes total.
+                A few seconds each day. 
               </p>
 
               {/* Step content — animates based on scroll */}
@@ -85,7 +91,7 @@ export default function HowItWorks() {
                 <motion.div
                   className="absolute top-0 left-0 w-full rounded-full"
                   style={{ background: 'var(--gradient-accent)' }}
-                  animate={{ height: `${((activeStep + 1) / 3) * 100}%` }}
+                  animate={{ height: `${((activeStep + 1) / 4) * 100}%` }}
                   transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                 />
               </div>

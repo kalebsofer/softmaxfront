@@ -10,7 +10,6 @@ import Magnetic from './Magnetic';
 const navLinks = [
   { label: 'Traction', href: '#traction' },
   { label: 'Studio', href: '#studio' },
-  { label: 'Work', href: '#work' },
   { label: 'Team', href: '#team' },
   { label: 'Principles', href: '#principles' },
   { label: 'Contact', href: '#contact' },
@@ -43,9 +42,9 @@ export default function Navbar() {
           <Image
             src="/images/logo.png"
             alt="Softmax Logo"
-            width={26}
-            height={32}
-            className="object-contain"
+            width={13}
+            height={16}
+            className="object-contain -translate-y-px"
           />
           <span className="text-lg font-bold tracking-tight text-foreground">
             Softmax

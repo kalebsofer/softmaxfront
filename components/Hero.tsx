@@ -57,7 +57,7 @@ export default function Hero() {
             transition={{ delay: 0.1, duration: 0.5 }}
             className="text-sm font-medium text-muted-foreground mb-4 tracking-wide uppercase"
           >
-            Productivity and Wellness
+            The Habit Tracker that sticks. 
           </motion.p>
 
           {/* Word-by-word reveal headline */}
