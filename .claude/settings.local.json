@@ -10,7 +10,8 @@
       "Bash(curl -sf http://127.0.0.1:3027/.well-known/apple-app-site-association)",
       "Bash(curl -sI http://127.0.0.1:3027/.well-known/assetlinks.json)",
       "Bash(curl -sf http://127.0.0.1:3027/.well-known/assetlinks.json)",
-      "Bash(curl -sI -A \"Mozilla/5.0 \\(iPhone; CPU iPhone OS 17_0 like Mac OS X\\) AppleWebKit/605.1.15\" http://127.0.0.1:3027/invite/TRACT-A7K9X2)"
+      "Bash(curl -sI -A \"Mozilla/5.0 \\(iPhone; CPU iPhone OS 17_0 like Mac OS X\\) AppleWebKit/605.1.15\" http://127.0.0.1:3027/invite/TRACT-A7K9X2)",
+      "Bash(curl -sf -o /dev/null http://127.0.0.1:3000/)"
     ]
   }
 }
