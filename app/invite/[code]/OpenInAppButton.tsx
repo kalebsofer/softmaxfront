@@ -23,9 +23,9 @@ export default function OpenInAppButton({ code }: { code: string }) {
     <button
       type="button"
       onClick={onClick}
-      className="block w-full text-sm md:text-xl font-semibold bg-foreground text-background py-3 md:py-5 rounded-full hover:opacity-90 transition-opacity mb-3 md:mb-4"
+      className="block w-full text-sm md:text-lg font-medium text-muted-foreground hover:text-foreground transition-colors py-3 md:py-4 border border-border rounded-full"
     >
-      Open in Traction
+      Already have it? Open in Traction
     </button>
   );
 }

@@ -118,17 +118,17 @@ function MobileBody({
         You&apos;ve been invited.
       </h1>
       <p className="text-sm md:text-xl text-muted-foreground mb-10 md:mb-16 leading-relaxed">
-        Open Traction Health to accept this shared habit invite.
+        Install Traction Health to accept this shared habit.
       </p>
-
-      <OpenInAppButton code={code} />
 
       <a
         href={storeUrl}
-        className="block w-full text-sm md:text-xl font-medium text-muted-foreground hover:text-foreground transition-colors py-3 md:py-5 border border-border rounded-full"
+        className="block w-full text-sm md:text-xl font-semibold bg-foreground text-background py-3 md:py-5 rounded-full hover:opacity-90 transition-opacity mb-3 md:mb-4"
       >
         {storeLabel}
       </a>
+
+      <OpenInAppButton code={code} />
 
       <div className="mt-10 md:mt-16 pt-6 md:pt-10 border-t border-border">
         <p className="text-xs md:text-sm uppercase tracking-wider text-muted-foreground mb-2 md:mb-3">
