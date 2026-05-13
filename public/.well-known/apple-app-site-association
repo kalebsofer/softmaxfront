@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["VKK86STFQ9.com.kalebrsofer.tractionhealth"],
+        "components": [
+          { "/": "/invite/*", "comment": "Traction invite redemption" }
+        ]
+      }
+    ]
+  }
+}

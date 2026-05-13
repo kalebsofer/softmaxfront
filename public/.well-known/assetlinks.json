@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.kalebrsofer.tractionhealth",
+      "sha256_cert_fingerprints": [
+        "23:4E:9A:7E:F8:B0:43:C1:8B:CE:AD:8C:98:F1:EE:43:33:8E:33:2A:39:55:7D:EA:13:E0:13:23:77:6C:B5:F6",
+        "C6:DB:9D:58:76:99:2D:B8:75:36:70:18:EA:3C:A0:11:DF:51:34:0E:D7:9A:1A:2D:CE:C9:35:BA:96:8C:BA:30"
+      ]
+    }
+  }
+]
