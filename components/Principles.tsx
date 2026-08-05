@@ -1,63 +1,20 @@
-'use client';
-
-import { motion } from 'framer-motion';
-
-const principles = [
-  {
-    title: 'Ship the smallest useful thing',
-    description: 'Scope down ruthlessly. A working feature today beats a perfect one next quarter.',
-  },
-  {
-    title: 'Measure what matters',
-    description: "Every metric should connect to a decision. If it doesn't inform action, drop it.",
-  },
-  {
-    title: 'Design for calm',
-    description: "Great tools don't create anxiety. They reduce it. Every notification, every prompt \u2014 earn its place.",
-  },
-  {
-    title: 'Secure by default',
-    description: "Security isn't a phase. It's baked into architecture, review, and deployment from day one.",
-  },
-];
+import { principles } from '@/content/copy';
 
 export default function Principles() {
   return (
-    <section id="principles" className="py-24 md:py-32">
-      <div className="container">
-        <motion.div
-          initial={{ opacity: 0, clipPath: 'inset(0 100% 0 0)' }}
-          whileInView={{ opacity: 1, clipPath: 'inset(0 0% 0 0)' }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="max-w-md mb-16"
-        >
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground tracking-tight">
-            Principles
-          </h2>
-          <p className="mt-3 text-muted-foreground">
-            How we think about building.
-          </p>
-        </motion.div>
-
-        <div className="grid sm:grid-cols-2 gap-x-12 gap-y-10 max-w-3xl">
-          {principles.map((p, i) => (
-            <motion.div
-              key={p.title}
-              initial={{ opacity: 0, clipPath: 'inset(0 100% 0 0)' }}
-              whileInView={{ opacity: 1, clipPath: 'inset(0 0% 0 0)' }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{
-                duration: 0.6,
-                delay: i * 0.1,
-                ease: [0.25, 0.46, 0.45, 0.94],
-              }}
-            >
-              <h3 className="text-base font-semibold text-foreground mb-1.5">{p.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{p.description}</p>
-            </motion.div>
-          ))}
-        </div>
+    <section className="border-t border-hairline px-5 pt-[18px] pb-7 md:px-10 md:pt-[34px] md:pb-11">
+      <h2 className="font-semibold text-[34px] leading-[0.98] tracking-[-0.04em] md:text-[clamp(30px,3.6vw,50px)] md:leading-none mb-5 md:mb-7">
+        {principles.title}
+      </h2>
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-[34px]">
+        {principles.items.map((p) => (
+          <div key={p.title} className="border-t border-ink pt-4">
+            <div className="font-semibold text-[19px] leading-[1.22] tracking-[-0.025em] mb-2">
+              {p.title}
+            </div>
+            <p className="text-sm leading-[1.55] text-ink/60">{p.description}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

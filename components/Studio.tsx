@@ -1,61 +1,41 @@
-'use client';
-
-import { motion } from 'framer-motion';
-import { Brain, Database, Cog, MessageSquare, Palette, Shield } from 'lucide-react';
-import Magnetic from './Magnetic';
-
-const capabilities = [
-  { icon: Brain, label: 'AI product engineering' },
-  { icon: Database, label: 'Data pipelines & analytics' },
-  { icon: Cog, label: 'Automation & internal tools' },
-  { icon: MessageSquare, label: 'LLM integrations & evals' },
-  { icon: Palette, label: 'UX for productivity products' },
-  { icon: Shield, label: 'Reliability / monitoring' },
-];
+import { whatWeDo } from '@/content/copy';
 
 export default function Studio() {
   return (
-    <section id="studio" className="py-24 md:py-32">
-      <div className="container">
-        <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="max-w-lg mb-16"
-        >
-          <p className="text-sm font-medium text-primary mb-3 tracking-wide uppercase">Consultancy</p>
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground tracking-tight">
-            Softmax Studio
-          </h2>
-          <p className="mt-3 text-muted-foreground leading-relaxed">
-            We help small teams ship AI products, data platforms, and automation — fast, safely, and with clean engineering.
-          </p>
-        </motion.div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {capabilities.map((cap, i) => (
-            <Magnetic key={cap.label} strength={0.1}>
-              <motion.div
-                initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: '-40px' }}
-                transition={{
-                  duration: 0.5,
-                  delay: i * 0.07,
-                  ease: [0.25, 0.46, 0.45, 0.94],
-                }}
-                className="flex items-center gap-3 p-4 rounded-lg border border-border hover:bg-secondary/60 transition-colors group"
-              >
-                <div className="w-9 h-9 rounded-md bg-secondary flex items-center justify-center flex-shrink-0 group-hover:bg-primary/10 transition-colors">
-                  <cap.icon className="w-4.5 h-4.5 text-foreground" strokeWidth={1.5} />
-                </div>
-                <span className="text-sm font-medium text-foreground">{cap.label}</span>
-              </motion.div>
-            </Magnetic>
-          ))}
-        </div>
+    <section id="studio" className="border-t border-hairline">
+      <div className="px-5 pt-[18px] pb-3.5 md:px-10 md:pt-[34px] md:pb-[22px] md:flex md:items-baseline md:justify-between">
+        <h2 className="font-semibold text-[34px] leading-[0.98] tracking-[-0.04em] md:text-[clamp(30px,3.6vw,50px)] md:leading-none">
+          {whatWeDo.title}
+        </h2>
+        <span className="block mt-2 md:mt-0 font-mono text-[11px] md:text-xs uppercase tracking-[0.05em] leading-none text-ink/55">
+          {whatWeDo.meta}
+        </span>
       </div>
+      {whatWeDo.rows.map((s) => (
+        <a
+          key={s.n}
+          href="#contact"
+          className="block border-t border-hairline px-5 py-[15px] md:px-10 md:py-[22px] hover:bg-wash transition-colors duration-200"
+        >
+          <div className="flex items-center gap-3 md:gap-[26px]">
+            <span className="font-mono text-[10.5px] md:text-xs leading-none text-ink/50 w-[22px] md:w-[30px] shrink-0">
+              {s.n}
+            </span>
+            <span className="flex-1 font-semibold text-[20px] leading-[1.06] tracking-[-0.03em] md:text-[clamp(22px,2.4vw,31px)] md:tracking-[-0.035em]">
+              {s.title}
+            </span>
+            <span className="hidden md:block text-sm leading-[1.45] text-ink/60 md:max-w-[260px] lg:max-w-[420px]">
+              {s.note}
+            </span>
+            <span className="font-mono text-[13px] md:text-base leading-none">
+              →
+            </span>
+          </div>
+          <p className="md:hidden mt-1.5 ml-[34px] text-[12.5px] leading-[1.5] text-ink/60">
+            {s.note}
+          </p>
+        </a>
+      ))}
     </section>
   );
 }

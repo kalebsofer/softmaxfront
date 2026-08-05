@@ -1,100 +1,129 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
-import Magnetic from './Magnetic';
+import { contact } from '@/content/copy';
+
+type Status = 'idle' | 'sending' | 'sent' | 'error';
+
+const fieldLabel =
+  'block font-mono text-[10px] md:text-[11px] uppercase tracking-[0.08em] leading-none text-paper/65 mb-2';
+const fieldInput =
+  'w-full py-[13px] bg-transparent border-0 border-b border-paper/20 text-paper text-base placeholder:text-paper/40 outline-none rounded-none';
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<Status>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    const data = new FormData(e.currentTarget);
+    setStatus('sending');
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.get('name'),
+          email: data.get('email'),
+          message: data.get('message'),
+        }),
+      });
+      if (!res.ok) throw new Error(`Contact endpoint returned ${res.status}`);
+      setStatus('sent');
+    } catch {
+      setStatus('error');
+    }
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-secondary/40">
-      <div className="container">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 max-w-4xl">
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-          >
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground tracking-tight">
-              Want help shipping?
-            </h2>
-            <p className="mt-4 text-muted-foreground leading-relaxed">
-              Whether you need to build an AI product, fix a data pipeline, or ship a mobile app — we&apos;d love to hear what you&apos;re working on.
-            </p>
-            <p className="mt-6 text-sm text-muted-foreground">
-              Or email us directly:{' '}
-              <a href="mailto:hello@softmaxco.io" className="text-foreground underline underline-offset-4 hover:text-primary transition-colors">
-                hello@softmaxco.io
-              </a>
-            </p>
-            <p className="mt-2 text-xs text-muted-foreground">
-              We typically respond within 24 hours.
-            </p>
-          </motion.div>
+    <section
+      id="contact"
+      className="bg-ink text-paper px-5 pt-[18px] pb-10 md:px-10 md:pt-16 md:pb-14"
+    >
+      <div className="grid lg:grid-cols-[1.25fr_1fr] gap-8 lg:gap-16 items-start">
+        <div>
+          <h2 className="font-semibold text-[38px] leading-[0.95] tracking-[-0.042em] md:text-[clamp(42px,6vw,86px)] md:leading-[0.94] md:tracking-[-0.045em] mb-4 md:mb-6">
+            {contact.title}
+          </h2>
+          <p className="text-sm leading-[1.55] md:text-[17px] md:leading-[1.6] text-paper/70 max-w-[520px] mb-6 md:mb-[30px]">
+            {contact.lead}
+          </p>
+          <div className="flex flex-wrap gap-8 md:gap-11 font-mono text-[13px] leading-[1.7] text-paper/65">
+            <div>
+              <div className="text-paper">{contact.email}</div>
+              <div>{contact.emailNote}</div>
+            </div>
+            <div>
+              <div className="text-paper">{contact.location}</div>
+              <div>{contact.locationNote}</div>
+            </div>
+          </div>
+        </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-          >
-            {submitted ? (
-              <div className="flex items-center justify-center h-full">
-                <div className="text-center">
-                  <p className="text-lg font-semibold text-foreground">Thank you!</p>
-                  <p className="mt-1 text-sm text-muted-foreground">We&apos;ll be in touch soon.</p>
-                </div>
+        <div className="pb-[env(safe-area-inset-bottom)]">
+          {status === 'sent' ? (
+            <div className="border border-paper/15 p-[34px]">
+              <div className="font-semibold text-2xl leading-[1.1] tracking-[-0.03em] mb-2">
+                {contact.success.title}
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1.5">Name</label>
-                  <input
-                    id="name"
-                    type="text"
-                    required
-                    className="w-full px-4 py-2.5 rounded-lg border border-border bg-surface text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/30 transition-shadow"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1.5">Email</label>
-                  <input
-                    id="email"
-                    type="email"
-                    required
-                    className="w-full px-4 py-2.5 rounded-lg border border-border bg-surface text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/30 transition-shadow"
-                    placeholder="you@company.com"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1.5">Message</label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    required
-                    className="w-full px-4 py-2.5 rounded-lg border border-border bg-surface text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/30 transition-shadow resize-none"
-                    placeholder="Tell us about your project"
-                  />
-                </div>
-                <Magnetic strength={0.12}>
-                  <button
-                    type="submit"
-                    className="w-full bg-foreground text-background py-2.5 px-6 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
-                  >
-                    Send message
-                  </button>
-                </Magnetic>
-              </form>
-            )}
-          </motion.div>
+              <p className="text-sm leading-[1.55] text-paper/65">
+                {contact.success.body}
+              </p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="flex flex-col gap-3.5 md:gap-4">
+              <div>
+                <label htmlFor="contact-name" className={fieldLabel}>
+                  {contact.form.nameLabel}
+                </label>
+                <input
+                  id="contact-name"
+                  name="name"
+                  type="text"
+                  required
+                  placeholder={contact.form.namePlaceholder}
+                  className={fieldInput}
+                />
+              </div>
+              <div>
+                <label htmlFor="contact-email" className={fieldLabel}>
+                  {contact.form.emailLabel}
+                </label>
+                <input
+                  id="contact-email"
+                  name="email"
+                  type="email"
+                  required
+                  placeholder={contact.form.emailPlaceholder}
+                  className={fieldInput}
+                />
+              </div>
+              <div>
+                <label htmlFor="contact-message" className={fieldLabel}>
+                  {contact.form.messageLabel}
+                </label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows={3}
+                  required
+                  placeholder={contact.form.messagePlaceholder}
+                  className={`${fieldInput} leading-normal resize-none`}
+                />
+              </div>
+              <button
+                type="submit"
+                disabled={status === 'sending'}
+                className="mt-2.5 self-start font-mono text-xs font-medium uppercase tracking-[0.06em] bg-paper text-ink rounded-full px-[26px] py-[17px] hover:opacity-90 transition-opacity disabled:opacity-60"
+              >
+                {status === 'sending' ? contact.form.sending : contact.form.submit}
+              </button>
+              {status === 'error' && (
+                <span className="font-mono text-[11px] leading-[1.5] text-paper/65">
+                  {contact.form.error}
+                </span>
+              )}
+            </form>
+          )}
         </div>
       </div>
     </section>

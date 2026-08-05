@@ -3,82 +3,82 @@ import Footer from '@/components/Footer'
 
 export default function Privacy() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-paper">
       <Navbar />
-      <main className="pt-24 pb-16">
+      <main className="pt-6 md:pt-10 pb-16">
         <div className="container max-w-3xl">
-          <h1 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">Privacy Policy</h1>
+          <h1 className="text-[34px] md:text-[44px] font-semibold tracking-[-0.04em] leading-[1.05] mb-8 text-ink">Privacy Policy</h1>
 
-          <p className="text-base text-muted-foreground mb-8">
-            <strong className="text-foreground">Effective Date</strong>: {new Date().toLocaleDateString()}
+          <p className="text-base text-ink/60 mb-8">
+            <strong className="text-ink">Effective Date</strong>: {new Date().toLocaleDateString()}
           </p>
 
-          <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+          <p className="text-base text-ink/60 mb-6 leading-[1.65]">
             Softmax is fully committed to the protection of your privacy at all times. This Privacy Statement explains what happens to any Personal Data that you provide to us, or that we collect from you whilst you visit our site.
           </p>
 
-          <h2 className="text-xl font-semibold mt-8 mb-4 text-foreground">Change to the Data Protection Law</h2>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Change to the Data Protection Law</h2>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             The law in relation to data protection has changed from May 2018. This Privacy Notice has been written to reflect your new rights and to explain how we process your personal data.
           </p>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             You should read through this Privacy Notice to fully understand the basis upon which we collect your personal data, how we use it, where we store it and to whom it is disclosed.
           </p>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             We are dedicated to keeping your data safe and complying with applicable data protection legislation.
           </p>
 
-          <h2 className="text-xl font-semibold mt-8 mb-4 text-foreground">Your Rights</h2>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Your Rights</h2>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             By law, you have a number of rights when it comes to your personal data. Further information and advice about your rights can be obtained from the data protection regulator in your country, in the UK this is the Information Commissioner&apos;s Office (ICO). These rights include:
           </p>
 
-          <ol className="list-decimal list-outside ml-6 mb-4 space-y-4 text-sm text-muted-foreground leading-relaxed">
+          <ol className="list-decimal list-outside ml-6 mb-4 space-y-4 text-base text-ink/60 leading-[1.65]">
             <li>
-              <strong className="text-foreground">Right to be informed:</strong> You have the right to be provided with clear, transparent and easily understandable information about how we use your personal data and your rights. This is why we&apos;re providing you with the information in this Notice.
+              <strong className="text-ink">Right to be informed:</strong> You have the right to be provided with clear, transparent and easily understandable information about how we use your personal data and your rights. This is why we&apos;re providing you with the information in this Notice.
             </li>
             <li>
-              <strong className="text-foreground">Right of access:</strong> You have the right to access your personal data and supplementary information. This allows you to be aware of and verify the lawfulness of the processing.
+              <strong className="text-ink">Right of access:</strong> You have the right to access your personal data and supplementary information. This allows you to be aware of and verify the lawfulness of the processing.
             </li>
             <li>
-              <strong className="text-foreground">Right to rectification:</strong> You are entitled to have your data corrected if it is inaccurate or incomplete.
+              <strong className="text-ink">Right to rectification:</strong> You are entitled to have your data corrected if it is inaccurate or incomplete.
             </li>
             <li>
-              <strong className="text-foreground">Right to erasure:</strong> The right to erasure is also known as &apos;the right to be forgotten&apos;. It enables you to request the deletion or removal of your personal data where there&apos;s no compelling reason for us to keep processing it. This is not a general right to erasure; under certain circumstances we will need to continue processing your data in spite of a request for its deletion.
+              <strong className="text-ink">Right to erasure:</strong> The right to erasure is also known as &apos;the right to be forgotten&apos;. It enables you to request the deletion or removal of your personal data where there&apos;s no compelling reason for us to keep processing it. This is not a general right to erasure; under certain circumstances we will need to continue processing your data in spite of a request for its deletion.
             </li>
             <li>
-              <strong className="text-foreground">Right to restrict processing:</strong> You have the right to request the restriction or suppression of your personal data. However, this is not an absolute right and only applies in certain circumstances. When processing is restricted, we can still store your personal data, but may not use it further.
+              <strong className="text-ink">Right to restrict processing:</strong> You have the right to request the restriction or suppression of your personal data. However, this is not an absolute right and only applies in certain circumstances. When processing is restricted, we can still store your personal data, but may not use it further.
             </li>
             <li>
-              <strong className="text-foreground">Right to data portability:</strong> This allows you to obtain and reuse your personal data for your own purposes across different services. It allows you to move, copy or transfer personal data easily from one IT environment to another in a safe and secure way.
+              <strong className="text-ink">Right to data portability:</strong> This allows you to obtain and reuse your personal data for your own purposes across different services. It allows you to move, copy or transfer personal data easily from one IT environment to another in a safe and secure way.
             </li>
             <li>
-              <strong className="text-foreground">Right to object:</strong> You have the right to object to processing for direct marketing (which we will only do with your consent) and also to processing which is carried out for the purposes of our legitimate interests.
+              <strong className="text-ink">Right to object:</strong> You have the right to object to processing for direct marketing (which we will only do with your consent) and also to processing which is carried out for the purposes of our legitimate interests.
             </li>
             <li>
-              <strong className="text-foreground">Rights related to automated decision making including profiling:</strong> This allows you to object to any decision based solely on automated processing and you can request the chance to have a decision considered by a human so that they are able to express their point of view, or challenge the decision.
+              <strong className="text-ink">Rights related to automated decision making including profiling:</strong> This allows you to object to any decision based solely on automated processing and you can request the chance to have a decision considered by a human so that they are able to express their point of view, or challenge the decision.
             </li>
             <li>
-              <strong className="text-foreground">Right to lodge a complaint:</strong> You have the right to lodge a complaint about the way we handle or process your personal data with your national data protection regulator.
+              <strong className="text-ink">Right to lodge a complaint:</strong> You have the right to lodge a complaint about the way we handle or process your personal data with your national data protection regulator.
             </li>
             <li>
-              <strong className="text-foreground">Right to withdraw consent:</strong> If you have given your consent to anything we do with your personal data, you have the right to withdraw your consent at any time (although it&apos;s important to note that the withdrawal of consent does not affect the lawfulness of processing based on consent before its withdrawal). This includes your right to withdraw consent to us using your personal data for marketing purposes.
+              <strong className="text-ink">Right to withdraw consent:</strong> If you have given your consent to anything we do with your personal data, you have the right to withdraw your consent at any time (although it&apos;s important to note that the withdrawal of consent does not affect the lawfulness of processing based on consent before its withdrawal). This includes your right to withdraw consent to us using your personal data for marketing purposes.
             </li>
           </ol>
 
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             We are required by law to act on requests and provide information free of charge, except where your requests are manifestly unfounded or excessive (in particular because of their repetitive nature) in which case we may charge a reasonable fee (taking into account the administrative costs of providing the information or communication, or taking the action requested), or refuse to act on the request.
           </p>
 
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             Please consider your request responsibly before submitting it. We&apos;ll respond as soon as we can. Generally this will be within 1 month from when we receive your request but, if the request is going to take longer to deal with, we&apos;ll come back to you and let you know within the 1 month period.
           </p>
 
-          <h2 className="text-xl font-semibold mt-8 mb-4 text-foreground">Information we collect</h2>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Information we collect</h2>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             In running and maintaining our website we may collect and process the following data about you:
           </p>
-          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-sm text-muted-foreground leading-relaxed">
+          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
             <li>Information about your use of our site including details of your visits such as pages viewed and the resources that you access. Such information includes traffic data, location data and other communication data.</li>
             <li>Information provided voluntarily by you. For example, when you register for information or submit an application. This may include:
               <ul className="list-disc list-outside ml-6 mt-2 space-y-1">
@@ -92,11 +92,11 @@ export default function Privacy() {
             <li>Information that you provide when you communicate with us - by any means</li>
           </ul>
 
-          <h2 className="text-xl font-semibold mt-8 mb-4 text-foreground">Use of your information</h2>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Use of your information</h2>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             We use the information that we collect from you to provide our services to you. In addition to this we may use the information for one or more of the following purposes:
           </p>
-          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-sm text-muted-foreground leading-relaxed">
+          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
             <li>To provide information to you that you request from us relating to our services</li>
             <li>To provide additional information to you relating to our services that may be of interest to you</li>
             <li>To notify you of upcoming events</li>
@@ -105,86 +105,86 @@ export default function Privacy() {
             <li>To inform you of any changes to our website or services</li>
           </ul>
 
-          <h2 className="text-xl font-semibold mt-8 mb-4 text-foreground">Storing and sharing your personal data</h2>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Storing and sharing your personal data</h2>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             In operating our website and supplying you with our service, it may become necessary to transfer data that we collect from you to locations outside of the European Economic Area (EEA) for processing and storing.
           </p>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             We have obligations to ensure that your personal data processed by us or by our suppliers and partners operating outside the EEA is treated securely and is protected against unauthorised access, loss or destruction, unlawful processing and any processing which is inconsistent with the purposes set out in this Notice.
           </p>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             Please get in touch for a list of the suppliers and processors we currently use, and other parties to whom we disclose your personal data. We can also send information about how these parties use your personal data, any processing they perform outside the EEA, and the safeguards that are used to protect your personal data if this happens. This information may change from time to time. Please ask us if you would like more information about the safeguards that are used to protect your personal data when it is processed outside the EEA (see Contacting Us below).
           </p>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             By providing your personal data to us, you agree to this transfer, storing or processing. In addition to the purposes set out above, we may also provide your personal data to our processors who perform certain business services for us. We share your personal data with third parties who:
           </p>
-          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-sm text-muted-foreground leading-relaxed">
+          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
             <li>Send emails on our behalf</li>
             <li>Facilitate requested communication</li>
             <li>Carry out payments</li>
             <li>Collect feedback</li>
             <li>Track movement on our website</li>
           </ul>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             We will not disclose your personal information to any other party other than in accordance with this Privacy notice and in the circumstances detailed below:
           </p>
-          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-sm text-muted-foreground leading-relaxed">
+          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
             <li>In the event that we sell any or all of our business to the buyer</li>
             <li>Where we are legally required by law to disclose your personal information</li>
             <li>To further fraud protection and reduce the risk of fraud</li>
           </ul>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             It is important that the personal information we hold about you is accurate and current. Please get in touch with us if your personal information changes during your relationship with us.
           </p>
 
-          <h2 className="text-xl font-semibold mt-8 mb-4 text-foreground">Legal basis for processing your personal data</h2>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Legal basis for processing your personal data</h2>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             In most cases, it is in our legitimate interests to collect and use the personal data referred to above (see &quot;Information We Collect&quot; above) so that we can provide you with a service and better understand our customer base so that we can improve our services and marketing activities (which could also benefit you).
           </p>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             As previously mentioned, we will process your data for the purpose of sending you marketing communication after obtaining your consent to do so.
           </p>
 
-          <h2 className="text-xl font-semibold mt-8 mb-4 text-foreground">Data retention period</h2>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Data retention period</h2>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             Where Softmax is legally obliged to retain personal data for a specified minimum or maximum period by law, regulation, court order or otherwise, Softmax shall retain the required personal data for that minimum or maximum period.
           </p>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             Subject to the above, Softmax shall retain personal data as long as is necessary for the purpose for which the personal data was collected, subject to the valid exercise of any data subject right, including to withdraw consent (and there is no other legal basis to process the personal data), to object to processing, to require restriction of processing or erasure of the personal data, and there is no ground on which to refuse the exercise of such right.
           </p>
 
-          <h2 className="text-xl font-semibold mt-8 mb-4 text-foreground">Third party links</h2>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Third party links</h2>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             On occasion we include links to third parties on this website. Where we provide a link it does not mean that we endorse or approve that site&apos;s policy towards visitor privacy. You should review their privacy policy before sending them any personal data.
           </p>
 
-          <h2 className="text-xl font-semibold mt-8 mb-4 text-foreground">Use of cookies</h2>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Use of cookies</h2>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             Cookies provide information regarding the computer used by a visitor. We may use cookies where appropriate to gather information about your computer in order to assist us in improving our website.
           </p>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             We may gather information about your general Internet use by using the cookie. Where used, these cookies are downloaded to your computer and stored on the computer&apos;s hard drive. Such information will not identify you personally. It is statistical data. This statistical data does not identify any personal details whatsoever.
           </p>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             You can adjust the settings on your computer to decline any cookies if you wish. This can easily be done by activating the &quot;reject cookies&quot; setting on your computer.
           </p>
 
-          <h2 className="text-xl font-semibold mt-8 mb-4 text-foreground">Contacting us</h2>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-            Please do not hesitate to contact us regarding any matter relating to this Privacy Notice and your personal data at <a href="mailto:hello@softmax.com" className="text-foreground underline underline-offset-4 hover:text-primary transition-colors">hello@softmax.com</a>.
+          <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Contacting us</h2>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
+            Please do not hesitate to contact us regarding any matter relating to this Privacy Notice and your personal data at <a href="mailto:hello@softmax.com" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors">hello@softmax.com</a>.
           </p>
 
-          <h2 className="text-xl font-semibold mt-8 mb-4 text-foreground">Our details</h2>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Our details</h2>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             This website is owned and operated by Softmax Ltd
           </p>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             We are registered in England and Wales under registration number 15897507 and our registered office is at 46 Regents Park Road, NW1 7SX
           </p>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-            You can contact us by writing to the business address given above, by sending an email to <a href="mailto:hello@softmax.com" className="text-foreground underline underline-offset-4 hover:text-primary transition-colors">hello@softmax.com</a>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
+            You can contact us by writing to the business address given above, by sending an email to <a href="mailto:hello@softmax.com" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors">hello@softmax.com</a>
           </p>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             Softmax Ltd, 46 Regents Park Road, London NW1 7SX
           </p>
         </div>

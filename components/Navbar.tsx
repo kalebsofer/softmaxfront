@@ -1,145 +1,157 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useScrollspy } from '@/hooks/useScrollspy';
+import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import Magnetic from './Magnetic';
+import { nav } from '@/content/copy';
 
-const navLinks = [
-  { label: 'Traction', href: '#traction' },
-  { label: 'Studio', href: '#studio' },
-  { label: 'Team', href: '#team' },
-  { label: 'Principles', href: '#principles' },
-  { label: 'Contact', href: '#contact' },
-];
+const pill =
+  'font-mono text-xs font-medium uppercase tracking-[0.05em] rounded-full px-[18px] py-3 transition-colors';
 
 export default function Navbar() {
-  const active = useScrollspy();
-  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const onHome = pathname === '/';
+  const onStudio = pathname === '/studio';
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handler, { passive: true });
-    return () => window.removeEventListener('scroll', handler);
-  }, []);
+    document.body.style.overflow = mobileOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileOpen]);
+
+  // On the homepage nav items anchor-scroll; everywhere else they route home first.
+  const anchor = (hash: string) => (onHome ? `#${hash}` : `/#${hash}`);
+
+  const navLinks = [
+    { label: nav.links.work, href: anchor('work'), active: false },
+    { label: nav.links.studio, href: '/studio', active: onStudio },
+    { label: nav.links.traction, href: anchor('traction'), active: false },
+    { label: nav.links.team, href: anchor('team'), active: false },
+  ];
 
   return (
-    <motion.header
-      initial={{ y: -20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, ease: 'easeOut' }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-background/80 backdrop-blur-xl border-b border-border shadow-[var(--shadow-soft)]'
-          : 'bg-transparent'
-      }`}
-    >
-      <nav className="container flex items-center justify-between h-16 md:h-18">
-        <Link href="/" className="flex items-center gap-2">
+    <header className="sticky top-0 z-50 bg-paper/95 backdrop-blur-[14px]">
+      <div className="flex items-center justify-between px-5 py-3.5 md:px-10 md:py-[22px]">
+        <Link href="/" className="flex items-center gap-[9px]">
           <Image
             src="/images/logo.png"
-            alt="Softmax Logo"
-            width={13}
-            height={16}
-            className="object-contain -translate-y-px"
+            alt=""
+            width={14}
+            height={17}
+            className="object-contain"
           />
-          <span className="text-lg font-bold tracking-tight text-foreground">
-            Softmax
+          <span className="text-[19px] font-bold leading-none tracking-[-0.035em]">
+            {nav.brand}
           </span>
         </Link>
 
-        {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-[30px] font-mono text-xs uppercase tracking-[0.05em]">
           {navLinks.map((link) => (
-            <a
-              key={link.href}
+            <Link
+              key={link.label}
               href={link.href}
-              className={`text-sm font-medium transition-colors duration-200 ${
-                active === link.href.slice(1)
-                  ? 'text-foreground'
-                  : 'text-muted-foreground hover:text-foreground'
+              className={`transition-colors ${
+                link.active ? 'text-ink' : 'text-ink/55 hover:text-ink'
               }`}
             >
               {link.label}
-              {active === link.href.slice(1) && (
-                <motion.div
-                  layoutId="nav-indicator"
-                  className="h-px bg-foreground mt-0.5"
-                  transition={{ type: 'spring', stiffness: 500, damping: 35 }}
-                />
-              )}
-            </a>
+            </Link>
           ))}
-        </div>
+        </nav>
 
-        <div className="hidden md:flex items-center gap-3">
-          <Magnetic strength={0.2}>
-            <a
-              href="#contact"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors px-4 py-2 rounded-lg hover:bg-secondary"
-            >
-              Book a call
-            </a>
-          </Magnetic>
-          <Magnetic strength={0.2}>
-            <a
-              href="#traction"
-              className="text-sm font-semibold bg-foreground text-background px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
-            >
-              Get Traction
-            </a>
-          </Magnetic>
-        </div>
-
-        {/* Mobile menu button */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden p-2 text-foreground"
-          aria-label="Toggle menu"
-        >
-          <div className="w-5 flex flex-col gap-1">
-            <span className={`block h-px bg-foreground transition-transform duration-200 ${mobileOpen ? 'rotate-45 translate-y-[3px]' : ''}`} />
-            <span className={`block h-px bg-foreground transition-opacity duration-200 ${mobileOpen ? 'opacity-0' : ''}`} />
-            <span className={`block h-px bg-foreground transition-transform duration-200 ${mobileOpen ? '-rotate-45 -translate-y-[3px]' : ''}`} />
-          </div>
-        </button>
-      </nav>
-
-      {/* Mobile menu */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background/95 backdrop-blur-xl border-b border-border overflow-hidden"
+        <div className="hidden md:flex items-center gap-[9px]">
+          <Link
+            href={onStudio ? '#engage' : anchor('contact')}
+            className={`${pill} border border-ink/[0.12] hover:bg-ink/[0.04]`}
           >
-            <div className="container py-4 flex flex-col gap-3">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="text-sm font-medium text-muted-foreground hover:text-foreground py-2 transition-colors"
-                >
-                  {link.label}
-                </a>
-              ))}
-              <div className="flex gap-3 pt-2">
-                <a href="#contact" onClick={() => setMobileOpen(false)} className="text-sm font-medium text-muted-foreground hover:text-foreground px-4 py-2 border border-border rounded-lg">
-                  Book a call
-                </a>
-                <a href="#traction" onClick={() => setMobileOpen(false)} className="text-sm font-semibold bg-foreground text-background px-4 py-2 rounded-lg">
-                  Get Traction
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.header>
+            {nav.startProject}
+          </Link>
+          {!onStudio && (
+            <Link
+              href={anchor('traction')}
+              className={`${pill} bg-ink text-paper hover:opacity-[0.88] transition-opacity`}
+            >
+              {nav.getTraction}
+            </Link>
+          )}
+        </div>
+
+        <button
+          onClick={() => setMobileOpen(true)}
+          className="md:hidden font-mono text-[11px] font-medium uppercase tracking-[0.05em] bg-ink text-paper rounded-full px-4 py-[11px]"
+          aria-label="Open menu"
+        >
+          {nav.menu}
+        </button>
+      </div>
+
+      {/* Full-screen mobile sheet — portalled to body: the header's backdrop-filter
+          would otherwise become the containing block for this fixed overlay. */}
+      {mobileOpen &&
+        createPortal(
+        <div className="fixed inset-0 z-[60] bg-paper flex flex-col md:hidden">
+          <div className="flex items-center justify-between px-5 py-3.5">
+            <Link
+              href="/"
+              onClick={() => setMobileOpen(false)}
+              className="flex items-center gap-[9px]"
+            >
+              <Image
+                src="/images/logo.png"
+                alt=""
+                width={14}
+                height={17}
+                className="object-contain"
+              />
+              <span className="text-[19px] font-bold leading-none tracking-[-0.035em]">
+                {nav.brand}
+              </span>
+            </Link>
+            <button
+              onClick={() => setMobileOpen(false)}
+              className="font-mono text-[11px] font-medium uppercase tracking-[0.05em] bg-ink text-paper rounded-full px-4 py-[11px]"
+              aria-label="Close menu"
+            >
+              {nav.close}
+            </button>
+          </div>
+          <nav className="flex-1 flex flex-col">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className="border-t border-hairline px-5 py-5 text-[28px] font-semibold leading-none tracking-[-0.035em]"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          <div className="flex flex-col gap-[9px] px-5 pb-8">
+            <Link
+              href={onStudio ? '#engage' : anchor('contact')}
+              onClick={() => setMobileOpen(false)}
+              className="font-mono text-xs font-medium uppercase tracking-[0.06em] bg-ink text-paper rounded-full p-[17px] text-center"
+            >
+              {nav.startProject}
+            </Link>
+            {!onStudio && (
+              <Link
+                href={anchor('traction')}
+                onClick={() => setMobileOpen(false)}
+                className="font-mono text-xs font-medium uppercase tracking-[0.06em] border border-ink/[0.12] rounded-full p-[17px] text-center"
+              >
+                {nav.getTraction}
+              </Link>
+            )}
+          </div>
+        </div>,
+        document.body
+      )}
+    </header>
   );
 }

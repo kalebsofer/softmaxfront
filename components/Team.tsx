@@ -1,102 +1,76 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useState } from 'react';
 import Image from 'next/image';
-import Magnetic from './Magnetic';
-
-const teamMembers = [
-  {
-    name: 'Kaleb',
-    role: 'Founder, Engineer',
-    image: '/images/kaleb.jpg',
-    linkedin: 'https://www.linkedin.com/in/kalebsofer/',
-    description:
-      'Initially trained as an aerospace engineer, Kaleb transitioned to Data in 2018 inspired by AlphaZero and YOLOv3. Since then, he has taken on engineering and consultancy roles with Deliveroo, Santander, and the UK Ministry of Justice.',
-  },
-  {
-    name: 'Margaux',
-    role: 'AI',
-    image: '/images/margaux.jpg',
-    linkedin: 'https://www.linkedin.com/in/margaux-dowland-69962529b/',
-    description:
-      'After completing her masters from Imperial College London with distinction, Margaux was awarded prize-winner for the best MSc Pure Mathematics Project in 2023. She currently works as an ML engineer for Oak Academy, developing AI applications in Education.',
-  },
-  {
-    name: 'Luka',
-    role: 'Product',
-    image: '/images/luka.jpg',
-    linkedin: 'https://www.linkedin.com/in/luka-vlaskalic-bba5988a/',
-    description:
-      'Luka holds a Master\u2019s degree with distinction in Physics from The University of Manchester. With over five years of experience managing products and leading technical teams in the renewable energy sector, he is currently working at Amp X, an innovative digital energy platform driving disruption in the industry.',
-  },
-  {
-    name: 'Izaak',
-    role: 'Advisor',
-    image: '/images/izaak.png',
-    linkedin: 'https://www.linkedin.com/in/izaakrogan/',
-    description:
-      'Founder of the Machine Learning Institute, Izaak is a software engineer with over a decade of experience accumulating job titles like Head of Engineering and CTO.',
-  },
-];
+import { team } from '@/content/copy';
 
 export default function Team() {
-  return (
-    <section id="team" className="py-24 md:py-32">
-      <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.5 }}
-          className="max-w-md mb-16"
-        >
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground tracking-tight">
-            Our team
-          </h2>
-          <p className="mt-3 text-muted-foreground">
-            The people behind Softmax.
-          </p>
-        </motion.div>
+  const [open, setOpen] = useState(0);
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {teamMembers.map((member, i) => (
-            <Magnetic key={member.name} strength={0.06}>
-              <motion.a
+  return (
+    <section id="team">
+      <div className="px-5 pt-[18px] pb-3.5 md:px-10 md:pt-[34px] md:pb-[22px] md:flex md:items-baseline md:justify-between">
+        <h2 className="font-semibold text-[34px] leading-[0.98] tracking-[-0.04em] md:text-[clamp(30px,3.6vw,50px)] md:leading-none">
+          {team.title}
+        </h2>
+        <span className="block mt-2 md:mt-0 font-mono text-[11px] md:text-xs uppercase tracking-[0.05em] leading-none text-ink/55">
+          {team.meta}
+        </span>
+      </div>
+      {team.members.map((member, i) => {
+        const isOpen = open === i;
+        return (
+          <div
+            key={member.name}
+            onClick={() => setOpen(isOpen ? -1 : i)}
+            className={`border-t border-hairline px-5 py-3.5 md:px-10 md:py-5 cursor-pointer transition-colors duration-200 ${
+              isOpen ? 'bg-wash' : 'hover:bg-wash'
+            }`}
+          >
+            <div className="flex items-center gap-3.5 md:gap-[22px]">
+              <Image
+                src={member.image}
+                alt={member.name}
+                width={42}
+                height={42}
+                className="w-9 h-9 md:w-[42px] md:h-[42px] rounded-full object-cover shrink-0"
+              />
+              <div className="flex-1 md:flex-none">
+                <div className="font-semibold text-[20px] leading-[1.02] tracking-[-0.03em] md:text-[clamp(24px,2.6vw,34px)] md:leading-[1.04] md:tracking-[-0.035em]">
+                  {member.name}
+                </div>
+                <div className="mt-[3px] md:hidden font-mono text-[10.5px] uppercase leading-none text-ink/55">
+                  {member.role}
+                </div>
+              </div>
+              <span className="hidden md:inline font-mono text-xs uppercase tracking-[0.05em] leading-none text-ink/55">
+                {member.role}
+              </span>
+              <a
                 href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 40, rotate: -2 }}
-                whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-                viewport={{ once: true, margin: '-60px' }}
-                transition={{
-                  duration: 0.6,
-                  delay: i * 0.12,
-                  ease: [0.25, 0.46, 0.45, 0.94],
-                }}
-                className="group block p-6 rounded-xl border border-border bg-surface hover:shadow-[var(--shadow-card)] transition-shadow duration-300"
+                onClick={(e) => e.stopPropagation()}
+                className="hidden md:inline-block ml-auto font-mono text-xs uppercase tracking-[0.05em] leading-none text-ink/55 border-b border-ink/[0.15] pb-[3px] hover:text-ink transition-colors"
               >
-                <div className="w-20 h-20 mb-4 relative overflow-hidden rounded-full mx-auto">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="text-center">
-                  <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mt-0.5 mb-3">{member.role}</p>
-                  <p className="text-xs text-muted-foreground leading-relaxed text-left">
-                    {member.description}
-                  </p>
-                </div>
-              </motion.a>
-            </Magnetic>
-          ))}
-        </div>
-      </div>
+                {team.linkedinLabel}
+              </a>
+              <span className="font-mono text-[15px] leading-none text-ink/60 w-3.5 text-center">
+                {isOpen ? '–' : '+'}
+              </span>
+            </div>
+            <p
+              className={`accordion-bio overflow-hidden text-[12.5px] leading-[1.55] md:text-[15px] md:leading-[1.6] text-ink/60 max-w-[820px] md:ml-16 ${
+                isOpen
+                  ? 'max-h-[110px] md:max-h-[120px] opacity-100 mt-[11px] md:mt-3.5'
+                  : 'max-h-0 opacity-0 mt-0'
+              }`}
+            >
+              {member.description}
+            </p>
+          </div>
+        );
+      })}
     </section>
   );
 }

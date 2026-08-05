@@ -8,87 +8,87 @@ export const metadata = {
 
 export default function TractionPrivacy() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-paper">
       <Navbar />
-      <main className="pt-24 pb-16">
+      <main className="pt-6 md:pt-10 pb-16">
         <div className="container max-w-3xl">
-          <h1 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">Traction Health — Privacy Policy</h1>
-          <p className="text-base text-muted-foreground mb-8"><strong className="text-foreground">Last Updated</strong>: June 2, 2026</p>
+          <h1 className="text-[34px] md:text-[44px] font-semibold tracking-[-0.04em] leading-[1.05] mb-2 text-ink">Traction Health — Privacy Policy</h1>
+          <p className="text-base text-ink/60 mb-8"><strong className="text-ink">Last Updated</strong>: June 2, 2026</p>
 
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             Traction Health (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), operated by Softmax Ltd, provides the Traction Health mobile application (the &quot;App&quot;). This Privacy Policy explains how we collect, use, share, and protect your personal information when you use our App.
           </p>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             By using the App, you agree to the collection and use of information in accordance with this Privacy Policy.
           </p>
 
-          <h2 className="text-xl font-semibold mt-8 mb-4 text-foreground">Information We Collect</h2>
+          <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Information We Collect</h2>
 
-          <h3 className="text-lg font-medium mt-6 mb-3 text-foreground">Account Information</h3>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">When you create an account, we collect your name (first and last name), email address, and optionally a phone number. You may also provide optional profile information such as date of birth and an avatar. You can sign up using email and password, Google Sign-In, or Apple Sign-In; if you use a third-party sign-in method, we receive your name and email address from that provider. We also support anonymous device-based accounts that do not require personal contact information.</p>
+          <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">Account Information</h3>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">When you create an account, we collect your name (first and last name), email address, and optionally a phone number. You may also provide optional profile information such as date of birth and an avatar. You can sign up using email and password, Google Sign-In, or Apple Sign-In; if you use a third-party sign-in method, we receive your name and email address from that provider. We also support anonymous device-based accounts that do not require personal contact information.</p>
 
-          <h3 className="text-lg font-medium mt-6 mb-3 text-foreground">Health and Fitness Data</h3>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">The App is a habit and task tracking tool. All health and fitness data is manually entered by you. We collect habit and task names, descriptions, and categories; completion logs (date, value, and completion status); streak and completion-rate metrics; and schedule and reminder preferences.</p>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed font-medium text-foreground">We do not integrate with Apple HealthKit, Google Fit, or any automatic health data collection APIs. All wellness data in the App is provided directly by you.</p>
+          <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">Health and Fitness Data</h3>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">The App is a habit and task tracking tool. All health and fitness data is manually entered by you. We collect habit and task names, descriptions, and categories; completion logs (date, value, and completion status); streak and completion-rate metrics; and schedule and reminder preferences.</p>
+          <p className="text-base mb-4 leading-[1.65] font-medium text-ink">We do not integrate with Apple HealthKit, Google Fit, or any automatic health data collection APIs. All wellness data in the App is provided directly by you.</p>
 
-          <h3 className="text-lg font-medium mt-6 mb-3 text-foreground">User-Generated Content</h3>
-          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-sm text-muted-foreground leading-relaxed">
+          <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">User-Generated Content</h3>
+          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
             <li>Custom habit and task names, descriptions, and categories</li>
             <li>Feedback and bug report text, including steps to reproduce and expected behavior</li>
             <li>Photos or screenshots submitted with bug reports (up to 5 per report)</li>
           </ul>
 
-          <h3 className="text-lg font-medium mt-6 mb-3 text-foreground">Community and Social Data</h3>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">The App includes optional community features (shared habits, partnerships, and groups) that let you connect with other people, share your progress, and encourage each other. These features are only available after you create an account with an email address and claim a username; anonymous device-based accounts cannot access community features. When you use community features, we process:</p>
-          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-sm text-muted-foreground leading-relaxed">
-            <li><strong className="text-foreground">Public profile:</strong> your username (display name), avatar (provided by your sign-in provider or generated by the App), and join date.</li>
-            <li><strong className="text-foreground">Connection codes and invite links:</strong> a shareable code and invite link. Anyone you give it to can view a preview of your public profile and your aggregate streak and habit-count statistics (unless you hide them) and send you a connection request.</li>
-            <li><strong className="text-foreground">Shared habit data:</strong> habit names, your completion progress, streaks, completion rate, and group leaderboard ranking become visible to the people you share with or the members of a group you join.</li>
-            <li><strong className="text-foreground">Messages and interactions:</strong> comments, nudges (with optional messages), mentions, and emoji reactions you send, shown to the other participants and in their community activity feed.</li>
-            <li><strong className="text-foreground">Connections and group membership:</strong> the people you are connected to and the groups you belong to.</li>
-            <li><strong className="text-foreground">Safety actions:</strong> records of users you block and reports you submit about other users.</li>
+          <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">Community and Social Data</h3>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">The App includes optional community features (shared habits, partnerships, and groups) that let you connect with other people, share your progress, and encourage each other. These features are only available after you create an account with an email address and claim a username; anonymous device-based accounts cannot access community features. When you use community features, we process:</p>
+          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
+            <li><strong className="text-ink">Public profile:</strong> your username (display name), avatar (provided by your sign-in provider or generated by the App), and join date.</li>
+            <li><strong className="text-ink">Connection codes and invite links:</strong> a shareable code and invite link. Anyone you give it to can view a preview of your public profile and your aggregate streak and habit-count statistics (unless you hide them) and send you a connection request.</li>
+            <li><strong className="text-ink">Shared habit data:</strong> habit names, your completion progress, streaks, completion rate, and group leaderboard ranking become visible to the people you share with or the members of a group you join.</li>
+            <li><strong className="text-ink">Messages and interactions:</strong> comments, nudges (with optional messages), mentions, and emoji reactions you send, shown to the other participants and in their community activity feed.</li>
+            <li><strong className="text-ink">Connections and group membership:</strong> the people you are connected to and the groups you belong to.</li>
+            <li><strong className="text-ink">Safety actions:</strong> records of users you block and reports you submit about other users.</li>
           </ul>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">You control how much you share: you can hide your statistics from the community, change or regenerate your connection code, block other users, report abusive content or behavior, and leave any group or end any share at any time.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">You control how much you share: you can hide your statistics from the community, change or regenerate your connection code, block other users, report abusive content or behavior, and leave any group or end any share at any time.</p>
 
-          <h3 className="text-lg font-medium mt-6 mb-3 text-foreground">Device Information</h3>
-          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-sm text-muted-foreground leading-relaxed">
+          <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">Device Information</h3>
+          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
             <li>A unique device identifier generated and stored locally on your device</li>
             <li>Device model, platform (iOS/Android), and operating system version</li>
             <li>App version</li>
           </ul>
 
-          <h3 className="text-lg font-medium mt-6 mb-3 text-foreground">Diagnostics and Usage Data</h3>
-          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-sm text-muted-foreground leading-relaxed">
-            <li><strong className="text-foreground">Crash data</strong> (crash logs and exception reports via Sentry)</li>
-            <li><strong className="text-foreground">Performance data</strong> (app launch time, request latency, and error rates)</li>
-            <li><strong className="text-foreground">Session diagnostics</strong> (interaction and error data via LogRocket for debugging, linked to your account; authentication credentials and community message content are excluded from capture)</li>
-            <li><strong className="text-foreground">Bug report diagnostics</strong> (device model, OS version, app version, screen size, locale, timezone, and network type, collected only when you submit a bug report)</li>
+          <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">Diagnostics and Usage Data</h3>
+          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
+            <li><strong className="text-ink">Crash data</strong> (crash logs and exception reports via Sentry)</li>
+            <li><strong className="text-ink">Performance data</strong> (app launch time, request latency, and error rates)</li>
+            <li><strong className="text-ink">Session diagnostics</strong> (interaction and error data via LogRocket for debugging, linked to your account; authentication credentials and community message content are excluded from capture)</li>
+            <li><strong className="text-ink">Bug report diagnostics</strong> (device model, OS version, app version, screen size, locale, timezone, and network type, collected only when you submit a bug report)</li>
           </ul>
 
-          <h3 className="text-lg font-medium mt-6 mb-3 text-foreground">Push Notification Tokens</h3>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">If you enable push notifications, we collect your push notification token along with your device platform and model to deliver habit and task reminders and community notifications.</p>
+          <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">Push Notification Tokens</h3>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">If you enable push notifications, we collect your push notification token along with your device platform and model to deliver habit and task reminders and community notifications.</p>
 
-          <h2 className="text-xl font-semibold mt-8 mb-4 text-foreground">How We Use Your Information</h2>
-          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-sm text-muted-foreground leading-relaxed">
-            <li><strong className="text-foreground">App Functionality:</strong> to authenticate your account, sync your data across devices, power community features, deliver push notifications, and provide customer support.</li>
-            <li><strong className="text-foreground">Analytics:</strong> to understand app performance, diagnose crashes and errors, and improve the user experience.</li>
+          <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">How We Use Your Information</h2>
+          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
+            <li><strong className="text-ink">App Functionality:</strong> to authenticate your account, sync your data across devices, power community features, deliver push notifications, and provide customer support.</li>
+            <li><strong className="text-ink">Analytics:</strong> to understand app performance, diagnose crashes and errors, and improve the user experience.</li>
           </ul>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed font-medium text-foreground">We do not use your data for third-party advertising, developer advertising or marketing, targeted advertising or ad measurement, sharing with data brokers, or tracking you across other apps or websites.</p>
+          <p className="text-base mb-4 leading-[1.65] font-medium text-ink">We do not use your data for third-party advertising, developer advertising or marketing, targeted advertising or ad measurement, sharing with data brokers, or tracking you across other apps or websites.</p>
 
-          <h2 className="text-xl font-semibold mt-8 mb-4 text-foreground">How We Share Your Information</h2>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">We share your information only with the following service providers, solely to operate and maintain the App. The community features have not added any new third-party service providers.</p>
-          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-sm text-muted-foreground leading-relaxed">
-            <li><strong className="text-foreground">Firebase (Google)</strong> — authentication and file storage: email, name, auth tokens, bug report attachments.</li>
-            <li><strong className="text-foreground">Sentry</strong> — crash reporting and performance monitoring: crash logs, performance metrics, device info.</li>
-            <li><strong className="text-foreground">LogRocket</strong> — session replay and error debugging: user ID, session interaction data, error events (credentials and community message content excluded).</li>
-            <li><strong className="text-foreground">Expo</strong> — push notification delivery: push notification tokens, device platform.</li>
+          <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">How We Share Your Information</h2>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">We share your information only with the following service providers, solely to operate and maintain the App. The community features have not added any new third-party service providers.</p>
+          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
+            <li><strong className="text-ink">Firebase (Google)</strong> — authentication and file storage: email, name, auth tokens, bug report attachments.</li>
+            <li><strong className="text-ink">Sentry</strong> — crash reporting and performance monitoring: crash logs, performance metrics, device info.</li>
+            <li><strong className="text-ink">LogRocket</strong> — session replay and error debugging: user ID, session interaction data, error events (credentials and community message content excluded).</li>
+            <li><strong className="text-ink">Expo</strong> — push notification delivery: push notification tokens, device platform.</li>
           </ul>
-          <h3 className="text-lg font-medium mt-6 mb-3 text-foreground">Sharing With Other Users</h3>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">When you use community features, you share information directly with other people you choose to connect with. Your username, avatar, shared habit progress, comments, nudges, reactions, and group leaderboard standing are visible to your connections and the members of groups you join, and anyone you give your connection code or invite link to can view a preview of your public profile. This sharing is initiated by you and only occurs when you opt into community features. We do not make your community activity public on the open internet or to users you have not connected with.</p>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed font-medium text-foreground">We do not sell your personal information. We do not share your data with advertisers, data brokers, or any third parties for marketing purposes.</p>
+          <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">Sharing With Other Users</h3>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">When you use community features, you share information directly with other people you choose to connect with. Your username, avatar, shared habit progress, comments, nudges, reactions, and group leaderboard standing are visible to your connections and the members of groups you join, and anyone you give your connection code or invite link to can view a preview of your public profile. This sharing is initiated by you and only occurs when you opt into community features. We do not make your community activity public on the open internet or to users you have not connected with.</p>
+          <p className="text-base mb-4 leading-[1.65] font-medium text-ink">We do not sell your personal information. We do not share your data with advertisers, data brokers, or any third parties for marketing purposes.</p>
 
-          <h2 className="text-xl font-semibold mt-8 mb-4 text-foreground">Data Retention</h2>
-          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-sm text-muted-foreground leading-relaxed">
+          <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Data Retention</h2>
+          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
             <li>Your account data and habit/task data are retained as long as your account is active.</li>
             <li>When you delete your account, we initiate deletion of your data with a 14-day grace period, after which your data is permanently removed from our systems.</li>
             <li>When you delete your account, your community data — including connections, shared habits, comments, nudges, reactions, group memberships, blocks, and reports — is deleted along with your account, and your username, avatar, and connection code are removed from public view.</li>
@@ -96,38 +96,38 @@ export default function TractionPrivacy() {
             <li>Bug reports and feedback are retained to improve the App and may be removed upon request.</li>
           </ul>
 
-          <h2 className="text-xl font-semibold mt-8 mb-4 text-foreground">Data Security</h2>
-          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-sm text-muted-foreground leading-relaxed">
+          <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Data Security</h2>
+          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
             <li>Authentication tokens are stored in encrypted device storage (Secure Store on iOS, encrypted preferences on Android).</li>
             <li>All data transmitted between the App and our servers is encrypted using HTTPS/TLS.</li>
             <li>Passwords are never stored on your device; authentication is handled by Firebase.</li>
           </ul>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">While we strive to protect your personal information, no method of electronic transmission or storage is completely secure, and we cannot guarantee absolute security.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">While we strive to protect your personal information, no method of electronic transmission or storage is completely secure, and we cannot guarantee absolute security.</p>
 
-          <h2 className="text-xl font-semibold mt-8 mb-4 text-foreground">Your Rights and Choices</h2>
-          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-sm text-muted-foreground leading-relaxed">
-            <li><strong className="text-foreground">Access:</strong> request a copy of the personal data we hold about you.</li>
-            <li><strong className="text-foreground">Correction:</strong> update or correct inaccurate personal information through your in-app profile settings.</li>
-            <li><strong className="text-foreground">Deletion:</strong> delete your account and associated data from within the App or by contacting us.</li>
-            <li><strong className="text-foreground">Push Notifications:</strong> disable push notifications at any time through your device settings.</li>
-            <li><strong className="text-foreground">Anonymous Use:</strong> use the App with a device-based account without providing personal contact information. Community features are not available to anonymous accounts.</li>
-            <li><strong className="text-foreground">Community Privacy:</strong> hide your statistics from the community, change or regenerate your connection code, block other users, report abusive content or behavior, and leave any group or end any share at any time from within the App.</li>
+          <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Your Rights and Choices</h2>
+          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
+            <li><strong className="text-ink">Access:</strong> request a copy of the personal data we hold about you.</li>
+            <li><strong className="text-ink">Correction:</strong> update or correct inaccurate personal information through your in-app profile settings.</li>
+            <li><strong className="text-ink">Deletion:</strong> delete your account and associated data from within the App or by contacting us.</li>
+            <li><strong className="text-ink">Push Notifications:</strong> disable push notifications at any time through your device settings.</li>
+            <li><strong className="text-ink">Anonymous Use:</strong> use the App with a device-based account without providing personal contact information. Community features are not available to anonymous accounts.</li>
+            <li><strong className="text-ink">Community Privacy:</strong> hide your statistics from the community, change or regenerate your connection code, block other users, report abusive content or behavior, and leave any group or end any share at any time from within the App.</li>
           </ul>
 
-          <h3 className="text-lg font-medium mt-6 mb-3 text-foreground">California Residents (CCPA)</h3>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">If you are a California resident, you have the right to know what personal information we collect, use, and disclose; to request deletion of your personal information; and not to be discriminated against for exercising your privacy rights. We do not sell personal information as defined by the California Consumer Privacy Act.</p>
+          <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">California Residents (CCPA)</h3>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">If you are a California resident, you have the right to know what personal information we collect, use, and disclose; to request deletion of your personal information; and not to be discriminated against for exercising your privacy rights. We do not sell personal information as defined by the California Consumer Privacy Act.</p>
 
-          <h3 className="text-lg font-medium mt-6 mb-3 text-foreground">European and UK Residents (GDPR)</h3>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">If you are located in the European Economic Area or the United Kingdom, our legal bases for processing your information are contract (processing necessary to provide the App), legitimate interest (analytics, crash reporting, and improving the App), and consent (where required, such as for push notifications). You also have the right to data portability and the right to lodge a complaint with your local data protection authority.</p>
+          <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">European and UK Residents (GDPR)</h3>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">If you are located in the European Economic Area or the United Kingdom, our legal bases for processing your information are contract (processing necessary to provide the App), legitimate interest (analytics, crash reporting, and improving the App), and consent (where required, such as for push notifications). You also have the right to data portability and the right to lodge a complaint with your local data protection authority.</p>
 
-          <h2 className="text-xl font-semibold mt-8 mb-4 text-foreground">Children&apos;s Privacy</h2>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">The App is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13, please contact us so we can promptly delete it.</p>
+          <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Children&apos;s Privacy</h2>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">The App is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13, please contact us so we can promptly delete it.</p>
 
-          <h2 className="text-xl font-semibold mt-8 mb-4 text-foreground">Changes to This Privacy Policy</h2>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the updated policy within the App or on our website and updating the &quot;Last Updated&quot; date above. Your continued use of the App after changes are posted constitutes your acceptance of the updated policy.</p>
+          <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Changes to This Privacy Policy</h2>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the updated policy within the App or on our website and updating the &quot;Last Updated&quot; date above. Your continued use of the App after changes are posted constitutes your acceptance of the updated policy.</p>
 
-          <h2 className="text-xl font-semibold mt-8 mb-4 text-foreground">Contact Us</h2>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">If you have any questions about this Privacy Policy or our data practices, contact us at <a href="mailto:support@softmaxco.io" className="text-foreground underline underline-offset-4 hover:text-primary transition-colors">support@softmaxco.io</a>. Traction Health is operated by Softmax Ltd, 46 Regents Park Road, London NW1 7SX, registered in England and Wales under company number 15897507.</p>
+          <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Contact Us</h2>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">If you have any questions about this Privacy Policy or our data practices, contact us at <a href="mailto:support@softmaxco.io" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors">support@softmaxco.io</a>. Traction Health is operated by Softmax Ltd, 46 Regents Park Road, London NW1 7SX, registered in England and Wales under company number 15897507.</p>
         </div>
       </main>
       <Footer />

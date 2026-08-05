@@ -4,7 +4,7 @@ import SmoothScroll from '@/components/SmoothScroll'
 
 export const metadata: Metadata = {
   title: 'Softmax',
-  description: 'AI + product engineers. We help small teams ship AI products, data platforms, and automation.',
+  description: 'A software and AI studio in London. Strategy, design and engineering from one senior team — AI products, data platforms and automation, shipped and handed over clean.',
 }
 
 export default function RootLayout({
