@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { contact } from '@/content/copy';
+import BookCall from '@/components/BookCall';
 
 type Status = 'idle' | 'sending' | 'sent' | 'error';
 
@@ -47,6 +48,7 @@ export default function Contact() {
           <p className="text-sm leading-[1.55] md:text-[17px] md:leading-[1.6] text-paper/70 max-w-[520px] mb-6 md:mb-[30px]">
             {contact.lead}
           </p>
+          <BookCall className="mb-6 md:mb-[30px] font-mono text-xs font-medium uppercase tracking-[0.06em] bg-[#b3402f] text-paper rounded-full px-[26px] py-[15px] hover:opacity-90 transition-opacity" />
           <div className="flex flex-wrap gap-8 md:gap-11 font-mono text-[13px] leading-[1.7] text-paper/65">
             <div>
               <div className="text-paper">{contact.email}</div>

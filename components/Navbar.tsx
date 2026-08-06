@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { nav } from '@/content/copy';
+import BookCall from '@/components/BookCall';
 
 const pill =
   'font-mono text-xs font-medium uppercase tracking-[0.05em] rounded-full px-[18px] py-3 transition-colors';
@@ -70,6 +71,9 @@ export default function Navbar() {
           >
             {nav.startProject}
           </Link>
+          <BookCall
+            className={`${pill} bg-[#b3402f] text-paper hover:opacity-[0.88] transition-opacity`}
+          />
           {!onStudio && (
             <Link
               href={anchor('traction')}
@@ -139,6 +143,7 @@ export default function Navbar() {
             >
               {nav.startProject}
             </Link>
+            <BookCall className="font-mono text-xs font-medium uppercase tracking-[0.06em] bg-[#b3402f] text-paper rounded-full p-[17px] text-center" />
             {!onStudio && (
               <Link
                 href={anchor('traction')}

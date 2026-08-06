@@ -3,6 +3,7 @@
 import { Fragment } from 'react';
 import { motion } from 'framer-motion';
 import { hero, capabilityStrip } from '@/content/copy';
+import BookCall from '@/components/BookCall';
 
 function Stamp() {
   // Ring circumference at r=62 ≈ 389 viewBox units; textLength locks the
@@ -75,6 +76,7 @@ export default function Hero() {
         >
           {hero.primaryCta}
         </a>
+        <BookCall className="font-mono text-xs font-medium uppercase tracking-[0.06em] bg-[#b3402f] text-paper rounded-full p-[17px] text-center" />
         <a
           href="#work"
           className="font-mono text-xs font-medium uppercase tracking-[0.06em] border border-ink/[0.12] rounded-full p-[17px] text-center"

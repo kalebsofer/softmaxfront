@@ -220,6 +220,16 @@ export const contact = {
   emailNote: 'Reply within 24 hours',
   location: 'London, UK',
   locationNote: 'Remote-first, UK & EU hours',
+  booking: {
+    cta: 'Book a call',
+    title: 'Book a call',
+    close: 'Close',
+    fallback: 'Open in Google Calendar',
+    // Google Calendar appointment schedule (kalebsofer@gmail.com), resolved
+    // from https://calendar.app.google/6mRQKtZEQc7xRN7X6 — gv=true makes the
+    // page embeddable. Leave empty to hide the button.
+    url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ134F4T6irVswtg8zy7mfbVvdTpPqLpey-a50hf9oCpXanWyzQcf775q62kUm3j8tNXcBmh5NEj?gv=true',
+  },
   form: {
     nameLabel: 'Name',
     namePlaceholder: 'Your name',
