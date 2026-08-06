@@ -21,7 +21,7 @@ export const nav = {
 };
 
 export const hero = {
-  headline: 'A data and AI studio in London, fewer people, further along.',
+  headline: 'A data and AI studio in London helping SMEs transition.',
   // Mobile-only pills under the headline
   primaryCta: 'Start a project',
   secondaryCta: 'See the work',
