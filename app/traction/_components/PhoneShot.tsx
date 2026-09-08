@@ -1,10 +1,15 @@
-import { getImageProps } from 'next/image';
+import Image from 'next/image';
 
 type Props = {
-  /** Screenshot basename under public/images/traction/landing, without the theme suffix. */
-  shot: 'community' | 'group_standings';
+  /**
+   * Screenshot filename under public/images/traction/landing, without the
+   * extension. The theme suffix is part of the name: the trio deliberately
+   * mixes dark and light captures, so a shot does not follow the visitor's
+   * color scheme.
+   */
+  shot: 'group_dark' | 'home_dark' | 'progress_light';
   alt: string;
-  /** Frame size: `sm` is the phone tucked behind, `lg` the one in front. */
+  /** Frame size: `sm` is a phone tucked behind, `lg` the one in front. */
   size: 'sm' | 'lg';
   /** Rendered width in px at the largest breakpoint, used for `sizes`. */
   maxWidth: number;
@@ -25,11 +30,7 @@ const screens = {
   lg: 'rounded-[24px] lg:rounded-[33px]',
 } as const;
 
-/**
- * A phone-framed screenshot that swaps between the light and dark capture
- * with the visitor's color scheme. Built on `<picture>` so only the matching
- * theme's image is downloaded.
- */
+/** A phone-framed app screenshot. */
 export default function PhoneShot({
   shot,
   alt,
@@ -38,29 +39,19 @@ export default function PhoneShot({
   className = '',
   priority = false,
 }: Props) {
-  const common = {
-    alt,
-    width: SHOT_WIDTH,
-    height: SHOT_HEIGHT,
-    sizes: `(min-width: 1024px) ${maxWidth}px, 55vw`,
-    priority,
-  };
-  const {
-    props: { srcSet: darkSrcSet },
-  } = getImageProps({ ...common, src: `/images/traction/landing/${shot}_dark.png` });
-  const {
-    props: { srcSet: lightSrcSet, ...rest },
-  } = getImageProps({ ...common, src: `/images/traction/landing/${shot}_light.png` });
-
   return (
     <div
       className={`box-border bg-tl-phone-bg border border-tl-phone-border ${frames[size]} ${className}`}
     >
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcSet={darkSrcSet} sizes={common.sizes} />
-        <source srcSet={lightSrcSet} sizes={common.sizes} />
-        <img {...rest} alt={alt} className={`block w-full h-auto ${screens[size]}`} />
-      </picture>
+      <Image
+        src={`/images/traction/landing/${shot}.png`}
+        alt={alt}
+        width={SHOT_WIDTH}
+        height={SHOT_HEIGHT}
+        sizes={`(min-width: 1024px) ${maxWidth}px, 40vw`}
+        priority={priority}
+        className={`block w-full h-auto ${screens[size]}`}
+      />
     </div>
   );
 }

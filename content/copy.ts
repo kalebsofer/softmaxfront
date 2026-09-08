@@ -176,8 +176,9 @@ export const tractionLanding = {
     playAria: 'Get Traction on Google Play',
   },
   phones: {
-    community: 'Traction community screen: activity from people you follow',
-    standings: 'Traction group standings screen: a shared goal leaderboard',
+    group: "Traction group screen: a shared habit with the day's progress and member streaks",
+    home: "Traction home screen: today's habits, streak and completion ring",
+    progress: 'Traction progress screen: a completion calendar and per-habit streaks',
   },
   footer: {
     byline: 'Traction by Softmax',

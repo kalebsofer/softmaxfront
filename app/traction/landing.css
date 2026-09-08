@@ -65,13 +65,13 @@
 }
 
 /*
- * Desktop phone stage: a 520x600 box in the design. It shrinks on short
- * viewports so the page stays a single screen, and the phones inside are
- * sized as percentages so they scale with it.
+ * Desktop phone stage: a 600x600 box holding three phones, the middle one in
+ * front. It shrinks on short viewports so the page stays a single screen, and
+ * the phones inside are sized as percentages so they scale with it.
  */
 @media (min-width: 1024px) {
   .tl-stage {
-    width: min(520px, calc((100dvh - 260px) * 0.8667));
+    width: min(600px, calc((100dvh - 260px) * 0.8667));
     aspect-ratio: 520 / 600;
   }
 }

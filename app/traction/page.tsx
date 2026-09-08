@@ -167,24 +167,32 @@ export default async function TractionLandingPage() {
           </div>
         </div>
 
-        {/* Phone stage. On phones it fills the space between the copy and the badges. */}
+        {/* Phone stage: three shots, the home screen front and centre. */}
         <div className="tl-stage relative flex-1 min-h-0 mt-[18px] overflow-hidden lg:flex-none lg:mt-0 lg:overflow-visible">
           <PhoneShot
-            shot="community"
-            alt={copy.phones.community}
+            shot="group_dark"
+            alt={copy.phones.group}
             size="sm"
-            maxWidth={236}
-            className="absolute left-[1.7%] top-[34px] w-[42.9%] lg:left-auto lg:right-[45.4%] lg:top-[9.33%] lg:w-[45.4%]"
+            maxWidth={198}
+            className="absolute left-0 top-[13%] w-[37%]"
           />
           <PhoneShot
-            shot="group_standings"
-            alt={copy.phones.standings}
+            shot="progress_light"
+            alt={copy.phones.progress}
+            size="sm"
+            maxWidth={198}
+            className="absolute right-0 top-[13%] w-[37%]"
+          />
+          <PhoneShot
+            shot="home_dark"
+            alt={copy.phones.home}
             size="lg"
-            maxWidth={290}
+            maxWidth={240}
             priority
-            className="absolute right-0 top-0 w-[54.3%] lg:w-[55.8%]"
+            className="absolute left-1/2 -translate-x-1/2 top-0 z-10 w-[46%]"
           />
         </div>
+
       </main>
 
       {/* Phone layout: badges pinned to the bottom of the screen. */}
