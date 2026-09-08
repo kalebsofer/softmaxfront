@@ -151,22 +151,21 @@ export const traction = {
 // Where a string has a `short` variant it is the phone-width copy.
 export const tractionLanding = {
   meta: {
-    title: 'Traction: build habits together',
+    title: 'Traction: build better habits together',
     description:
-      'A minimal tracker for habits and tasks. Solo, or in a group keeping each other accountable. Free on iOS and Android.',
+      'The social network for building better habits. Whether you\'re part of a group to keep each other accountable or on a solo mission to build consistency, Traction is a low friction interface for setting goals and tracking progress. Free on iOS and Android.',
   },
   brand: 'Traction',
   headerNote: 'Free · iOS and Android',
   headerNoteShort: 'Free',
   headline: 'Build habits together.',
-  lead: "Welcome to Traction, your minimal tracker for habits and tasks. Whether you're on a solo mission to build consistency or part of a group keeping each other accountable, Traction is a low-friction interface for setting goals and tracking progress.",
-  leadShort: 'Your minimal tracker for habits and tasks. Solo, or in a group keeping each other accountable.',
+  lead: "Welcome to Traction, the social network for building better habits. Whether you're on a solo mission to build consistency or part of a group keeping each other accountable, Traction is a low-friction interface for setting goals and tracking progress.",
+  leadShort: 'The social network for building better habits. Solo, or in a group keeping each other accountable.',
   chips: [
     { label: 'Group goals and standings', short: 'Group goals' },
-    { label: 'Habits and tasks in one list', short: 'Habits + tasks' },
-    { label: 'Progress heatmaps', short: 'Heatmaps' },
+    { label: 'Habits and tasks in one view', short: 'Habits + tasks' },
+    { label: 'Progress calendar, heatmaps and metrics', short: 'Progress' },
   ],
-  scanToInstall: 'Scan to install',
   badges: {
     appStoreKicker: 'Download on the',
     appStoreName: 'App Store',
@@ -182,12 +181,9 @@ export const tractionLanding = {
   footer: {
     byline: 'Traction by Softmax',
     tagline: 'The social network for building better habits',
-    deleteData: 'Delete data',
     privacy: 'Privacy',
     terms: 'Terms',
     support: 'support@softmaxco.io',
-    social: '@TractionApp',
-    socialUrl: 'https://x.com/TractionApp',
   },
 };
 

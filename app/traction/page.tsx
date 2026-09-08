@@ -50,7 +50,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: copy.footer.social,
     title: copy.meta.title,
     description: copy.meta.description,
   },
@@ -151,17 +150,12 @@ export default async function TractionLandingPage() {
           </ul>
 
           <div className="hidden lg:flex mt-10 items-center gap-6">
-            <div className="flex flex-col items-center gap-2.5">
-              <div
-                className="tl-qr box-border w-[140px] h-[140px] p-3.5 rounded-xl bg-tl-qr-bg"
-                role="img"
-                aria-label={`QR code linking to ${QR_URL}`}
-                dangerouslySetInnerHTML={{ __html: qrSvg }}
-              />
-              <span className="text-xs font-medium leading-none text-tl-muted">
-                {copy.scanToInstall}
-              </span>
-            </div>
+            <div
+              className="tl-qr box-border flex-none w-[140px] h-[140px] p-3.5 rounded-xl bg-tl-qr-bg"
+              role="img"
+              aria-label={`QR code linking to ${QR_URL}`}
+              dangerouslySetInnerHTML={{ __html: qrSvg }}
+            />
             <div className="w-px h-[84px] bg-tl-divider" aria-hidden="true" />
             <div className="flex flex-col gap-2.5">
               <StoreBadges layout="inline" />
@@ -213,19 +207,8 @@ export default async function TractionLandingPage() {
           <Link href="/traction/terms" className="hover:underline">
             {copy.footer.terms}
           </Link>
-          <Link href="/traction/data" className="hover:underline">
-            {copy.footer.deleteData}
-          </Link>
           <a href={`mailto:${copy.footer.support}`} className="hover:underline">
             {copy.footer.support}
-          </a>
-          <a
-            href={copy.footer.socialUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline"
-          >
-            {copy.footer.social}
           </a>
         </nav>
       </footer>
