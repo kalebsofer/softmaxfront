@@ -1,0 +1,92 @@
+/*
+ * Theme tokens for the Traction landing page (app/traction/page.tsx).
+ * The page follows the visitor's system color scheme; every token has a light
+ * value on `.tl` and a dark override below. Tailwind exposes them as `tl-*`
+ * colors (see tailwind.config.ts).
+ */
+.tl {
+  color-scheme: light;
+  --tl-bg: #e9ffeb;
+  --tl-fg: #131114;
+  --tl-body: #3b4b45;
+  --tl-muted: #3b5a50;
+  --tl-hairline: rgba(19, 17, 20, 0.08);
+  --tl-divider: rgba(19, 17, 20, 0.12);
+  --tl-chip-fg: #14776c;
+  --tl-chip-bg: rgba(27, 153, 139, 0.12);
+  --tl-chip-alt-fg: #14776c;
+  --tl-chip-alt-bg: rgba(27, 153, 139, 0.12);
+  --tl-badge-bg: #131114;
+  --tl-badge-fg: #ffffff;
+  --tl-badge-kicker: rgba(255, 255, 255, 0.72);
+  --tl-phone-bg: #131114;
+  --tl-phone-border: transparent;
+  --tl-phone-shadow-sm: 0 18px 44px rgba(19, 17, 20, 0.14);
+  --tl-phone-shadow-lg: 0 28px 64px rgba(19, 17, 20, 0.22);
+  --tl-qr-bg: #fffbfe;
+  --tl-strip-end: #1b998b;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tl {
+    color-scheme: dark;
+    --tl-bg: #131114;
+    --tl-fg: #ebffec;
+    --tl-body: #b9b6bf;
+    --tl-muted: #9b98a0;
+    --tl-hairline: #2a282c;
+    --tl-divider: #2a282c;
+    --tl-chip-fg: #4ade80;
+    --tl-chip-bg: rgba(74, 222, 128, 0.13);
+    --tl-chip-alt-fg: #2dd4bf;
+    --tl-chip-alt-bg: rgba(45, 212, 191, 0.13);
+    --tl-badge-bg: #ebffec;
+    --tl-badge-fg: #131114;
+    --tl-badge-kicker: rgba(19, 17, 20, 0.66);
+    --tl-phone-bg: #000000;
+    --tl-phone-border: #2a282c;
+    --tl-phone-shadow-sm: 0 18px 44px rgba(0, 0, 0, 0.5);
+    --tl-phone-shadow-lg: 0 28px 64px rgba(0, 0, 0, 0.6);
+    --tl-strip-end: #4ade80;
+  }
+}
+
+/* Progress gradient strip along the top edge. */
+.tl-strip {
+  background: linear-gradient(
+    90deg,
+    #f2bac9,
+    #dfc5be,
+    #cbd0b3,
+    #b8dca7,
+    #a4e79c,
+    var(--tl-strip-end)
+  );
+}
+
+/*
+ * Desktop phone stage: a 600x600 box holding three phones, the middle one in
+ * front. It shrinks on short viewports so the page stays a single screen, and
+ * the phones inside are sized as percentages so they scale with it.
+ */
+@media (min-width: 1024px) {
+  .tl-stage {
+    width: min(600px, calc((100dvh - 260px) * 0.8667));
+    aspect-ratio: 520 / 600;
+  }
+}
+
+.tl-phone-sm {
+  box-shadow: var(--tl-phone-shadow-sm);
+}
+
+.tl-phone-lg {
+  box-shadow: var(--tl-phone-shadow-lg);
+}
+
+/* The QR is an inline SVG from `qrcode`; make it fill its padded frame. */
+.tl-qr svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}

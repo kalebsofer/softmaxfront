@@ -3,6 +3,7 @@ import './globals.css'
 import SmoothScroll from '@/components/SmoothScroll'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.softmaxco.io'),
   title: 'Softmax',
   description: 'A software and AI studio in London. Strategy, design and engineering from one senior team — AI products, data platforms and automation, shipped and handed over clean.',
 }

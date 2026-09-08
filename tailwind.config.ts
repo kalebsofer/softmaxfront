@@ -22,12 +22,35 @@ export default {
       fontFamily: {
         sans: ["Archivo", "Helvetica", "Arial", "sans-serif"],
         mono: ['"JetBrains Mono"', "monospace"],
+        // Traction landing page only; the variables come from next/font in app/traction.
+        satoshi: ["var(--font-satoshi)", "var(--font-inter)", "system-ui", "sans-serif"],
+        inter: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       colors: {
         paper: "#fbfaf8",
         ink: "#0a0a0a",
         wash: "#f4f2ee",
         hairline: "rgba(10,10,10,0.08)",
+        // Traction landing page theme tokens, defined per color scheme in
+        // app/traction/landing.css.
+        tl: {
+          bg: "var(--tl-bg)",
+          fg: "var(--tl-fg)",
+          body: "var(--tl-body)",
+          muted: "var(--tl-muted)",
+          hairline: "var(--tl-hairline)",
+          divider: "var(--tl-divider)",
+          "chip-fg": "var(--tl-chip-fg)",
+          "chip-bg": "var(--tl-chip-bg)",
+          "chip-alt-fg": "var(--tl-chip-alt-fg)",
+          "chip-alt-bg": "var(--tl-chip-alt-bg)",
+          "badge-bg": "var(--tl-badge-bg)",
+          "badge-fg": "var(--tl-badge-fg)",
+          "badge-kicker": "var(--tl-badge-kicker)",
+          "phone-bg": "var(--tl-phone-bg)",
+          "phone-border": "var(--tl-phone-border)",
+          "qr-bg": "var(--tl-qr-bg)",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

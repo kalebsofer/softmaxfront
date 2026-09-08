@@ -4,23 +4,12 @@ import Link from 'next/link';
 import QRCode from 'qrcode';
 import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
+import { APP_STORE_URL, PLAY_STORE_URL, detectPlatform } from '@/lib/traction';
 import OpenInAppButton from './OpenInAppButton';
 
 // Code shape shared with the Traction Health mobile app. Uppercase, no I/L/O/1
 // to avoid visual ambiguity when typed/spoken.
 const CODE_REGEX = /^TRACT-[ABCDEFGHJKMNPQRSTUVWXYZ23456789]{6}$/;
-
-const APP_STORE_URL = 'https://apps.apple.com/app/id6758675167';
-const PLAY_STORE_URL =
-  'https://play.google.com/store/apps/details?id=com.kalebrsofer.tractionhealth';
-
-type Platform = 'ios' | 'android' | 'desktop';
-
-function detectPlatform(userAgent: string): Platform {
-  if (/iPhone|iPad|iPod/i.test(userAgent)) return 'ios';
-  if (/Android/i.test(userAgent)) return 'android';
-  return 'desktop';
-}
 
 export const metadata: Metadata = {
   title: 'Open in Traction',

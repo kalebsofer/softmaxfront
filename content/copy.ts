@@ -147,6 +147,48 @@ export const traction = {
   },
 };
 
+// softmaxco.io/traction — the app's own landing page (single screen, no scroll).
+// Where a string has a `short` variant it is the phone-width copy.
+export const tractionLanding = {
+  meta: {
+    title: 'Traction: build better habits together',
+    description:
+      'The social network for building better habits. Whether you\'re part of a group to keep each other accountable or on a solo mission to build consistency, Traction is a low friction interface for setting goals and tracking progress. Free on iOS and Android.',
+  },
+  brand: 'Traction',
+  headerNote: 'Free · iOS and Android',
+  headerNoteShort: 'Free',
+  /** Rendered as two stacked lines; the break is intentional, not a wrap. */
+  headline: ['Build better habits,', 'together.'],
+  lead: "Welcome to Traction, the social network for building better habits. Whether you're on a solo mission to build consistency or part of a group keeping each other accountable, Traction is a low-friction interface for setting goals and tracking progress.",
+  leadShort: 'The social network for building better habits. Solo, or in a group keeping each other accountable.',
+  chips: [
+    { label: 'Group goals and standings', short: 'Group goals' },
+    { label: 'Habits and tasks in one view', short: 'Habits + tasks' },
+    { label: 'Progress calendar, heatmaps and metrics', short: 'Progress' },
+  ],
+  badges: {
+    appStoreKicker: 'Download on the',
+    appStoreName: 'App Store',
+    appStoreAria: 'Download Traction on the App Store',
+    playKicker: 'Get it on',
+    playName: 'Google Play',
+    playAria: 'Get Traction on Google Play',
+  },
+  phones: {
+    group: "Traction group screen: a shared habit with the day's progress and member streaks",
+    home: "Traction home screen: today's habits, streak and completion ring",
+    progress: 'Traction progress screen: a completion calendar and per-habit streaks',
+  },
+  footer: {
+    byline: 'Traction by Softmax',
+    tagline: 'The social network for building better habits',
+    privacy: 'Privacy',
+    terms: 'Terms',
+    support: 'support@softmaxco.io',
+  },
+};
+
 export const team = {
   title: 'Who are we?',
   meta: 'Tap a name for the long version',
