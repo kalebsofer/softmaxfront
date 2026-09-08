@@ -134,8 +134,12 @@ export default async function TractionLandingPage() {
       {/* Below lg the layout is a phone-width column, centered on tablets. */}
       <main className="flex-1 min-h-0 flex flex-col w-full max-w-[520px] mx-auto px-5 pt-2 lg:max-w-none lg:grid lg:grid-cols-[1fr_auto] lg:items-center lg:gap-16 lg:px-12 lg:pt-0 lg:pb-16 xl:px-24">
         <div className="flex-none">
-          <h1 className="font-satoshi font-bold text-[34px] leading-[1.06] tracking-[-0.03em] lg:text-[58px] lg:leading-[1.04] text-pretty">
-            {copy.headline}
+          <h1 className="font-satoshi font-bold text-[34px] leading-[1.06] tracking-[-0.03em] lg:text-[50px] lg:leading-[1.04] xl:text-[58px] text-pretty">
+            {copy.headline.map((line) => (
+              <span key={line} className="block">
+                {line}
+              </span>
+            ))}
           </h1>
           <p className="mt-3 text-[15px] leading-[1.6] text-tl-body lg:mt-5 lg:max-w-[540px] lg:text-[17px] lg:leading-[1.7] text-pretty">
             <span className="lg:hidden">{copy.leadShort}</span>

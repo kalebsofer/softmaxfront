@@ -68,17 +68,21 @@ export default async function OpenGraphImage() {
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <div
               style={{
+                display: 'flex',
+                flexDirection: 'column',
                 fontSize: 96,
                 fontWeight: 700,
                 letterSpacing: '-0.03em',
                 lineHeight: 1.02,
               }}
             >
-              {copy.headline}
+              {copy.headline.map((line) => (
+                <div key={line}>{line}</div>
+              ))}
             </div>
             <div
               style={{
-                marginTop: 24,
+                marginTop: 20,
                 fontSize: 30,
                 lineHeight: 1.4,
                 color: '#3B4B45',
@@ -87,16 +91,18 @@ export default async function OpenGraphImage() {
             >
               {copy.leadShort}
             </div>
-            <div style={{ display: 'flex', gap: 12, marginTop: 36 }}>
+            <div style={{ display: 'flex', gap: 12, marginTop: 24 }}>
               {copy.chips.map((chip) => (
                 <span
                   key={chip.label}
                   style={{
-                    fontSize: 24,
+                    /* Sized so all three labels sit on one row inside 1200px. */
+                    fontSize: 21,
                     fontWeight: 500,
+                    flexShrink: 0,
                     color: '#14776c',
                     background: 'rgba(27,153,139,0.12)',
-                    padding: '14px 24px',
+                    padding: '12px 22px',
                     borderRadius: 999,
                   }}
                 >

@@ -158,7 +158,8 @@ export const tractionLanding = {
   brand: 'Traction',
   headerNote: 'Free · iOS and Android',
   headerNoteShort: 'Free',
-  headline: 'Build habits together.',
+  /** Rendered as two stacked lines; the break is intentional, not a wrap. */
+  headline: ['Build better habits,', 'together.'],
   lead: "Welcome to Traction, the social network for building better habits. Whether you're on a solo mission to build consistency or part of a group keeping each other accountable, Traction is a low-friction interface for setting goals and tracking progress.",
   leadShort: 'The social network for building better habits. Solo, or in a group keeping each other accountable.',
   chips: [
