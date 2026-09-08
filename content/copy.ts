@@ -147,6 +147,50 @@ export const traction = {
   },
 };
 
+// softmaxco.io/traction — the app's own landing page (single screen, no scroll).
+// Where a string has a `short` variant it is the phone-width copy.
+export const tractionLanding = {
+  meta: {
+    title: 'Traction: build habits together',
+    description:
+      'A minimal tracker for habits and tasks. Solo, or in a group keeping each other accountable. Free on iOS and Android.',
+  },
+  brand: 'Traction',
+  headerNote: 'Free · iOS and Android',
+  headerNoteShort: 'Free',
+  headline: 'Build habits together.',
+  lead: "Traction is a minimal tracker for habits and tasks. On a solo mission to build consistency, or in a group keeping each other accountable, it's a low-friction way to set goals and see progress.",
+  leadShort: 'A minimal tracker for habits and tasks. Solo, or in a group keeping each other accountable.',
+  chips: [
+    { label: 'Group goals and standings', short: 'Group goals' },
+    { label: 'Habits and tasks in one list', short: 'Habits + tasks' },
+    { label: 'Progress heatmaps', short: 'Heatmaps' },
+  ],
+  scanToInstall: 'Scan to install',
+  badges: {
+    appStoreKicker: 'Download on the',
+    appStoreName: 'App Store',
+    appStoreAria: 'Download Traction on the App Store',
+    playKicker: 'Get it on',
+    playName: 'Google Play',
+    playAria: 'Get Traction on Google Play',
+  },
+  phones: {
+    community: 'Traction community screen: activity from people you follow',
+    standings: 'Traction group standings screen: a shared goal leaderboard',
+  },
+  footer: {
+    byline: 'Traction by Softmax',
+    offline: 'Works offline',
+    deleteData: 'Delete your data any time',
+    privacy: 'Privacy',
+    terms: 'Terms',
+    support: 'support@softmaxco.io',
+    social: '@TractionApp',
+    socialUrl: 'https://x.com/TractionApp',
+  },
+};
+
 export const team = {
   title: 'Who are we?',
   meta: 'Tap a name for the long version',
