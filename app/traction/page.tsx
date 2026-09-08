@@ -204,10 +204,7 @@ export default async function TractionLandingPage() {
 
       <footer className="hidden lg:flex flex-none h-14 items-center justify-between px-12 xl:px-24 border-t border-tl-hairline text-[13px] leading-none text-tl-muted">
         <span>
-          {copy.footer.byline} · {copy.footer.offline} ·{' '}
-          <Link href="/traction/data" className="hover:underline">
-            {copy.footer.deleteData}
-          </Link>
+          {copy.footer.byline} · {copy.footer.tagline}
         </span>
         <nav className="flex gap-5" aria-label="Legal and contact">
           <Link href="/traction/privacy" className="hover:underline">
@@ -215,6 +212,9 @@ export default async function TractionLandingPage() {
           </Link>
           <Link href="/traction/terms" className="hover:underline">
             {copy.footer.terms}
+          </Link>
+          <Link href="/traction/data" className="hover:underline">
+            {copy.footer.deleteData}
           </Link>
           <a href={`mailto:${copy.footer.support}`} className="hover:underline">
             {copy.footer.support}

@@ -159,8 +159,8 @@ export const tractionLanding = {
   headerNote: 'Free · iOS and Android',
   headerNoteShort: 'Free',
   headline: 'Build habits together.',
-  lead: "Traction is a minimal tracker for habits and tasks. On a solo mission to build consistency, or in a group keeping each other accountable, it's a low-friction way to set goals and see progress.",
-  leadShort: 'A minimal tracker for habits and tasks. Solo, or in a group keeping each other accountable.',
+  lead: "Welcome to Traction, your minimal tracker for habits and tasks. Whether you're on a solo mission to build consistency or part of a group keeping each other accountable, Traction is a low-friction interface for setting goals and tracking progress.",
+  leadShort: 'Your minimal tracker for habits and tasks. Solo, or in a group keeping each other accountable.',
   chips: [
     { label: 'Group goals and standings', short: 'Group goals' },
     { label: 'Habits and tasks in one list', short: 'Habits + tasks' },
@@ -181,8 +181,8 @@ export const tractionLanding = {
   },
   footer: {
     byline: 'Traction by Softmax',
-    offline: 'Works offline',
-    deleteData: 'Delete your data any time',
+    tagline: 'The social network for building better habits',
+    deleteData: 'Delete data',
     privacy: 'Privacy',
     terms: 'Terms',
     support: 'support@softmaxco.io',
