@@ -21,43 +21,40 @@ export const nav = {
 };
 
 export const hero = {
-  headline: 'A data and AI studio in London helping SMEs transition.',
+  headline: 'We are a collective of data engineers and AI specialists.',
   // Mobile-only pills under the headline
   primaryCta: 'Start a project',
   secondaryCta: 'See the work',
   // Rotating stamp seal beside the headline; both lines render around the ring.
   stamp: {
-    ring: 'Taking new clients on for September',
+    ring: 'Taking new clients on for October',
     cta: 'Get in touch',
   },
 };
 
 export const capabilityStrip = {
   items: [
+    'discovery',
     'strategy',
-    'data & systems',
-    'ai & agents',
-    'automation',
-    'modernisation',
+    'delivery',
+    'compliance',
   ],
-  availability: 'Available from September',
+  availability: 'Available from October',
   // Mobile-only row under the marquee
   scrollHint: 'Scroll ↓',
 };
 
 export const work = {
-  mobileTitle: 'Work',
-  mobileCount: '02 projects',
+  title: 'Recent work',
   fac: {
     title: 'Founders and Coders',
     meta: 'Curriculum · Training · Recruitment',
     imageAlt: 'Founders and Coders workshop',
-    placeholderCaption: 'Founders and Coders — photography to follow',
   },
   traction: {
     title: 'Traction',
-    meta: 'Own product · iOS & Android',
-    imageAlt: 'Traction progress screen',
+    meta: 'Our own product · iOS & Android',
+    imageAlt: 'Traction habit tracker in hand on a London street',
   },
   statement:
     'Strategy, design and engineering from one senior team. We scope thoroughly, ship quickly and hand over completely.',
@@ -257,7 +254,7 @@ export const principles = {
 
 export const contact = {
   title: "Tell us what's broken. We'll scope it in one call.",
-  lead: 'Taking new clients as of September, get in touch!',
+  lead: 'Taking new clients as of October, get in touch!',
   email: 'hello@softmaxco.io',
   emailNote: 'Reply within 24 hours',
   location: 'London, UK',

@@ -2,11 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { work } from '@/content/copy';
 
-// Founders and Coders photography is still to come — drop the file into
-// public/images/ and point this at it. The slot keeps its aspect ratio either
-// way so the layout will not shift when the photo lands.
-const FAC_PHOTO: string | null = null;
-
 const tileTitle =
   'font-semibold text-[21px] leading-[1.06] tracking-[-0.035em] md:text-[26px] md:leading-[1.08]';
 const tileMeta =
@@ -15,14 +10,10 @@ const tileMeta =
 export default function CaseStudies() {
   return (
     <section id="work">
-      {/* Mobile-only section header */}
-      <div className="md:hidden flex items-baseline justify-between border-b border-hairline px-5 py-4">
-        <span className="font-semibold text-[22px] leading-none tracking-[-0.035em]">
-          {work.mobileTitle}
-        </span>
-        <span className="font-mono text-[11px] leading-none text-ink/55">
-          {work.mobileCount}
-        </span>
+      <div className="px-5 pt-[18px] pb-3.5 md:px-10 md:pt-[34px] md:pb-[22px]">
+        <h2 className="font-semibold text-[34px] leading-[0.98] tracking-[-0.04em] md:text-[clamp(30px,3.6vw,50px)] md:leading-none">
+          {work.title}
+        </h2>
       </div>
 
       <div className="grid md:grid-cols-2 gap-px bg-hairline">
@@ -31,18 +22,13 @@ export default function CaseStudies() {
           className="block bg-paper p-4 md:p-[26px] hover:bg-wash transition-colors duration-200"
         >
           <div className="relative aspect-[4/3] md:aspect-[16/10] bg-wash overflow-hidden">
-            {FAC_PHOTO ? (
-              <Image
-                src={FAC_PHOTO}
-                alt={work.fac.imageAlt}
-                fill
-                className="object-cover"
-              />
-            ) : (
-              <span className="absolute bottom-3 left-3 font-mono text-[11px] leading-[1.4] text-ink/55 bg-paper/80 px-2.5 py-1.5">
-                {work.fac.placeholderCaption}
-              </span>
-            )}
+            <Image
+              src="/images/whiteboard1.png"
+              alt={work.fac.imageAlt}
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
+            />
           </div>
           <div className="mt-3 md:mt-[18px] md:flex md:justify-between md:items-baseline">
             <span className={tileTitle}>{work.fac.title}</span>
@@ -56,13 +42,15 @@ export default function CaseStudies() {
           href="#traction"
           className="block bg-paper p-4 md:p-[26px] hover:bg-wash transition-colors duration-200"
         >
-          <div className="aspect-[4/3] md:aspect-[16/10] bg-ink flex items-center justify-center overflow-hidden">
+          {/* Warm charcoal gradient, lighter at the top like the photo's sky and darker
+              at the bottom like the pavement, so the letterboxing blends in */}
+          <div className="relative aspect-[4/3] md:aspect-[16/10] bg-gradient-to-b from-[#4a4342] to-[#2c2826] overflow-hidden">
             <Image
-              src="/images/traction/Home - 2778.png"
+              src="/images/tractionStreet1.png"
               alt={work.traction.imageAlt}
-              width={1284}
-              height={2778}
-              className="w-[40%] md:w-[36%] h-auto translate-y-[9%] rounded-[10px] md:rounded-2xl"
+              fill
+              sizes="(min-width: 768px) 30vw, 60vw"
+              className="object-contain"
             />
           </div>
           <div className="mt-3 md:mt-[18px] md:flex md:justify-between md:items-baseline">
