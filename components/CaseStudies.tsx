@@ -38,8 +38,8 @@ export default function CaseStudies() {
           </div>
         </Link>
 
-        <a
-          href="#traction"
+        <Link
+          href="/traction"
           className="block bg-paper p-4 md:p-[26px] hover:bg-wash transition-colors duration-200"
         >
           {/* Warm charcoal gradient, lighter at the top like the photo's sky and darker
@@ -59,7 +59,7 @@ export default function CaseStudies() {
               {work.traction.meta}
             </span>
           </div>
-        </a>
+        </Link>
       </div>
 
       <div className="border-t border-hairline px-5 py-[18px] md:px-10 md:py-[34px] flex items-start gap-12">
