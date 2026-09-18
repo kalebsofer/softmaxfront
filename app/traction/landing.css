@@ -1,78 +1,110 @@
 /*
  * Theme tokens for the Traction landing page (app/traction/page.tsx).
- * The page follows the visitor's system color scheme; every token has a light
- * value on `.tl` and a dark override below. Tailwind exposes them as `tl-*`
- * colors (see tailwind.config.ts).
+ * The page is the light "hero" surface from the Traction design system; it
+ * does not follow the visitor's color scheme. Tailwind exposes the tokens as
+ * `tl-*` colors (see tailwind.config.ts).
  */
 .tl {
   color-scheme: light;
   --tl-bg: #e9ffeb;
+  --tl-canvas: #fffbfe;
   --tl-fg: #131114;
   --tl-body: #3b4b45;
   --tl-muted: #3b5a50;
+  --tl-accent: #14776c;
   --tl-hairline: rgba(19, 17, 20, 0.08);
   --tl-divider: rgba(19, 17, 20, 0.12);
   --tl-chip-fg: #14776c;
   --tl-chip-bg: rgba(27, 153, 139, 0.12);
-  --tl-chip-alt-fg: #14776c;
-  --tl-chip-alt-bg: rgba(27, 153, 139, 0.12);
+  /* The "Free on iOS and Android" pill: solid brand teal so it stands out. */
+  --tl-pill-bg: #1b998b;
+  --tl-pill-fg: #ffffff;
   --tl-badge-bg: #131114;
   --tl-badge-fg: #ffffff;
   --tl-badge-kicker: rgba(255, 255, 255, 0.72);
+  --tl-badge-alt-bg: #fffbfe;
+  --tl-badge-alt-fg: #131114;
+  --tl-badge-alt-kicker: #3b5a50;
   --tl-phone-bg: #131114;
-  --tl-phone-border: transparent;
-  --tl-phone-shadow-sm: 0 18px 44px rgba(19, 17, 20, 0.14);
-  --tl-phone-shadow-lg: 0 28px 64px rgba(19, 17, 20, 0.22);
+  --tl-phone-shadow-sm: 0 18px 44px rgba(19, 17, 20, 0.16);
+  --tl-phone-shadow-lg: 0 26px 70px rgba(19, 17, 20, 0.26);
   --tl-qr-bg: #fffbfe;
-  --tl-strip-end: #1b998b;
+  --tl-glass-bg: rgba(255, 251, 254, 0.58);
+  --tl-glass-border: rgba(255, 255, 255, 0.75);
+  --tl-glass-shadow: 0 18px 44px rgba(19, 17, 20, 0.1);
+  --tl-ring-track: rgba(19, 17, 20, 0.06);
 }
 
-@media (prefers-color-scheme: dark) {
-  .tl {
-    color-scheme: dark;
-    --tl-bg: #131114;
-    --tl-fg: #ebffec;
-    --tl-body: #b9b6bf;
-    --tl-muted: #9b98a0;
-    --tl-hairline: #2a282c;
-    --tl-divider: #2a282c;
-    --tl-chip-fg: #4ade80;
-    --tl-chip-bg: rgba(74, 222, 128, 0.13);
-    --tl-chip-alt-fg: #2dd4bf;
-    --tl-chip-alt-bg: rgba(45, 212, 191, 0.13);
-    --tl-badge-bg: #ebffec;
-    --tl-badge-fg: #131114;
-    --tl-badge-kicker: rgba(19, 17, 20, 0.66);
-    --tl-phone-bg: #000000;
-    --tl-phone-border: #2a282c;
-    --tl-phone-shadow-sm: 0 18px 44px rgba(0, 0, 0, 0.5);
-    --tl-phone-shadow-lg: 0 28px 64px rgba(0, 0, 0, 0.6);
-    --tl-strip-end: #4ade80;
-  }
-}
-
-/* Progress gradient strip along the top edge. */
-.tl-strip {
-  background: linear-gradient(
-    90deg,
-    #f2bac9,
-    #dfc5be,
-    #cbd0b3,
-    #b8dca7,
-    #a4e79c,
-    var(--tl-strip-end)
+/* Radial highlight behind the headline; the ring shows through it. */
+.tl-surface {
+  background-color: var(--tl-bg);
+  background-image: radial-gradient(
+    circle at 50% var(--tl-glow-y, 42%),
+    var(--tl-canvas) 0%,
+    rgba(255, 251, 254, 0) 58%
   );
 }
 
 /*
- * Desktop phone stage: a 600x600 box holding three phones, the middle one in
- * front. It shrinks on short viewports so the page stays a single screen, and
- * the phones inside are sized as percentages so they scale with it.
+ * Desktop: the composition from the design is laid out in 1440x860 design
+ * units and scaled so that box fits the viewport, so the hero, phones and
+ * ring keep their exact proportions at every window size. The stage itself
+ * is the whole viewport in those units, never smaller than the design box, so
+ * the edge-anchored header, corner cards and footer spread to the real edges
+ * rather than sitting in a letterboxed 1440 column. tan(atan2()) turns the
+ * length ratio into a plain number, which CSS `calc` cannot do directly.
  */
-@media (min-width: 1024px) {
-  .tl-stage {
-    width: min(600px, calc((100dvh - 260px) * 0.8667));
-    aspect-ratio: 520 / 600;
+.tl-desktop {
+  --tl-scale: min(tan(atan2(100vw, 1440px)), tan(atan2(100dvh, 860px)));
+}
+
+.tl-stage {
+  width: calc(100vw / var(--tl-scale));
+  height: calc(100dvh / var(--tl-scale));
+  transform: scale(var(--tl-scale));
+  transform-origin: center;
+}
+
+/*
+ * The corner cards sit halfway across the space between the stage edge and
+ * the 640px hero column, so they track the center as the stage widens.
+ * 135px is half a card.
+ */
+.tl-corner-left {
+  left: calc((100% - 640px) / 4 - 135px);
+}
+
+.tl-corner-right {
+  right: calc((100% - 640px) / 4 - 135px);
+}
+
+.tl-glass {
+  background: var(--tl-glass-bg);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+  backdrop-filter: blur(22px) saturate(160%);
+  border: 1px solid var(--tl-glass-border);
+  box-shadow: var(--tl-glass-shadow);
+}
+
+@media (max-width: 1023px) {
+  /*
+ * The corner cards sit halfway across the space between the stage edge and
+ * the 640px hero column, so they track the center as the stage widens.
+ * 135px is half a card.
+ */
+.tl-corner-left {
+  left: calc((100% - 640px) / 4 - 135px);
+}
+
+.tl-corner-right {
+  right: calc((100% - 640px) / 4 - 135px);
+}
+
+.tl-glass {
+    background: rgba(255, 251, 254, 0.62);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    backdrop-filter: blur(18px) saturate(160%);
+    box-shadow: 0 10px 26px rgba(19, 17, 20, 0.08);
   }
 }
 
@@ -90,3 +122,47 @@
   width: 100%;
   height: auto;
 }
+
+/* Phone layout: the CTA fades in over the bottom of the phone stage. */
+.tl-cta-fade {
+  background: linear-gradient(180deg, rgba(233, 255, 235, 0), var(--tl-bg) 30%);
+}
+
+/* Motion: the hero rises in, the ring draws, the cards drift. */
+@keyframes tl-rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes tl-ring-draw {
+  from { stroke-dashoffset: var(--tl-ring-from); }
+  to { stroke-dashoffset: var(--tl-ring-to); }
+}
+
+@keyframes tl-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.tl-rise {
+  animation: tl-rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.tl-ring-arc {
+  stroke-dashoffset: var(--tl-ring-to);
+  animation: tl-ring-draw 1.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.tl-float {
+  animation: tl-float 7s ease-in-out infinite;
+  animation-delay: var(--tl-float-delay, 0s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tl-rise,
+  .tl-ring-arc,
+  .tl-float {
+    animation: none;
+  }
+}
+

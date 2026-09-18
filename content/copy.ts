@@ -150,20 +150,56 @@ export const tractionLanding = {
   meta: {
     title: 'Traction: build better habits together',
     description:
-      'The social network for building better habits. Whether you\'re part of a group to keep each other accountable or on a solo mission to build consistency, Traction is a low friction interface for setting goals and tracking progress. Free on iOS and Android.',
+      "The social network for building better habits. Whether you're part of a group to keep each other accountable or on a solo mission to build consistency, Traction is a low friction interface for setting goals and tracking progress. Free on iOS and Android.",
   },
-  brand: 'Traction',
+  brand: 'traction',
   headerNote: 'Free · iOS and Android',
   headerNoteShort: 'Free',
+  pill: 'Free on iOS and Android',
+  pillShort: 'Free · iOS and Android',
   /** Rendered as two stacked lines; the break is intentional, not a wrap. */
   headline: ['Build better habits,', 'together.'],
-  lead: "Welcome to Traction, the social network for building better habits. Whether you're on a solo mission to build consistency or part of a group keeping each other accountable, Traction is a low-friction interface for setting goals and tracking progress.",
+  lead: 'The social network for building better habits. Solo, or in a group keeping each other accountable, Traction is a low-friction interface for setting goals and tracking progress.',
   leadShort: 'The social network for building better habits. Solo, or in a group keeping each other accountable.',
   chips: [
     { label: 'Group goals and standings', short: 'Group goals' },
     { label: 'Habits and tasks in one view', short: 'Habits + tasks' },
     { label: 'Progress calendar, heatmaps and metrics', short: 'Progress' },
   ],
+  /** The four feature cards parked around the hero. */
+  cards: {
+    groups: {
+      kicker: 'Groups',
+      title: 'Morning Stretch · 3/5 today',
+      body: 'Share goals and keep each other accountable.',
+      members: [
+        { name: 'Maya', initial: 'M' },
+        { name: 'Priya', initial: 'P' },
+        { name: 'Meiling', initial: 'M' },
+      ],
+      more: '+2',
+    },
+    momentum: {
+      kicker: 'Momentum',
+      title: 'Last 14 days · 97% avg',
+      titleShort: 'Last 14 days · 97%',
+    },
+    widget: {
+      kicker: 'Widget',
+      title: 'Log from your device home screen',
+    },
+    sync: {
+      kicker: 'Device sync',
+      title: 'It logs what your phone already knows',
+      titleShort: 'Health, workouts, steps, sleep and more',
+      chips: ['Health', 'Workouts', 'Steps', 'Sleep', 'and more'],
+    },
+  },
+  /** Desktop call to action: the QR code that lands on the right store. */
+  qr: {
+    title: 'Scan to get the app',
+    aria: 'QR code linking to the Traction app store page',
+  },
   badges: {
     appStoreKicker: 'Download on the',
     appStoreName: 'App Store',

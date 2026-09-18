@@ -21,13 +21,13 @@ const SHOT_WIDTH = 1080;
 const SHOT_HEIGHT = 2400;
 
 const frames = {
-  sm: 'p-[5px] rounded-[24px] lg:p-[7px] lg:rounded-[34px] tl-phone-sm',
-  lg: 'p-1.5 rounded-[30px] lg:p-[9px] lg:rounded-[42px] tl-phone-lg',
+  sm: 'p-[5px] rounded-[22px] lg:p-1.5 lg:rounded-[28px] tl-phone-sm',
+  lg: 'p-[5px] rounded-[28px] lg:p-2 lg:rounded-[42px] tl-phone-lg',
 } as const;
 
 const screens = {
-  sm: 'rounded-[20px] lg:rounded-[27px]',
-  lg: 'rounded-[24px] lg:rounded-[33px]',
+  sm: 'rounded-[18px] lg:rounded-[24px]',
+  lg: 'rounded-[23px] lg:rounded-[34px]',
 } as const;
 
 /** A phone-framed app screenshot. */
@@ -41,7 +41,7 @@ export default function PhoneShot({
 }: Props) {
   return (
     <div
-      className={`box-border bg-tl-phone-bg border border-tl-phone-border ${frames[size]} ${className}`}
+      className={`box-border bg-tl-phone-bg ${frames[size]} ${className}`}
     >
       <Image
         src={`/images/traction/landing/${shot}.png`}

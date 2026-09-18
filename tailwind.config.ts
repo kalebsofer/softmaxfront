@@ -22,9 +22,8 @@ export default {
       fontFamily: {
         sans: ["Archivo", "Helvetica", "Arial", "sans-serif"],
         mono: ['"JetBrains Mono"', "monospace"],
-        // Traction landing page only; the variables come from next/font in app/traction.
-        satoshi: ["var(--font-satoshi)", "var(--font-inter)", "system-ui", "sans-serif"],
-        inter: ["var(--font-inter)", "system-ui", "sans-serif"],
+        // Traction landing page only; the variable comes from next/font in app/traction.
+        satoshi: ["var(--font-satoshi)", "system-ui", "sans-serif"],
       },
       colors: {
         paper: "#fbfaf8",
@@ -35,20 +34,24 @@ export default {
         // app/traction/landing.css.
         tl: {
           bg: "var(--tl-bg)",
+          canvas: "var(--tl-canvas)",
           fg: "var(--tl-fg)",
           body: "var(--tl-body)",
           muted: "var(--tl-muted)",
+          accent: "var(--tl-accent)",
           hairline: "var(--tl-hairline)",
           divider: "var(--tl-divider)",
           "chip-fg": "var(--tl-chip-fg)",
           "chip-bg": "var(--tl-chip-bg)",
-          "chip-alt-fg": "var(--tl-chip-alt-fg)",
-          "chip-alt-bg": "var(--tl-chip-alt-bg)",
+          "pill-bg": "var(--tl-pill-bg)",
+          "pill-fg": "var(--tl-pill-fg)",
           "badge-bg": "var(--tl-badge-bg)",
           "badge-fg": "var(--tl-badge-fg)",
           "badge-kicker": "var(--tl-badge-kicker)",
+          "badge-alt-bg": "var(--tl-badge-alt-bg)",
+          "badge-alt-fg": "var(--tl-badge-alt-fg)",
+          "badge-alt-kicker": "var(--tl-badge-alt-kicker)",
           "phone-bg": "var(--tl-phone-bg)",
-          "phone-border": "var(--tl-phone-border)",
           "qr-bg": "var(--tl-qr-bg)",
         },
         border: "hsl(var(--border))",
