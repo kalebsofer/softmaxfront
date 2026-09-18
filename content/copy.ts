@@ -124,6 +124,8 @@ export const traction = {
   eyebrow: 'Our own product',
   title: 'Traction — the peer-to-peer habit tracker',
   lead: 'Designed, built and shipped in-house to iOS and Android. The shortest proof that we take products all the way, not just to a prototype.',
+  // Links to the app's own page at /traction
+  pageCta: 'Explore Traction',
   stats: [
     { value: '2', label: 'platforms' },
     { value: '4', label: 'core screens' },

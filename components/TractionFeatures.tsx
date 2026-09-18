@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { traction } from '@/content/copy';
 import { AppleIcon, PlayIcon } from '@/components/StoreIcons';
 import { APP_STORE_URL as IOS_URL, PLAY_STORE_URL as ANDROID_URL } from '@/lib/traction';
@@ -36,6 +37,21 @@ function StoreBadges({ stacked = false }: { stacked?: boolean }) {
   );
 }
 
+/** The route to Traction's own page, the section's primary call to action. */
+function PageLink({ stacked = false }: { stacked?: boolean }) {
+  return (
+    <Link
+      href="/traction"
+      className={`${
+        stacked ? 'flex w-full justify-center p-[17px]' : 'inline-flex px-[22px] py-[15px]'
+      } items-center gap-2.5 rounded-full bg-[#1b998b] text-paper font-mono text-xs font-medium uppercase tracking-[0.06em] leading-none hover:opacity-[0.88] transition-opacity`}
+    >
+      {traction.pageCta}
+      <span aria-hidden="true">→</span>
+    </Link>
+  );
+}
+
 const screenshot =
   'w-[118px] rounded-[14px] md:w-[150px] md:rounded-[18px] border border-paper/15 h-auto';
 
@@ -53,7 +69,8 @@ export default function TractionFeatures() {
           <p className="text-sm leading-[1.55] md:text-[17px] md:leading-[1.6] text-paper/70 max-w-[470px] md:mb-[26px]">
             {traction.lead}
           </p>
-          <div className="hidden md:flex gap-2.5 mb-[22px]">
+          <div className="hidden md:flex flex-wrap items-center gap-2.5 mb-[22px]">
+            <PageLink />
             <StoreBadges />
           </div>
           <div className="hidden md:flex gap-[34px] pt-[22px] border-t border-paper/[0.12]">
@@ -70,7 +87,12 @@ export default function TractionFeatures() {
           </div>
         </div>
 
-        <div className="flex gap-2.5 md:gap-4 justify-center items-center px-5 pt-6 md:px-10 md:py-[52px]">
+        {/* The screenshots are a second, larger route to the Traction page. */}
+        <Link
+          href="/traction"
+          aria-label={traction.pageCta}
+          className="flex gap-2.5 md:gap-4 justify-center items-center px-5 pt-6 md:px-10 md:py-[52px] hover:opacity-90 transition-opacity"
+        >
           <Image
             src="/images/traction/Home - 2778.png"
             alt="Traction home screen"
@@ -92,10 +114,11 @@ export default function TractionFeatures() {
             height={2778}
             className={`${screenshot} hidden md:block`}
           />
-        </div>
+        </Link>
 
         {/* Mobile: store badges stacked full-width at the bottom */}
         <div className="md:hidden flex flex-col gap-[9px] p-5">
+          <PageLink stacked />
           <StoreBadges stacked />
         </div>
       </div>
