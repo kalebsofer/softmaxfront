@@ -7,31 +7,17 @@ import { APP_STORE_URL as IOS_URL, PLAY_STORE_URL as ANDROID_URL } from '@/lib/t
 
 function StoreBadges({ stacked = false }: { stacked?: boolean }) {
   const badge = `${
-    stacked ? 'flex w-full justify-center p-[13px]' : 'inline-flex px-4 py-[11px]'
+    stacked ? 'flex w-full justify-center p-[15px]' : 'inline-flex px-[18px] py-[13px]'
   } items-center gap-2.5 bg-paper text-ink rounded-[11px] hover:opacity-90 transition-opacity`;
   return (
     <>
       <a href={IOS_URL} target="_blank" rel="noopener noreferrer" className={badge}>
         <AppleIcon />
-        <span className="flex flex-col leading-[1.15]">
-          <span className="text-[10px] font-medium opacity-75">
-            {traction.badges.appStoreKicker}
-          </span>
-          <span className="text-sm font-semibold">
-            {traction.badges.appStoreName}
-          </span>
-        </span>
+        <span className="text-sm font-semibold leading-none">{traction.badges.appStoreName}</span>
       </a>
       <a href={ANDROID_URL} target="_blank" rel="noopener noreferrer" className={badge}>
         <PlayIcon />
-        <span className="flex flex-col leading-[1.15]">
-          <span className="text-[10px] font-medium opacity-75">
-            {traction.badges.playKicker}
-          </span>
-          <span className="text-sm font-semibold">
-            {traction.badges.playName}
-          </span>
-        </span>
+        <span className="text-sm font-semibold leading-none">{traction.badges.playName}</span>
       </a>
     </>
   );

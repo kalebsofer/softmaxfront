@@ -139,9 +139,7 @@ export const traction = {
     'No streak guilt',
   ],
   badges: {
-    appStoreKicker: 'Download on the',
     appStoreName: 'App Store',
-    playKicker: 'Get it on',
     playName: 'Google Play',
   },
 };
