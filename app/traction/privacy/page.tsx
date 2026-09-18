@@ -13,7 +13,7 @@ export default function TractionPrivacy() {
       <main className="pt-6 md:pt-10 pb-16">
         <div className="container max-w-3xl">
           <h1 className="text-[34px] md:text-[44px] font-semibold tracking-[-0.04em] leading-[1.05] mb-2 text-ink">Traction Health — Privacy Policy</h1>
-          <p className="text-base text-ink/60 mb-8"><strong className="text-ink">Last Updated</strong>: June 2, 2026</p>
+          <p className="text-base text-ink/60 mb-8"><strong className="text-ink">Last Updated</strong>: September 18, 2026</p>
 
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             Traction Health (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), operated by Softmax Ltd, provides the Traction Health mobile application (the &quot;App&quot;). This Privacy Policy explains how we collect, use, share, and protect your personal information when you use our App.
@@ -28,8 +28,9 @@ export default function TractionPrivacy() {
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">When you create an account, we collect your name (first and last name), email address, and optionally a phone number. You may also provide optional profile information such as date of birth and an avatar. You can sign up using email and password, Google Sign-In, or Apple Sign-In; if you use a third-party sign-in method, we receive your name and email address from that provider. We also support anonymous device-based accounts that do not require personal contact information.</p>
 
           <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">Health and Fitness Data</h3>
-          <p className="text-base text-ink/60 mb-4 leading-[1.65]">The App is a habit and task tracking tool. All health and fitness data is manually entered by you. We collect habit and task names, descriptions, and categories; completion logs (date, value, and completion status); streak and completion-rate metrics; and schedule and reminder preferences.</p>
-          <p className="text-base mb-4 leading-[1.65] font-medium text-ink">We do not integrate with Apple HealthKit, Google Fit, or any automatic health data collection APIs. All wellness data in the App is provided directly by you.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">The App is a habit and task tracking tool. We collect habit and task names, descriptions, and categories; completion logs (date, value, and completion status); streak and completion-rate metrics; and schedule and reminder preferences.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]"><strong className="text-ink">Apple Health and Health Connect.</strong> You can optionally link a habit to one metric from Apple Health (iOS) or Health Connect (Android), such as steps, distance, active energy, flights climbed, exercise and workout minutes, sleep, mindful minutes, water, caffeine, weight, or wheelchair pushes. When you do, the App reads that metric on your device, reduces it to a single total per day, and uses it to mark the habit complete. Only that daily total for each linked habit is stored with your account so the habit stays in sync across your devices. Raw samples, timestamps, routes, and source devices never leave your device. If you log a linked habit by hand, the App writes that entry back to Apple Health or Health Connect so your records agree.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">Health data is read only after you grant permission in the system dialog, and we never use it for advertising, analytics, or research, never sell it, never share it with third parties, and never store it in iCloud. If you share a linked habit or add it to a group, its daily progress is visible to those people in the same way as any other habit. You can unlink a habit, disconnect all habits under Settings &gt; Health data, or revoke access in the Apple Health or Health Connect settings at any time; totals already synced stay on the habit until you delete the habit or your account.</p>
 
           <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">User-Generated Content</h3>
           <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
@@ -93,6 +94,7 @@ export default function TractionPrivacy() {
             <li>When you delete your account, we initiate deletion of your data with a 14-day grace period, after which your data is permanently removed from our systems.</li>
             <li>When you delete your account, your community data — including connections, shared habits, comments, nudges, reactions, group memberships, blocks, and reports — is deleted along with your account, and your username, avatar, and connection code are removed from public view.</li>
             <li>Crash and diagnostic logs are retained according to the retention policies of our service providers (Sentry and LogRocket).</li>
+            <li>Daily totals synced from Apple Health or Health Connect are retained with the linked habit and deleted with the habit or the account.</li>
             <li>Bug reports and feedback are retained to improve the App and may be removed upon request.</li>
           </ul>
 
@@ -110,6 +112,7 @@ export default function TractionPrivacy() {
             <li><strong className="text-ink">Correction:</strong> update or correct inaccurate personal information through your in-app profile settings.</li>
             <li><strong className="text-ink">Deletion:</strong> delete your account and associated data from within the App or by contacting us.</li>
             <li><strong className="text-ink">Push Notifications:</strong> disable push notifications at any time through your device settings.</li>
+            <li><strong className="text-ink">Health Data:</strong> unlink any habit, disconnect all habits under Settings &gt; Health data, or revoke access in Apple Health or Health Connect settings.</li>
             <li><strong className="text-ink">Anonymous Use:</strong> use the App with a device-based account without providing personal contact information. Community features are not available to anonymous accounts.</li>
             <li><strong className="text-ink">Community Privacy:</strong> hide your statistics from the community, change or regenerate your connection code, block other users, report abusive content or behavior, and leave any group or end any share at any time from within the App.</li>
           </ul>
