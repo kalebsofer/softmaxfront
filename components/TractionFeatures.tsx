@@ -69,8 +69,10 @@ export default function TractionFeatures() {
           <p className="text-sm leading-[1.55] md:text-[17px] md:leading-[1.6] text-paper/70 max-w-[470px] md:mb-[26px]">
             {traction.lead}
           </p>
-          <div className="hidden md:flex flex-wrap items-center gap-2.5 mb-[22px]">
+          <div className="hidden md:block mb-[18px]">
             <PageLink />
+          </div>
+          <div className="hidden md:flex gap-2.5 mb-[22px]">
             <StoreBadges />
           </div>
           <div className="hidden md:flex gap-[34px] pt-[22px] border-t border-paper/[0.12]">
@@ -117,9 +119,11 @@ export default function TractionFeatures() {
         </Link>
 
         {/* Mobile: store badges stacked full-width at the bottom */}
-        <div className="md:hidden flex flex-col gap-[9px] p-5">
+        <div className="md:hidden p-5">
           <PageLink stacked />
-          <StoreBadges stacked />
+          <div className="flex flex-col gap-[9px] mt-5 pt-5 border-t border-paper/[0.12]">
+            <StoreBadges stacked />
+          </div>
         </div>
       </div>
 
