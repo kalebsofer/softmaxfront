@@ -144,8 +144,7 @@ export const traction = {
   },
 };
 
-// softmaxco.io/traction — the app's own landing page (single screen, no scroll).
-// Where a string has a `short` variant it is the phone-width copy.
+// softmaxco.io/traction: the app's own landing page.
 export const tractionLanding = {
   meta: {
     title: 'Traction: build better habits together',
@@ -153,52 +152,78 @@ export const tractionLanding = {
       "The social network for building better habits. Whether you're part of a group to keep each other accountable or on a solo mission to build consistency, Traction is a low friction interface for setting goals and tracking progress. Free on iOS and Android.",
   },
   brand: 'traction',
-  headerNote: 'Free · iOS and Android',
-  headerNoteShort: 'Free',
-  pill: 'Free on iOS and Android',
-  pillShort: 'Free · iOS and Android',
+  nav: {
+    home: 'Traction home',
+    links: [
+      { href: '#momentum', label: 'Momentum' },
+      { href: '#groups', label: 'Groups' },
+      { href: '#widget', label: 'Widget' },
+      { href: '#sync', label: 'Device sync' },
+    ],
+    cta: 'Get the app',
+  },
+  kicker: 'Free on iOS and Android',
   /** Rendered as two stacked lines; the break is intentional, not a wrap. */
   headline: ['Build better habits,', 'together.'],
   lead: 'The social network for building better habits. Solo, or in a group keeping each other accountable, Traction is a low-friction interface for setting goals and tracking progress.',
-  leadShort: 'The social network for building better habits. Solo, or in a group keeping each other accountable.',
-  chips: [
-    { label: 'Group goals and standings', short: 'Group goals' },
-    { label: 'Habits and tasks in one view', short: 'Habits + tasks' },
-    { label: 'Progress calendar, heatmaps and metrics', short: 'Progress' },
-  ],
-  /** The four feature cards parked around the hero. */
-  cards: {
-    groups: {
-      kicker: 'Groups',
-      title: 'Morning Stretch · 3/5 today',
-      body: 'Share goals and keep each other accountable.',
-      members: [
-        { name: 'Maya', initial: 'M' },
-        { name: 'Priya', initial: 'P' },
-        { name: 'Meiling', initial: 'M' },
-      ],
-      more: '+2',
-    },
-    momentum: {
-      kicker: 'Momentum',
-      title: 'Last 14 days · 97% avg',
-      titleShort: 'Last 14 days · 97%',
-    },
-    widget: {
-      kicker: 'Widget',
-      title: 'Log from your device home screen',
-    },
-    sync: {
-      kicker: 'Device sync',
-      title: 'It logs what your phone already knows',
-      titleShort: 'Health, workouts, steps, sleep and more',
-      chips: ['Health', 'Workouts', 'Steps', 'Sleep', 'and more'],
-    },
-  },
-  /** Desktop call to action: the QR code that lands on the right store. */
+  heroPhotoAlt: 'Traction open on a phone, held at a busy crossing',
+  /** Desktop: the hero card carries a QR code to scan with a phone. */
   qr: {
     title: 'Scan to get the app',
+    byline: 'Traction by Softmax',
     aria: 'QR code linking to the Traction app store page',
+  },
+  /** Phones: the hero card links straight to the visitor's own store. */
+  install: {
+    title: 'Get Traction',
+    ios: 'Free on the App Store',
+    android: 'Free on Google Play',
+  },
+  momentum: {
+    kicker: 'Momentum',
+    title: 'Last 14 days',
+    value: '97%',
+    unit: 'avg',
+    aria: 'Daily completion over the last 14 days, averaging 97%',
+  },
+  groups: {
+    kicker: 'Groups',
+    title: 'Shared goals',
+    titleAccent: 'keep each other accountable',
+    photoAlt: 'Two friends laughing at a shared goal on their phones',
+    screenAlt: 'Traction group screen held in hand: Read 20 pages, everyone is in',
+    members: ['Maya', 'Priya', 'Meiling'],
+    more: '+2',
+    status: 'Morning Stretch · 3/5 today',
+  },
+  screens: {
+    title: 'Build better habits',
+    titleAccent: 'around your life',
+    prev: 'Previous screens',
+    next: 'Next screens',
+    items: [
+      { src: 'home', title: 'Today at a glance', accent: '', alt: "Traction home screen: today's habits, streak and completion ring" },
+      { src: 'routine', title: 'Link habits', accent: 'to form routines', alt: 'Morning Routine: meditate, stretch and take vitamins, linked' },
+      { src: 'calendar', title: 'Small steps,', accent: 'visible progress', alt: 'Progress calendar for September held in hand' },
+      { src: 'schedule', title: 'Build better habits', accent: 'around your life', alt: 'Schedule view with tasks and habits for the day' },
+    ],
+  },
+  widget: {
+    kicker: 'Widget',
+    title: 'Log from your device home screen',
+    alt: 'Traction widget on an iPhone home screen: morning run, meditate, pick up dry cleaning',
+  },
+  sync: {
+    kicker: 'Device sync',
+    title: 'It logs what your phone already knows',
+    chips: ['Health', 'Workouts', 'Steps', 'Sleep'],
+    more: 'and more',
+    alt: 'Traction progress screen: a completion calendar and per-habit streaks',
+  },
+  get: {
+    headline: ['Scan to get', 'the app.'],
+    headlinePhone: ['Start today,', "it's free."],
+    photoAlt: 'Friends at the gym checking Traction on their phones',
   },
   badges: {
     appStoreKicker: 'Download on the',
@@ -208,13 +233,7 @@ export const tractionLanding = {
     playName: 'Google Play',
     playAria: 'Get Traction on Google Play',
   },
-  phones: {
-    group: "Traction group screen: a shared habit with the day's progress and member streaks",
-    home: "Traction home screen: today's habits, streak and completion ring",
-    progress: 'Traction progress screen: a completion calendar and per-habit streaks',
-  },
   footer: {
-    byline: 'Traction by Softmax',
     tagline: 'The social network for building better habits',
     privacy: 'Privacy',
     terms: 'Terms',

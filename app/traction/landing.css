@@ -1,168 +1,136 @@
 /*
- * Theme tokens for the Traction landing page (app/traction/page.tsx).
- * The page is the light "hero" surface from the Traction design system; it
- * does not follow the visitor's color scheme. Tailwind exposes the tokens as
- * `tl-*` colors (see tailwind.config.ts).
+ * Traction landing page (app/traction/page.tsx): the dark "liquid glass"
+ * surface. The page is always dark; it does not follow the visitor's color
+ * scheme. Layout and type live in Tailwind classes on the page; this file
+ * holds the tokens and the effects Tailwind cannot express cleanly.
  */
 .tl {
-  color-scheme: light;
-  --tl-bg: #e9ffeb;
-  --tl-canvas: #fffbfe;
-  --tl-fg: #131114;
-  --tl-body: #3b4b45;
-  --tl-muted: #3b5a50;
-  --tl-accent: #14776c;
-  --tl-hairline: rgba(19, 17, 20, 0.08);
-  --tl-divider: rgba(19, 17, 20, 0.12);
-  --tl-chip-fg: #14776c;
-  --tl-chip-bg: rgba(27, 153, 139, 0.12);
-  /* The "Free on iOS and Android" pill: solid brand teal so it stands out. */
-  --tl-pill-bg: #1b998b;
-  --tl-pill-fg: #ffffff;
-  --tl-badge-bg: #131114;
-  --tl-badge-fg: #ffffff;
-  --tl-badge-kicker: rgba(255, 255, 255, 0.72);
-  --tl-badge-alt-bg: #fffbfe;
-  --tl-badge-alt-fg: #131114;
-  --tl-badge-alt-kicker: #3b5a50;
-  --tl-phone-bg: #131114;
-  --tl-phone-shadow-sm: 0 18px 44px rgba(19, 17, 20, 0.16);
-  --tl-phone-shadow-lg: 0 26px 70px rgba(19, 17, 20, 0.26);
-  --tl-qr-bg: #fffbfe;
-  --tl-glass-bg: rgba(255, 251, 254, 0.58);
-  --tl-glass-border: rgba(255, 255, 255, 0.75);
-  --tl-glass-shadow: 0 18px 44px rgba(19, 17, 20, 0.1);
-  --tl-ring-track: rgba(19, 17, 20, 0.06);
+  color-scheme: dark;
+  --tl-bg: #131114;
+  --tl-fg: #fffbfe;
+  --tl-body: #cfccd4;
+  --tl-soft: #e4e1e8;
+  --tl-muted: #b9b6bf;
+  --tl-accent: #4ade80;
+  --tl-accent-soft: #a4e79c;
+  --tl-mint: #e9ffeb;
+  --tl-card: #1e1c20;
+  --tl-well: #0b0a0c;
+  --tl-screen-bg: #9fd9c6;
+  /* The completion scale, 0% to 100%, shared with the app's heatmaps. */
+  --tl-scale-0: #f2bac9;
+  --tl-scale-1: #dfc5be;
+  --tl-scale-2: #cbd0b3;
+  --tl-scale-3: #b8dca7;
+  --tl-scale-4: #a4e79c;
+  --tl-scale-5: #1b998b;
+  /* Page gutter and content width, shared by every section. */
+  --tl-gutter: clamp(20px, 4vw, 56px);
+  --tl-max: 1320px;
+  /* Left inset that lines full-bleed content up with the content column. */
+  --tl-inset: max(var(--tl-gutter), calc((100vw - var(--tl-max)) / 2 + 56px));
 }
 
-/* Radial highlight behind the headline; the ring shows through it. */
-.tl-surface {
-  background-color: var(--tl-bg);
-  background-image: radial-gradient(
-    circle at 50% var(--tl-glow-y, 42%),
-    var(--tl-canvas) 0%,
-    rgba(255, 251, 254, 0) 58%
-  );
+/* Overscroll and anchor jumps match the page rather than the site default. */
+html:has(.tl) {
+  background: #131114;
+  scroll-behavior: smooth;
 }
 
-/*
- * Desktop: the composition from the design is laid out in 1440x860 design
- * units and scaled so that box fits the viewport, so the hero, phones and
- * ring keep their exact proportions at every window size. The stage itself
- * is the whole viewport in those units, never smaller than the design box, so
- * the edge-anchored header, corner cards and footer spread to the real edges
- * rather than sitting in a letterboxed 1440 column. tan(atan2()) turns the
- * length ratio into a plain number, which CSS `calc` cannot do directly.
- */
-.tl-desktop {
-  --tl-scale: min(tan(atan2(100vw, 1440px)), tan(atan2(100dvh, 860px)));
+.tl a:focus-visible,
+.tl button:focus-visible {
+  outline: 2px solid var(--tl-accent);
+  outline-offset: 3px;
 }
 
-.tl-stage {
-  width: calc(100vw / var(--tl-scale));
-  height: calc(100dvh / var(--tl-scale));
-  transform: scale(var(--tl-scale));
-  transform-origin: center;
+.tl-container {
+  max-width: var(--tl-max);
+  margin-inline: auto;
+  padding-inline: var(--tl-gutter);
+  box-sizing: border-box;
 }
 
 /*
- * The corner cards sit halfway across the space between the stage edge and
- * the 640px hero column, so they track the center as the stage widens.
- * 135px is half a card.
+ * Liquid glass: a tinted, saturated backdrop blur with a specular top edge.
+ * On Chromium the backdrop is also refracted through #tl-lens (see
+ * GlassLens.tsx), which pulls it inward at the edges like a lens.
  */
-.tl-corner-left {
-  left: calc((100% - 640px) / 4 - 135px);
-}
-
-.tl-corner-right {
-  right: calc((100% - 640px) / 4 - 135px);
-}
-
 .tl-glass {
-  background: var(--tl-glass-bg);
-  -webkit-backdrop-filter: blur(22px) saturate(160%);
-  backdrop-filter: blur(22px) saturate(160%);
-  border: 1px solid var(--tl-glass-border);
-  box-shadow: var(--tl-glass-shadow);
+  --tl-glass-filter: blur(10px) saturate(190%) brightness(1.1);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02) 60%),
+    rgba(28, 26, 30, 0.3);
+  -webkit-backdrop-filter: var(--tl-glass-filter);
+  backdrop-filter: var(--tl-glass-filter);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 0 0 0.5px rgba(255, 255, 255, 0.18),
+    inset 0 -10px 18px -12px rgba(255, 255, 255, 0.22),
+    0 0 0 0.5px rgba(0, 0, 0, 0.5),
+    0 12px 32px rgba(0, 0, 0, 0.28);
 }
 
-@media (max-width: 1023px) {
-  /*
- * The corner cards sit halfway across the space between the stage edge and
- * the 640px hero column, so they track the center as the stage widens.
- * 135px is half a card.
+.tl-lens .tl-glass {
+  -webkit-backdrop-filter: url(#tl-lens) var(--tl-glass-filter);
+  backdrop-filter: url(#tl-lens) var(--tl-glass-filter);
+}
+
+/*
+ * Progressive blur: stacked backdrop blurs, each masked to a band, so the
+ * blur ramps up smoothly instead of starting at a hard edge. Layers are
+ * rendered by ProgressiveBlur.tsx with their radius and mask as variables.
  */
-.tl-corner-left {
-  left: calc((100% - 640px) / 4 - 135px);
+.tl-blur-layer {
+  position: absolute;
+  inset: 0;
+  -webkit-backdrop-filter: blur(var(--tl-blur));
+  backdrop-filter: blur(var(--tl-blur));
+  -webkit-mask-image: var(--tl-mask);
+  mask-image: var(--tl-mask);
 }
 
-.tl-corner-right {
-  right: calc((100% - 640px) / 4 - 135px);
+/* The screens rail scrolls sideways without a visible scrollbar. */
+.tl-rail {
+  scrollbar-width: none;
+  padding-inline: var(--tl-inset);
+  scroll-padding-inline: var(--tl-inset);
 }
 
-.tl-glass {
-    background: rgba(255, 251, 254, 0.62);
-    -webkit-backdrop-filter: blur(18px) saturate(160%);
-    backdrop-filter: blur(18px) saturate(160%);
-    box-shadow: 0 10px 26px rgba(19, 17, 20, 0.08);
-  }
+.tl-rail::-webkit-scrollbar {
+  display: none;
 }
 
-.tl-phone-sm {
-  box-shadow: var(--tl-phone-shadow-sm);
+.tl-rail-prev {
+  left: max(12px, calc((100vw - var(--tl-max)) / 2 + 24px));
 }
 
-.tl-phone-lg {
-  box-shadow: var(--tl-phone-shadow-lg);
+.tl-rail-next {
+  right: max(12px, calc((100vw - var(--tl-max)) / 2 + 24px));
 }
 
 /* The QR is an inline SVG from `qrcode`; make it fill its padded frame. */
 .tl-qr svg {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
-/* Phone layout: the CTA fades in over the bottom of the phone stage. */
-.tl-cta-fade {
-  background: linear-gradient(180deg, rgba(233, 255, 235, 0), var(--tl-bg) 30%);
-}
-
-/* Motion: the hero rises in, the ring draws, the cards drift. */
+/* Motion: the hero rises in. */
 @keyframes tl-rise {
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes tl-ring-draw {
-  from { stroke-dashoffset: var(--tl-ring-from); }
-  to { stroke-dashoffset: var(--tl-ring-to); }
-}
-
-@keyframes tl-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
 }
 
 .tl-rise {
   animation: tl-rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
-.tl-ring-arc {
-  stroke-dashoffset: var(--tl-ring-to);
-  animation: tl-ring-draw 1.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-}
-
-.tl-float {
-  animation: tl-float 7s ease-in-out infinite;
-  animation-delay: var(--tl-float-delay, 0s);
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .tl-rise,
-  .tl-ring-arc,
-  .tl-float {
+  html:has(.tl) {
+    scroll-behavior: auto;
+  }
+
+  .tl-rise {
     animation: none;
   }
 }
-
