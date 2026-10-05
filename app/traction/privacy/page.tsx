@@ -13,7 +13,7 @@ export default function TractionPrivacy() {
       <main className="pt-6 md:pt-10 pb-16">
         <div className="container max-w-3xl">
           <h1 className="text-[34px] md:text-[44px] font-semibold tracking-[-0.04em] leading-[1.05] mb-2 text-ink">Traction Health — Privacy Policy</h1>
-          <p className="text-base text-ink/60 mb-8"><strong className="text-ink">Last Updated</strong>: September 18, 2026</p>
+          <p className="text-base text-ink/60 mb-8"><strong className="text-ink">Last Updated</strong>: October 5, 2026</p>
 
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             Traction Health (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), operated by Softmax Ltd, provides the Traction Health mobile application (the &quot;App&quot;). This Privacy Policy explains how we collect, use, share, and protect your personal information when you use our App.
@@ -83,6 +83,9 @@ export default function TractionPrivacy() {
             <li><strong className="text-ink">Sentry</strong> — crash reporting and performance monitoring: crash logs, performance metrics, device info.</li>
             <li><strong className="text-ink">LogRocket</strong> — session replay and error debugging: user ID, session interaction data, error events (credentials and community message content excluded).</li>
             <li><strong className="text-ink">Expo</strong> — push notification delivery: push notification tokens, device platform.</li>
+            <li><strong className="text-ink">Anthropic</strong> - grouping in-app feedback so duplicate reports are handled together: the text of a feedback report and the screen it was sent from, never your name, username or email.</li>
+            <li><strong className="text-ink">Resend</strong> - delivering feedback reports to our team by email: report text, diagnostics, and your account email as the reply address.</li>
+            <li><strong className="text-ink">GitHub</strong> - tracking bug reports in a private repository: bug report text and diagnostics, never your email.</li>
           </ul>
           <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">Sharing With Other Users</h3>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">When you use community features, you share information directly with other people you choose to connect with. Your username, avatar, shared habit progress, comments, nudges, reactions, and group leaderboard standing are visible to your connections and the members of groups you join, and anyone you give your connection code or invite link to can view a preview of your public profile. This sharing is initiated by you and only occurs when you opt into community features. We do not make your community activity public on the open internet or to users you have not connected with.</p>
