@@ -1,0 +1,19 @@
+{
+  "projectId": "10e6c7d8-dacb-4505-93b9-bd703a7d392c",
+  "shape": "package",
+  "pkg": "softmaxfront",
+  "globalName": "SoftmaxCo",
+  "entry": ".design-sync/entry.ts",
+  "buildCmd": "./node_modules/.bin/tailwindcss -c .design-sync/tailwind.config.ts -i app/globals.css -o .design-sync/.cache/ds.css --minify",
+  "tsconfig": "tsconfig.json",
+  "srcDir": "components/ui",
+  "componentSrcMap": {
+    "PillButton": "components/ui/pill-button.tsx"
+  },
+  "cssEntry": ".design-sync/.cache/ds.css",
+  "docsDir": ".design-sync/docs",
+  "dtsPropsFor": {
+    "PillButton": "/** Color treatment. ink (default), signal (the one accent action per view), outline (secondary on paper), paper / outline-paper (on ink sections). */ tone?: \"ink\" | \"signal\" | \"outline\" | \"paper\" | \"outline-paper\"; /** sm: compact controls; md (default): header actions; lg: actions inside a section; block: full-width stacked mobile actions. */ size?: \"sm\" | \"md\" | \"lg\" | \"block\"; /** Render the single child element (for example an <a>) with the pill styles instead of a <button>. */ asChild?: boolean; children?: React.ReactNode; className?: string; type?: \"button\" | \"submit\" | \"reset\"; disabled?: boolean; onClick?: React.MouseEventHandler<HTMLButtonElement>; \"aria-label\"?: string;"
+  },
+  "readmeHeader": ".design-sync/conventions.md"
+}
