@@ -4,6 +4,7 @@ import { Fragment } from 'react';
 import { motion } from 'framer-motion';
 import { hero, capabilityStrip } from '@/content/copy';
 import BookCall from '@/components/BookCall';
+import { PillButton, pillButtonVariants } from '@/components/ui/pill-button';
 
 export default function Hero() {
   return (
@@ -18,19 +19,13 @@ export default function Hero() {
       </h1>
       {/* The desktop hero carries the viewport alone; on phone it gains explicit CTAs. */}
       <div className="mt-[26px] flex flex-col gap-[9px] md:hidden">
-        <a
-          href="#contact"
-          className="font-mono text-xs font-medium uppercase tracking-[0.06em] bg-ink text-paper rounded-full p-[17px] text-center"
-        >
-          {hero.primaryCta}
-        </a>
-        <BookCall className="font-mono text-xs font-medium uppercase tracking-[0.06em] bg-[#b3402f] text-paper rounded-full p-[17px] text-center" />
-        <a
-          href="#work"
-          className="font-mono text-xs font-medium uppercase tracking-[0.06em] border border-ink/[0.12] rounded-full p-[17px] text-center"
-        >
-          {hero.secondaryCta}
-        </a>
+        <PillButton asChild size="block">
+          <a href="#contact">{hero.primaryCta}</a>
+        </PillButton>
+        <BookCall className={pillButtonVariants({ tone: 'signal', size: 'block' })} />
+        <PillButton asChild tone="outline" size="block">
+          <a href="#work">{hero.secondaryCta}</a>
+        </PillButton>
       </div>
     </motion.section>
   );

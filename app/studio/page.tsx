@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import SectionReveal from '@/components/SectionReveal';
 import StudioCapabilities from '@/components/StudioCapabilities';
 import { studio } from '@/content/copy';
+import { PillButton } from '@/components/ui/pill-button';
 
 export const metadata: Metadata = {
   title: studio.metaTitle,
@@ -168,18 +169,12 @@ export default function StudioPage() {
           </p>
         </div>
         <div className="flex flex-wrap gap-2.5 items-center">
-          <Link
-            href="/#contact"
-            className="font-mono text-xs font-medium uppercase tracking-[0.06em] bg-paper text-ink rounded-full px-7 py-[18px] hover:opacity-90 transition-opacity"
-          >
-            {studio.cta.primary}
-          </Link>
-          <a
-            href="mailto:hello@softmaxco.io"
-            className="font-mono text-xs font-medium uppercase tracking-[0.06em] border border-paper/20 rounded-full px-7 py-[18px] hover:bg-paper/[0.08] transition-colors"
-          >
-            {studio.cta.secondary}
-          </a>
+          <PillButton asChild tone="paper" size="lg">
+            <Link href="/#contact">{studio.cta.primary}</Link>
+          </PillButton>
+          <PillButton asChild tone="outline-paper" size="lg">
+            <a href="mailto:hello@softmaxco.io">{studio.cta.secondary}</a>
+          </PillButton>
         </div>
       </section>
 

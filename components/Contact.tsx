@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { contact } from '@/content/copy';
 import BookCall from '@/components/BookCall';
+import { PillButton, pillButtonVariants } from '@/components/ui/pill-button';
 
 type Status = 'idle' | 'sending' | 'sent' | 'error';
 
@@ -45,7 +46,9 @@ export default function Contact() {
           <h2 className="font-semibold text-[38px] leading-[0.95] tracking-[-0.042em] md:text-[clamp(42px,6vw,86px)] md:leading-[0.94] md:tracking-[-0.045em] mb-6 md:mb-[30px]">
             {contact.title}
           </h2>
-          <BookCall className="mb-6 md:mb-[30px] font-mono text-xs font-medium uppercase tracking-[0.06em] bg-[#b3402f] text-paper rounded-full px-[26px] py-[15px] hover:opacity-90 transition-opacity" />
+          <BookCall
+            className={pillButtonVariants({ tone: 'signal', size: 'lg', className: 'mb-6 md:mb-[30px]' })}
+          />
           <div className="flex flex-wrap gap-8 md:gap-11 font-mono text-[13px] leading-[1.7] text-paper/65">
             <div>
               <div className="text-paper">{contact.email}</div>
@@ -108,13 +111,15 @@ export default function Contact() {
                   className={`${fieldInput} leading-normal resize-none`}
                 />
               </div>
-              <button
+              <PillButton
                 type="submit"
+                tone="paper"
+                size="lg"
                 disabled={status === 'sending'}
-                className="mt-2.5 self-start font-mono text-xs font-medium uppercase tracking-[0.06em] bg-paper text-ink rounded-full px-[26px] py-[17px] hover:opacity-90 transition-opacity disabled:opacity-60"
+                className="mt-2.5 self-start"
               >
                 {status === 'sending' ? contact.form.sending : contact.form.submit}
-              </button>
+              </PillButton>
               {status === 'error' && (
                 <span className="font-mono text-[11px] leading-[1.5] text-paper/65">
                   {contact.form.error}

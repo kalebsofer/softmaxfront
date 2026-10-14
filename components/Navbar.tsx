@@ -7,9 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { nav } from '@/content/copy';
 import BookCall from '@/components/BookCall';
-
-const pill =
-  'font-mono text-xs font-medium uppercase tracking-[0.05em] rounded-full px-[18px] py-3 transition-colors';
+import { PillButton, pillButtonVariants } from '@/components/ui/pill-button';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -65,32 +63,27 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden md:flex items-center gap-[9px]">
-          <Link
-            href={onStudio ? '#engage' : anchor('contact')}
-            className={`${pill} border border-ink/[0.12] hover:bg-ink/[0.04]`}
-          >
-            {nav.messageUs}
-          </Link>
-          <BookCall
-            className={`${pill} bg-[#b3402f] text-paper hover:opacity-[0.88] transition-opacity`}
-          />
-          {showGetTraction && (
-            <Link
-              href={anchor('traction')}
-              className={`${pill} bg-ink text-paper hover:opacity-[0.88] transition-opacity`}
-            >
-              {nav.getTraction}
+          <PillButton asChild tone="outline">
+            <Link href={onStudio ? '#engage' : anchor('contact')}>
+              {nav.messageUs}
             </Link>
+          </PillButton>
+          <BookCall className={pillButtonVariants({ tone: 'signal' })} />
+          {showGetTraction && (
+            <PillButton asChild>
+              <Link href={anchor('traction')}>{nav.getTraction}</Link>
+            </PillButton>
           )}
         </div>
 
-        <button
+        <PillButton
+          size="sm"
           onClick={() => setMobileOpen(true)}
-          className="md:hidden font-mono text-[11px] font-medium uppercase tracking-[0.05em] bg-ink text-paper rounded-full px-4 py-[11px]"
+          className="md:hidden"
           aria-label="Open menu"
         >
           {nav.menu}
-        </button>
+        </PillButton>
       </div>
 
       {/* Full-screen mobile sheet — portalled to body: the header's backdrop-filter
@@ -112,13 +105,13 @@ export default function Navbar() {
                 className="h-5 w-auto"
               />
             </Link>
-            <button
+            <PillButton
+              size="sm"
               onClick={() => setMobileOpen(false)}
-              className="font-mono text-[11px] font-medium uppercase tracking-[0.05em] bg-ink text-paper rounded-full px-4 py-[11px]"
               aria-label="Close menu"
             >
               {nav.close}
-            </button>
+            </PillButton>
           </div>
           <nav className="flex-1 flex flex-col">
             {navLinks.map((link) => (
@@ -133,22 +126,21 @@ export default function Navbar() {
             ))}
           </nav>
           <div className="flex flex-col gap-[9px] px-5 pb-8">
-            <Link
-              href={onStudio ? '#engage' : anchor('contact')}
-              onClick={() => setMobileOpen(false)}
-              className="font-mono text-xs font-medium uppercase tracking-[0.06em] bg-ink text-paper rounded-full p-[17px] text-center"
-            >
-              {nav.messageUs}
-            </Link>
-            <BookCall className="font-mono text-xs font-medium uppercase tracking-[0.06em] bg-[#b3402f] text-paper rounded-full p-[17px] text-center" />
-            {showGetTraction && (
+            <PillButton asChild size="block">
               <Link
-                href={anchor('traction')}
+                href={onStudio ? '#engage' : anchor('contact')}
                 onClick={() => setMobileOpen(false)}
-                className="font-mono text-xs font-medium uppercase tracking-[0.06em] border border-ink/[0.12] rounded-full p-[17px] text-center"
               >
-                {nav.getTraction}
+                {nav.messageUs}
               </Link>
+            </PillButton>
+            <BookCall className={pillButtonVariants({ tone: 'signal', size: 'block' })} />
+            {showGetTraction && (
+              <PillButton asChild tone="outline" size="block">
+                <Link href={anchor('traction')} onClick={() => setMobileOpen(false)}>
+                  {nav.getTraction}
+                </Link>
+              </PillButton>
             )}
           </div>
         </div>,
