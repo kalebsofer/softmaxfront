@@ -14,7 +14,7 @@ export const nav = {
     traction: 'Traction',
     team: 'Team',
   },
-  startProject: 'Start a project',
+  messageUs: 'Message us',
   getTraction: 'Get Traction',
   menu: 'Menu',
   close: 'Close',
@@ -23,13 +23,8 @@ export const nav = {
 export const hero = {
   headline: 'We are a collective of data engineers and AI specialists.',
   // Mobile-only pills under the headline
-  primaryCta: 'Start a project',
+  primaryCta: 'Message us',
   secondaryCta: 'See the work',
-  // Rotating stamp seal beside the headline; both lines render around the ring.
-  stamp: {
-    ring: 'Taking new clients on for October',
-    cta: 'Get in touch',
-  },
 };
 
 export const capabilityStrip = {
@@ -39,7 +34,6 @@ export const capabilityStrip = {
     'delivery',
     'compliance',
   ],
-  availability: 'Available from October',
   // Mobile-only row under the marquee
   scrollHint: 'Scroll ↓',
 };
@@ -309,7 +303,6 @@ export const principles = {
 
 export const contact = {
   title: "Tell us what's broken. We'll scope it in one call.",
-  lead: 'Taking new clients as of October, get in touch!',
   email: 'hello@softmaxco.io',
   emailNote: 'Reply within 24 hours',
   location: 'London, UK',
@@ -330,8 +323,7 @@ export const contact = {
     emailLabel: 'Email',
     emailPlaceholder: 'you@company.com',
     messageLabel: 'What needs building',
-    messagePlaceholder: 'A sentence is enough.',
-    submit: 'Send it →',
+    submit: 'Send →',
     sending: 'Sending…',
     error: 'Something went wrong — try again, or email hello@softmaxco.io.',
   },

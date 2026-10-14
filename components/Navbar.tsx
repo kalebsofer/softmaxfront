@@ -15,6 +15,8 @@ export default function Navbar() {
   const pathname = usePathname();
   const onHome = pathname === '/';
   const onStudio = pathname === '/studio';
+  // Home and Studio already lead with their own calls to action.
+  const showGetTraction = !onHome && !onStudio;
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
@@ -37,17 +39,15 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-paper/95 backdrop-blur-[14px]">
       <div className="flex items-center justify-between px-5 py-3.5 md:px-10 md:py-[22px]">
-        <Link href="/" className="flex items-center gap-[9px]">
+        <Link href="/" className="flex items-center">
           <Image
-            src="/images/logo.png"
-            alt=""
-            width={14}
-            height={17}
-            className="object-contain"
+            src="/brand/smc-primary.svg"
+            alt={nav.brand}
+            width={62}
+            height={20}
+            priority
+            className="h-5 w-auto md:h-[22px]"
           />
-          <span className="text-[19px] font-bold leading-none tracking-[-0.035em]">
-            {nav.brand}
-          </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-[30px] font-mono text-xs uppercase tracking-[0.05em]">
@@ -69,12 +69,12 @@ export default function Navbar() {
             href={onStudio ? '#engage' : anchor('contact')}
             className={`${pill} border border-ink/[0.12] hover:bg-ink/[0.04]`}
           >
-            {nav.startProject}
+            {nav.messageUs}
           </Link>
           <BookCall
             className={`${pill} bg-[#b3402f] text-paper hover:opacity-[0.88] transition-opacity`}
           />
-          {!onStudio && (
+          {showGetTraction && (
             <Link
               href={anchor('traction')}
               className={`${pill} bg-ink text-paper hover:opacity-[0.88] transition-opacity`}
@@ -102,18 +102,15 @@ export default function Navbar() {
             <Link
               href="/"
               onClick={() => setMobileOpen(false)}
-              className="flex items-center gap-[9px]"
+              className="flex items-center"
             >
               <Image
-                src="/images/logo.png"
-                alt=""
-                width={14}
-                height={17}
-                className="object-contain"
+                src="/brand/smc-primary.svg"
+                alt={nav.brand}
+                width={62}
+                height={20}
+                className="h-5 w-auto"
               />
-              <span className="text-[19px] font-bold leading-none tracking-[-0.035em]">
-                {nav.brand}
-              </span>
             </Link>
             <button
               onClick={() => setMobileOpen(false)}
@@ -141,10 +138,10 @@ export default function Navbar() {
               onClick={() => setMobileOpen(false)}
               className="font-mono text-xs font-medium uppercase tracking-[0.06em] bg-ink text-paper rounded-full p-[17px] text-center"
             >
-              {nav.startProject}
+              {nav.messageUs}
             </Link>
             <BookCall className="font-mono text-xs font-medium uppercase tracking-[0.06em] bg-[#b3402f] text-paper rounded-full p-[17px] text-center" />
-            {!onStudio && (
+            {showGetTraction && (
               <Link
                 href={anchor('traction')}
                 onClick={() => setMobileOpen(false)}

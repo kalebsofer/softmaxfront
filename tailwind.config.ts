@@ -96,7 +96,6 @@ export default {
       animation: {
         marquee: "marquee 28s linear infinite",
         "marquee-fast": "marquee 22s linear infinite",
-        "spin-slow": "spin 26s linear infinite",
       },
     },
   },

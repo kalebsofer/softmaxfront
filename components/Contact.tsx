@@ -42,12 +42,9 @@ export default function Contact() {
     >
       <div className="grid lg:grid-cols-[1.25fr_1fr] gap-8 lg:gap-16 items-start">
         <div>
-          <h2 className="font-semibold text-[38px] leading-[0.95] tracking-[-0.042em] md:text-[clamp(42px,6vw,86px)] md:leading-[0.94] md:tracking-[-0.045em] mb-4 md:mb-6">
+          <h2 className="font-semibold text-[38px] leading-[0.95] tracking-[-0.042em] md:text-[clamp(42px,6vw,86px)] md:leading-[0.94] md:tracking-[-0.045em] mb-6 md:mb-[30px]">
             {contact.title}
           </h2>
-          <p className="text-sm leading-[1.55] md:text-[17px] md:leading-[1.6] text-paper/70 max-w-[520px] mb-6 md:mb-[30px]">
-            {contact.lead}
-          </p>
           <BookCall className="mb-6 md:mb-[30px] font-mono text-xs font-medium uppercase tracking-[0.06em] bg-[#b3402f] text-paper rounded-full px-[26px] py-[15px] hover:opacity-90 transition-opacity" />
           <div className="flex flex-wrap gap-8 md:gap-11 font-mono text-[13px] leading-[1.7] text-paper/65">
             <div>
@@ -108,7 +105,6 @@ export default function Contact() {
                   name="message"
                   rows={3}
                   required
-                  placeholder={contact.form.messagePlaceholder}
                   className={`${fieldInput} leading-normal resize-none`}
                 />
               </div>

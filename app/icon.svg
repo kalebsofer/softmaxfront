@@ -1,16 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 8 260 260">
-  <defs>
-    <linearGradient id="g" x1="0" y1="8" x2="0" y2="268" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#E9FFEB"/>
-      <stop offset=".1" stop-color="#E9FFEB"/>
-      <stop offset=".35" stop-color="#93D4C3"/>
-      <stop offset=".65" stop-color="#93D4C3"/>
-      <stop offset=".9" stop-color="#1B998B"/>
-      <stop offset="1" stop-color="#1B998B"/>
-    </linearGradient>
-  </defs>
-  <g fill="none" stroke="url(#g)" stroke-width="60" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M30 102 L110 38 L190 102"/>
-    <path d="M30 238 L110 174 L190 238"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64"><rect width="64" height="64" rx="12" fill="#141414"/><path fill="#FF4A1C" d="M32.83 53.12L32.83 53.12Q26.24 53.12 21.63 50.83Q17.03 48.55 14.65 43.85Q12.28 39.16 12.28 31.97L12.28 31.97Q12.28 21.40 17.59 16.14Q22.91 10.88 32.83 10.88L32.83 10.88Q38.36 10.88 42.63 12.75Q46.91 14.62 49.32 18.34Q51.72 22.05 51.72 27.57L51.72 27.57L41.33 27.57Q41.33 24.96 40.29 23.09Q39.25 21.22 37.38 20.21Q35.51 19.20 32.83 19.20L32.83 19.20Q29.50 19.20 27.37 20.56Q25.23 21.93 24.22 24.48Q23.21 27.04 23.21 30.66L23.21 30.66L23.21 33.34Q23.21 36.96 24.22 39.54Q25.23 42.13 27.34 43.47Q29.45 44.80 32.77 44.80L32.77 44.80Q35.62 44.80 37.61 43.85Q39.60 42.90 40.64 41.03Q41.68 39.16 41.68 36.54L41.68 36.54L51.72 36.54Q51.72 42.07 49.38 45.75Q47.03 49.44 42.78 51.28Q38.54 53.12 32.83 53.12Z"/></svg>

@@ -69,18 +69,17 @@ function Shell({ children }: { children: React.ReactNode }) {
         <div className="w-full max-w-md md:max-w-3xl text-center">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 md:gap-3 mb-12 md:mb-20 opacity-80 hover:opacity-100 transition-opacity"
+            className="inline-flex mb-12 md:mb-20 opacity-80 hover:opacity-100 transition-opacity"
           >
+            {/* The kit's horizontal lockup: wordmark outlined from Satoshi Bold,
+                mark at 0.85x the type size with a 0.304em gap. */}
             <Image
-              src="/images/logo.png"
-              alt="Softmax"
-              width={13}
+              src="/images/traction/traction-lockup-horizontal.svg"
+              alt="Traction"
+              width={83}
               height={16}
-              className="object-contain h-4 md:h-8 w-auto"
+              className="h-4 md:h-8 w-auto"
             />
-            <span className="text-base md:text-2xl font-bold tracking-tight text-foreground">
-              Softmax
-            </span>
           </Link>
           {children}
         </div>
