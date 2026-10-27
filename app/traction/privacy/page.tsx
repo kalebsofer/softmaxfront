@@ -17,7 +17,7 @@ export default function TractionPrivacy() {
 
           <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Introduction</h2>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">
-            Traction Health (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) operates the Traction Health mobile application (the &quot;App&quot;). This Privacy Policy explains how we collect, use, share, and protect your personal information when you use our App.
+            Traction Health (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), operated by Softmax Ltd, provides the Traction Health mobile application (the &quot;App&quot;). This Privacy Policy explains how we collect, use, share, and protect your personal information when you use our App.
           </p>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             By using the App, you agree to the collection and use of information in accordance with this Privacy Policy.
@@ -202,6 +202,7 @@ export default function TractionPrivacy() {
             <br />
             <strong className="text-ink">Website</strong>: <a href="https://softmaxco.io" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors">https://softmaxco.io</a>
           </p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">Traction Health is operated by Softmax Ltd, 46 Regents Park Road, London NW1 7SX, registered in England and Wales under company number 15897507.</p>
         </div>
       </main>
       <Footer />
