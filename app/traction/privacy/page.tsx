@@ -140,12 +140,11 @@ export default function TractionPrivacy() {
           <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
             <li>Your account data and habit/task data are retained as long as your account is active.</li>
             <li>When you delete your account, we initiate deletion of your data with a 14-day grace period, after which your data is permanently removed from our systems.</li>
+            <li>When you delete your account, your community data — including connections, shared habits, comments, nudges, reactions, group memberships, blocks, and reports — is deleted along with your account, and your username, avatar, and connection code are removed from public view.</li>
             <li>Daily totals synced from Apple Health or Health Connect are retained with the linked habit and deleted with the habit or the account.</li>
             <li>Crash and diagnostic logs are retained according to the retention policies of our service providers (Sentry and LogRocket).</li>
             <li>Ad measurement records are kept while you use the App and deleted with your account or when you turn ad measurement off; AppsFlyer keeps event-level data for 90 days and aggregated reports for up to 25 months.</li>
             <li>Bug reports and feedback are retained to improve the App and may be removed upon request.</li>
-            <li>When you delete your account, your community data, including connections, shared habits, comments, nudges, reactions, group memberships, blocks, and reports, is deleted along with your account, and your username, avatar, and connection code are removed from public view.</li>
-            <li>Comments, nudges, and reactions you sent to others are removed from their views when your account is deleted.</li>
           </ul>
 
           <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Data Security</h2>
