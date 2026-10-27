@@ -15,8 +15,9 @@ export default function TractionPrivacy() {
           <h1 className="text-[34px] md:text-[44px] font-semibold tracking-[-0.04em] leading-[1.05] mb-2 text-ink">Traction Health — Privacy Policy</h1>
           <p className="text-base text-ink/60 mb-8"><strong className="text-ink">Last Updated</strong>: October 27, 2026</p>
 
+          <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Introduction</h2>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">
-            Traction Health (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), operated by Softmax Ltd, provides the Traction Health mobile application (the &quot;App&quot;). This Privacy Policy explains how we collect, use, share, and protect your personal information when you use our App.
+            Traction Health (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) operates the Traction Health mobile application (the &quot;App&quot;). This Privacy Policy explains how we collect, use, share, and protect your personal information when you use our App.
           </p>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             By using the App, you agree to the collection and use of information in accordance with this Privacy Policy.
@@ -25,12 +26,24 @@ export default function TractionPrivacy() {
           <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Information We Collect</h2>
 
           <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">Account Information</h3>
-          <p className="text-base text-ink/60 mb-4 leading-[1.65]">When you create an account, we collect your name (first and last name), email address, and optionally a phone number. You may also provide optional profile information such as date of birth and an avatar. You can sign up using email and password, Google Sign-In, or Apple Sign-In; if you use a third-party sign-in method, we receive your name and email address from that provider. We also support anonymous device-based accounts that do not require personal contact information.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">When you create an account, we collect:</p>
+          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
+            <li><strong className="text-ink">Name</strong> (first and last name)</li>
+            <li><strong className="text-ink">Email address</strong></li>
+            <li><strong className="text-ink">Phone number</strong> (optional)</li>
+          </ul>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">You may also provide optional profile information such as date of birth and an avatar.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">You can sign up using email and password, Google Sign-In, or Apple Sign-In. If you use a third-party sign-in method, we receive your name and email address from that provider. We also support anonymous device-based accounts that do not require personal contact information.</p>
 
           <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">Health and Fitness Data</h3>
-          <p className="text-base text-ink/60 mb-4 leading-[1.65]">The App is a habit and task tracking tool. We collect habit and task names, descriptions, and categories; completion logs (date, value, and completion status); streak and completion-rate metrics; and schedule and reminder preferences.</p>
-          <p className="text-base text-ink/60 mb-4 leading-[1.65]"><strong className="text-ink">Apple Health and Health Connect.</strong> You can optionally link a habit to one metric from Apple Health (iOS) or Health Connect (Android), such as steps, distance, active energy, flights climbed, exercise and workout minutes, sleep, mindful minutes, water, caffeine, weight, or wheelchair pushes. When you do, the App reads that metric on your device, reduces it to a single total per day, and uses it to mark the habit complete. Only that daily total for each linked habit is stored with your account so the habit stays in sync across your devices. Raw samples, timestamps, routes, and source devices never leave your device. If you log a linked habit by hand, the App writes that entry back to Apple Health or Health Connect so your records agree.</p>
-          <p className="text-base text-ink/60 mb-4 leading-[1.65]">Health data is read only after you grant permission in the system dialog, and we never use it for advertising, analytics, or research, never sell it, never share it with third parties, and never store it in iCloud. If you share a linked habit or add it to a group, its daily progress is visible to those people in the same way as any other habit. You can unlink a habit, disconnect all habits under Settings &gt; Health data, or revoke access in the Apple Health or Health Connect settings at any time; totals already synced stay on the habit until you delete the habit or your account.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">The App is a habit and task tracking tool. We collect:</p>
+          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
+            <li>Habit and task names, descriptions, and categories</li>
+            <li>Completion logs (date, value, and completion status)</li>
+            <li>Streak and completion rate metrics</li>
+            <li>Schedule and reminder preferences</li>
+          </ul>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]"><strong className="text-ink">Apple Health and Health Connect.</strong> You can optionally link a habit to one metric from Apple Health (iOS) or Health Connect (Android), such as steps, distance, active energy, flights climbed, exercise and workout minutes, sleep, mindful minutes, water, caffeine, weight, or wheelchair pushes. When you do, the App reads that metric on your device, reduces it to a single total per day, and uses it to mark the habit complete. Only that daily total for each linked habit is stored with your account so the habit stays in sync across your devices. Raw samples, timestamps, routes, and source devices never leave your device. If you log a linked habit by hand, the App writes that entry back to Apple Health or Health Connect so your records agree. Health data is read only after you grant permission in the system dialog, and we never use it for advertising, analytics, or research, never sell it, never share it with third parties, and never store it in iCloud. If you share a linked habit or add it to a group, its daily progress is visible to those people in the same way as any other habit. You can unlink a habit, disconnect all habits under Settings &gt; Health data, or revoke access in the Apple Health or Health Connect settings at any time; totals already synced stay on the habit until you delete the habit or your account.</p>
 
           <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">User-Generated Content</h3>
           <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
@@ -40,34 +53,37 @@ export default function TractionPrivacy() {
           </ul>
 
           <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">Community and Social Data</h3>
-          <p className="text-base text-ink/60 mb-4 leading-[1.65]">The App includes optional community features (shared habits, partnerships, and groups) that let you connect with other people, share your progress, and encourage each other. These features are only available after you create an account with an email address and claim a username; anonymous device-based accounts cannot access community features. When you use community features, we process:</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">Traction Health includes optional community features (shared habits, partnerships, and groups) that let you connect with other people, share your progress, and encourage each other. These features are only available after you create an account with an email address and claim a username; anonymous device-based accounts cannot access community features.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">When you use community features, the following information is created and processed:</p>
           <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
-            <li><strong className="text-ink">Public profile:</strong> your username (display name), avatar (provided by your sign-in provider or generated by the App), and join date.</li>
-            <li><strong className="text-ink">Connection codes and invite links:</strong> a shareable code and invite link. Anyone you give it to can view a preview of your public profile and your aggregate streak and habit-count statistics (unless you hide them) and send you a connection request.</li>
-            <li><strong className="text-ink">Shared habit data:</strong> habit names, your completion progress, streaks, completion rate, and group leaderboard ranking become visible to the people you share with or the members of a group you join.</li>
-            <li><strong className="text-ink">Messages and interactions:</strong> comments, nudges (with optional messages), mentions, and emoji reactions you send, shown to the other participants and in their community activity feed.</li>
-            <li><strong className="text-ink">Connections and group membership:</strong> the people you are connected to and the groups you belong to.</li>
+            <li><strong className="text-ink">Public profile:</strong> your chosen username (display name), your avatar (provided by your sign-in provider), and the date you joined.</li>
+            <li><strong className="text-ink">Connection codes and invite links:</strong> a shareable code in the form TRACT-XXXXXX and a corresponding invite link. Anyone you give this code or link to can view a preview of your public profile (username, avatar, join date, and, unless you hide them, your aggregate streak and habit-count statistics) and send you a connection request.</li>
+            <li><strong className="text-ink">Shared habit data:</strong> when you share a habit or join a group, the habit&apos;s name, your completion progress, streaks, completion rate, and group leaderboard ranking become visible to the people you have shared with or the members of that group.</li>
+            <li><strong className="text-ink">Messages and interactions:</strong> comments, &quot;nudges&quot; (with optional messages), @mentions, and emoji reactions that you send. These are stored and shown to the other participants in the relevant share or group, and may appear in their community activity feed.</li>
+            <li><strong className="text-ink">Connections and group membership:</strong> the list of people you are connected to and the groups you belong to.</li>
             <li><strong className="text-ink">Safety actions:</strong> records of users you block and reports you submit about other users.</li>
           </ul>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">You control how much you share: you can hide your statistics from the community, change or regenerate your connection code, block other users, report abusive content or behavior, and leave any group or end any share at any time.</p>
 
           <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">Device Information</h3>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">We collect certain device information to provide core App functionality:</p>
           <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
-            <li>A unique device identifier generated and stored locally on your device</li>
+            <li><strong className="text-ink">Device identifier</strong> (a unique ID generated and stored locally on your device)</li>
             <li>Device model, platform (iOS/Android), and operating system version</li>
             <li>App version</li>
           </ul>
 
           <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">Diagnostics and Usage Data</h3>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">To maintain and improve the App, we collect:</p>
           <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
             <li><strong className="text-ink">Crash data</strong> (crash logs and exception reports via Sentry)</li>
             <li><strong className="text-ink">Performance data</strong> (app launch time, request latency, and error rates)</li>
-            <li><strong className="text-ink">Session diagnostics</strong> (interaction and error data via LogRocket for debugging, linked to your account; authentication credentials and community message content are excluded from capture)</li>
+            <li><strong className="text-ink">Session diagnostics</strong> (interaction and error data via LogRocket for debugging purposes, linked to your account; authentication credentials and community message content are excluded from capture)</li>
             <li><strong className="text-ink">Bug report diagnostics</strong> (device model, OS version, app version, screen size, locale, timezone, and network type, collected only when you submit a bug report)</li>
           </ul>
 
           <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">Push Notification Tokens</h3>
-          <p className="text-base text-ink/60 mb-4 leading-[1.65]">If you enable push notifications, we collect your push notification token along with your device platform and model to deliver habit and task reminders and community notifications.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">If you enable push notifications, we collect your Expo push notification token along with your device platform and model to deliver habit and task reminders.</p>
 
           <h3 id="ad-measurement" className="scroll-mt-24 font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">Ad Measurement (AppsFlyer)</h3>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">We advertise Traction on Google and Apple. To understand which ads bring people who go on to use the App, and what each of those people costs us, we use AppsFlyer, a mobile measurement company. AppsFlyer acts as our processor: it handles this data on our instructions and under a data processing agreement with us.</p>
@@ -88,25 +104,33 @@ export default function TractionPrivacy() {
           <p className="text-base text-ink/60 mb-4 leading-[1.65]"><strong className="text-ink">Your rights.</strong> You can ask us for a copy of this data, or ask us to delete it, by emailing <a href="mailto:support@softmaxco.io" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors">support@softmaxco.io</a>. We will pass deletion requests on to AppsFlyer.</p>
 
           <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">How We Use Your Information</h2>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">We use the information we collect for the following purposes:</p>
           <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
-            <li><strong className="text-ink">App Functionality:</strong> to authenticate your account, sync your data across devices, power community features, deliver push notifications, and provide customer support.</li>
-            <li><strong className="text-ink">Analytics:</strong> to understand app performance, diagnose crashes and errors, and improve the user experience.</li>
+            <li><strong className="text-ink">App Functionality:</strong> to authenticate your account, sync your data across devices, deliver push notification reminders, and provide customer support.</li>
+            <li><strong className="text-ink">Analytics:</strong> to understand app performance, diagnose crashes and errors, and improve the user experience. Analytics data is linked to your identity to help us debug issues and understand usage patterns.</li>
             <li><strong className="text-ink">Ad measurement:</strong> to measure which of our own ads bring people to the App, through AppsFlyer, as described under <a href="#ad-measurement" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors">Ad Measurement</a>.</li>
           </ul>
-          <p className="text-base mb-4 leading-[1.65] font-medium text-ink">We do not use your data for third-party advertising, showing you personalized or targeted ads, sharing with data brokers, or tracking you across other apps or websites.</p>
+          <p className="text-base mb-4 leading-[1.65] font-medium text-ink">We do not use your data for:</p>
+          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
+            <li>Third-party advertising</li>
+            <li>Showing you personalized or targeted ads</li>
+            <li>Sharing with data brokers</li>
+            <li>Tracking you across other apps or websites</li>
+          </ul>
 
           <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">How We Share Your Information</h2>
-          <p className="text-base text-ink/60 mb-4 leading-[1.65]">We share your information only with the following service providers, solely to operate and maintain the App. The community features have not added any new third-party service providers.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">We share your information only with the following service providers, solely to operate and maintain the App:</p>
           <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
-            <li><strong className="text-ink">Firebase (Google)</strong> — authentication and file storage: email, name, auth tokens, bug report attachments.</li>
-            <li><strong className="text-ink">Sentry</strong> — crash reporting and performance monitoring: crash logs, performance metrics, device info.</li>
-            <li><strong className="text-ink">LogRocket</strong> — session replay and error debugging: user ID, session interaction data, error events (credentials and community message content excluded).</li>
-            <li><strong className="text-ink">Expo</strong> — push notification delivery: push notification tokens, device platform.</li>
-            <li><strong className="text-ink">Anthropic</strong> - grouping in-app feedback so duplicate reports are handled together: the text of a feedback report and the screen it was sent from, never your name, username or email.</li>
-            <li><strong className="text-ink">Resend</strong> - delivering feedback reports to our team by email: report text, diagnostics, and your account email as the reply address.</li>
+            <li><strong className="text-ink">Firebase (Google)</strong> - authentication, file storage: email, name, auth tokens, bug report attachments.</li>
+            <li><strong className="text-ink">Sentry</strong> - crash reporting and performance monitoring: crash logs, performance metrics, device info.</li>
+            <li><strong className="text-ink">LogRocket</strong> - session replay and error debugging: user ID, session interaction data, error events.</li>
+            <li><strong className="text-ink">Expo</strong> - push notification delivery: push notification tokens, device platform.</li>
+            <li><strong className="text-ink">Anthropic</strong> - grouping in-app feedback so duplicate reports are handled together: feedback report text and the screen it was sent from, never your name, username or email.</li>
+            <li><strong className="text-ink">Resend</strong> - delivering feedback reports to our team by email: report text, diagnostics, your account email as the reply address.</li>
             <li><strong className="text-ink">GitHub</strong> - tracking bug reports in a private repository: bug report text and diagnostics, never your email.</li>
             <li><strong className="text-ink">AppsFlyer</strong> - measuring which of our ads lead to installs and use, while ad measurement is on: random install IDs, ad source, device and app details, IP address, app opens, habit created, check-in and group joined events.</li>
           </ul>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">These providers process data on our behalf and are contractually obligated to use it only for the purposes described above. The community features have not added any new third-party service providers.</p>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]"><strong className="text-ink">Google Ads.</strong> For installs that came from a Google ad, and while ad measurement is on, AppsFlyer shares the events listed under <a href="#ad-measurement" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors">Ad Measurement</a> with Google so that Google Ads can report which of its ads worked. Google receives them as an independent controller, and we tell Google not to use them for personalized ads.</p>
           <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">Sharing With Other Users</h3>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">When you use community features, you share information directly with other people you choose to connect with. Your username, avatar, shared habit progress, comments, nudges, reactions, and group leaderboard standing are visible to your connections and the members of groups you join, and anyone you give your connection code or invite link to can view a preview of your public profile. This sharing is initiated by you and only occurs when you opt into community features. We do not make your community activity public on the open internet or to users you have not connected with.</p>
@@ -116,22 +140,26 @@ export default function TractionPrivacy() {
           <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
             <li>Your account data and habit/task data are retained as long as your account is active.</li>
             <li>When you delete your account, we initiate deletion of your data with a 14-day grace period, after which your data is permanently removed from our systems.</li>
-            <li>When you delete your account, your community data — including connections, shared habits, comments, nudges, reactions, group memberships, blocks, and reports — is deleted along with your account, and your username, avatar, and connection code are removed from public view.</li>
-            <li>Crash and diagnostic logs are retained according to the retention policies of our service providers (Sentry and LogRocket).</li>
             <li>Daily totals synced from Apple Health or Health Connect are retained with the linked habit and deleted with the habit or the account.</li>
+            <li>Crash and diagnostic logs are retained according to the retention policies of our service providers (Sentry and LogRocket).</li>
             <li>Ad measurement records are kept while you use the App and deleted with your account or when you turn ad measurement off; AppsFlyer keeps event-level data for 90 days and aggregated reports for up to 25 months.</li>
             <li>Bug reports and feedback are retained to improve the App and may be removed upon request.</li>
+            <li>When you delete your account, your community data, including connections, shared habits, comments, nudges, reactions, group memberships, blocks, and reports, is deleted along with your account, and your username, avatar, and connection code are removed from public view.</li>
+            <li>Comments, nudges, and reactions you sent to others are removed from their views when your account is deleted.</li>
           </ul>
 
           <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Data Security</h2>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">We take reasonable measures to protect your information:</p>
           <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
             <li>Authentication tokens are stored in encrypted device storage (Secure Store on iOS, encrypted preferences on Android).</li>
             <li>All data transmitted between the App and our servers is encrypted using HTTPS/TLS.</li>
             <li>Passwords are never stored on your device; authentication is handled by Firebase.</li>
+            <li>LogRocket sanitizes authentication request and response bodies to prevent credential exposure.</li>
           </ul>
-          <p className="text-base text-ink/60 mb-4 leading-[1.65]">While we strive to protect your personal information, no method of electronic transmission or storage is completely secure, and we cannot guarantee absolute security.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">While we strive to protect your personal information, no method of electronic transmission or storage is completely secure. We cannot guarantee absolute security.</p>
 
           <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Your Rights and Choices</h2>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">Depending on your jurisdiction, you may have the following rights:</p>
           <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
             <li><strong className="text-ink">Access:</strong> request a copy of the personal data we hold about you.</li>
             <li><strong className="text-ink">Correction:</strong> update or correct inaccurate personal information through your in-app profile settings.</li>
@@ -142,12 +170,25 @@ export default function TractionPrivacy() {
             <li><strong className="text-ink">Anonymous Use:</strong> use the App with a device-based account without providing personal contact information. Community features are not available to anonymous accounts.</li>
             <li><strong className="text-ink">Community Privacy:</strong> hide your statistics from the community, change or regenerate your connection code, block other users, report abusive content or behavior, and leave any group or end any share at any time from within the App.</li>
           </ul>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">To exercise any of these rights, contact us at the address listed below.</p>
 
           <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">California Residents (CCPA)</h3>
-          <p className="text-base text-ink/60 mb-4 leading-[1.65]">If you are a California resident, you have the right to know what personal information we collect, use, and disclose; to request deletion of your personal information; and not to be discriminated against for exercising your privacy rights. We do not sell personal information as defined by the California Consumer Privacy Act.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">If you are a California resident, you have the right to:</p>
+          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
+            <li>Know what personal information we collect, use, and disclose</li>
+            <li>Request deletion of your personal information</li>
+            <li>Not be discriminated against for exercising your privacy rights</li>
+          </ul>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">We do not sell personal information as defined by the California Consumer Privacy Act.</p>
 
-          <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">European and UK Residents (GDPR)</h3>
-          <p className="text-base text-ink/60 mb-4 leading-[1.65]">If you are located in the European Economic Area, the United Kingdom or Switzerland, our legal bases for processing your information are contract (processing necessary to provide the App), legitimate interest (analytics, crash reporting, and improving the App), and consent (where required, such as for push notifications and ad measurement). You also have the right to data portability and the right to lodge a complaint with your local data protection authority.</p>
+          <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">European Residents (GDPR)</h3>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">If you are located in the European Economic Area, the United Kingdom or Switzerland, our legal bases for processing your information are:</p>
+          <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
+            <li><strong className="text-ink">Contract:</strong> processing necessary to provide the App&apos;s services to you</li>
+            <li><strong className="text-ink">Legitimate Interest:</strong> processing necessary for analytics, crash reporting, and improving the App</li>
+            <li><strong className="text-ink">Consent:</strong> where required, such as for push notifications and ad measurement</li>
+          </ul>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">You may also have the right to data portability and the right to lodge a complaint with your local data protection authority.</p>
 
           <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Children&apos;s Privacy</h2>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">The App is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13, please contact us so we can promptly delete it.</p>
@@ -156,7 +197,12 @@ export default function TractionPrivacy() {
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the updated policy within the App or on our website and updating the &quot;Last Updated&quot; date above. Your continued use of the App after changes are posted constitutes your acceptance of the updated policy.</p>
 
           <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Contact Us</h2>
-          <p className="text-base text-ink/60 mb-4 leading-[1.65]">If you have any questions about this Privacy Policy or our data practices, contact us at <a href="mailto:support@softmaxco.io" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors">support@softmaxco.io</a>. Traction Health is operated by Softmax Ltd, 46 Regents Park Road, London NW1 7SX, registered in England and Wales under company number 15897507.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">If you have any questions about this Privacy Policy or our data practices, please contact us at:</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">
+            <strong className="text-ink">Email</strong>: <a href="mailto:support@softmaxco.io" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors">support@softmaxco.io</a>
+            <br />
+            <strong className="text-ink">Website</strong>: <a href="https://softmaxco.io" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors">https://softmaxco.io</a>
+          </p>
         </div>
       </main>
       <Footer />
