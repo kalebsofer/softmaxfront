@@ -14,10 +14,10 @@ export default function TractionDataDeletion() {
       <main className="pt-6 md:pt-10 pb-16">
         <div className="container max-w-3xl">
           <h1 className="text-[34px] md:text-[44px] font-semibold tracking-[-0.04em] leading-[1.05] mb-2 text-ink">Traction Health — Data Deletion</h1>
-          <p className="text-base text-ink/60 mb-8"><strong className="text-ink">Last Updated</strong>: June 2, 2026</p>
+          <p className="text-base text-ink/60 mb-8"><strong className="text-ink">Last Updated</strong>: November 24, 2026</p>
 
           <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">How to Delete Your Data</h2>
-          <p className="text-base text-ink/60 mb-4 leading-[1.65]">Traction Health lets you delete your account and all associated data directly from within the app. When you delete your account, we remove your personal information, habits, tasks, completion logs, community data, and all other data linked to your account.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">Traction Health lets you delete your account and all associated data directly from within the app. When you delete your account, we remove your personal information, habits, tasks, completion logs, journal entries, goals, community data, and all other data linked to your account.</p>
 
           <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Delete Your Account from the App</h2>
           <ol className="list-decimal list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
@@ -34,11 +34,14 @@ export default function TractionDataDeletion() {
             <li>Account information (name, email, profile details, username, avatar, connection code)</li>
             <li>All habits and tasks you created</li>
             <li>Completion logs and streak data</li>
+            <li>Journal entries</li>
+            <li>Goals, your answers, the plans drafted for you, and your Goals usage</li>
             <li>Community data — connections, shared habits, comments, nudges, reactions, group memberships, blocks, and reports; comments, nudges, and reactions you sent to others are removed from their views</li>
             <li>Push notification tokens and device profiles</li>
             <li>Settings and preferences</li>
             <li>Firebase authentication record (email/password, Google, Apple, or Facebook linked accounts)</li>
           </ul>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">Deleted data can remain in our database host&apos;s backups for up to 7 days. Journal entries in a backup remain encrypted. Goal text already sent to Anthropic is deleted by Anthropic within 30 days, except where its usage policy or the law requires it to keep it longer.</p>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">Crash logs and performance data retained by our third-party service providers (Sentry, LogRocket) may persist according to their own retention policies.</p>
 
           <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Request Deletion via Email</h2>
