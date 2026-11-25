@@ -13,7 +13,7 @@ export default function TractionPrivacy() {
       <main className="pt-6 md:pt-10 pb-16">
         <div className="container max-w-3xl">
           <h1 className="text-[34px] md:text-[44px] font-semibold tracking-[-0.04em] leading-[1.05] mb-2 text-ink">Traction Health — Privacy Policy</h1>
-          <p className="text-base text-ink/60 mb-8"><strong className="text-ink">Last Updated</strong>: October 27, 2026</p>
+          <p className="text-base text-ink/60 mb-8"><strong className="text-ink">Last Updated</strong>: November 24, 2026</p>
 
           <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Introduction</h2>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">
@@ -34,6 +34,7 @@ export default function TractionPrivacy() {
           </ul>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">You may also provide optional profile information such as date of birth and an avatar.</p>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">You can sign up using email and password, Google Sign-In, or Apple Sign-In. If you use a third-party sign-in method, we receive your name and email address from that provider. We also support anonymous device-based accounts that do not require personal contact information.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">If you use the App with a device-based account and then sign in to an account you already have, what you tracked can move to that account: your habits and check-ins, tasks, journal entries, connections and groups. Where both have something, the App asks you what to keep. What it says will be deleted is removed from view straight away and permanently deleted after 14 days. We keep a record that the move happened, with identifiers and counts and no names or text, until the account is deleted.</p>
 
           <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">Health and Fitness Data</h3>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">The App is a habit and task tracking tool. We collect:</p>
@@ -50,7 +51,29 @@ export default function TractionPrivacy() {
             <li>Custom habit and task names, descriptions, and categories</li>
             <li>Feedback and bug report text, including steps to reproduce and expected behavior</li>
             <li>Photos or screenshots submitted with bug reports (up to 5 per report)</li>
+            <li>Journal entries, described under <a href="#journal" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors">Journal</a></li>
+            <li>Goals and what you write to plan them, described under <a href="#goals" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors">Goals and AI</a></li>
           </ul>
+
+          <h3 id="journal" className="scroll-mt-24 font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">Journal</h3>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">The Journal is an optional private diary, with one entry for each day. If you use it, we store the text of each entry, whether you type it or dictate it, the day it belongs to, and when it was last changed.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">Entries are stored on our servers with your account so that you can read them on your devices. The text is encrypted before it is written to our database, and the database never holds it in readable form. This is not end-to-end encryption: our servers hold the key and decrypt an entry to show it to you.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">Your entries are never shown to friends, followers or group members, are never sent to an AI provider, and are never used for advertising or analytics. Their text is kept out of our logs, crash reports and session diagnostics.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">The App keeps your entries for the last seven days, and any writing that has not been saved yet, on your device so that you can read and write without a connection. They are removed from the device when you sign out.</p>
+
+          <h3 id="goals" className="scroll-mt-24 font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">Goals and AI</h3>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">Goals is an optional feature for people signed in to an account. You say what you want to achieve, answer a few questions, and review a suggested plan of habits. If you use it, we store your goal in your own words, your answers, the changes you ask for, the plans drafted for you, the habits you create from them, and when you accepted the notice about AI. We also count your use of Goals, because its use is limited. The App keeps a copy of your goals on your device so that you can see them without a connection, and removes it when you sign out.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]"><strong className="text-ink">What is sent to Anthropic.</strong> To suggest questions and draft a plan, our servers send the following to Anthropic, the company behind the Claude AI models: your goal, your answers, the changes you ask for, today&apos;s date, and the plan being changed, including the habits you added to it. We do not send your name, email address, username, account ID or device details, and we do not send your journal, your check-ins or any health readings. What you write is sent as you wrote it, so leave out anything you do not want Anthropic to process.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]"><strong className="text-ink">Your permission.</strong> Before anything is sent for the first time, the App tells you that Goals uses AI from Anthropic and what is sent, and asks you to agree. If you choose &quot;Not now&quot;, nothing is sent. Nothing is added to your habits until you confirm the plan.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]"><strong className="text-ink">What Anthropic does with it.</strong> Anthropic processes this text for us as a processor under its <a href="https://www.anthropic.com/legal/commercial-terms" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors" target="_blank" rel="noopener noreferrer">Commercial Terms</a> and <a href="https://www.anthropic.com/legal/data-processing-addendum" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors" target="_blank" rel="noopener noreferrer">Data Processing Addendum</a>, and those terms do not allow it to train its models on it. Anthropic <a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors" target="_blank" rel="noopener noreferrer">deletes inputs and outputs within 30 days</a>, except where it needs to keep them longer to enforce its usage policy or to comply with the law. Anthropic may process it outside your country, and its Data Processing Addendum includes standard contractual clauses and the UK Addendum for transfers.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]"><strong className="text-ink">Who can see it.</strong> Your goals, answers and plans are never shown to friends, followers or group members. Habits created from a goal start with their moments visible to no one; if you later share a habit, it is shared like any other habit.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">Plans are suggestions written by AI. They can be wrong, and they are not medical advice.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]"><strong className="text-ink">Cloudflare (human check).</strong> If you ask for more goals, we run a short check that you are a person and not a program, using Cloudflare Turnstile. The check runs only when you ask for it. To run it, your device connects to Cloudflare, which processes your IP address, your browser or device&apos;s User-Agent and TLS fingerprint, and the page the check is on. Cloudflare does this on our behalf to detect and block bots, and, as a controller in its own right, to improve its bot detection. See Cloudflare&apos;s <a href="https://www.cloudflare.com/turnstile-privacy-policy/" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors" target="_blank" rel="noopener noreferrer">Turnstile Privacy Addendum</a>. We check the result with Cloudflare and do not keep it. We keep only that your account was given more goals, how many and when, and we delete that with your account.</p>
+
+          <h3 id="dictation" className="scroll-mt-24 font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">Microphone and Dictation</h3>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">You can speak instead of typing in the Journal and in Goals. The App uses the microphone only after you tap a microphone button, and your device asks for your permission the first time.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">Your phone turns what you say into text. Where it cannot do that itself, a speech service processes the audio: Apple&apos;s on iOS, and on Android Google&apos;s or the one set as your phone&apos;s default. That processing is under that company&apos;s own terms. Traction never records or keeps your voice, and your audio never reaches our servers. The text appears in the field for you to read and change, and from then on it is handled exactly like text you type.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">Dictation is always optional. You can turn the microphone off in your device settings at any time and type instead.</p>
 
           <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">Community and Social Data</h3>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">Traction Health includes optional community features (shared habits, partnerships, and groups) that let you connect with other people, share your progress, and encourage each other. These features are only available after you create an account with an email address and claim a username; anonymous device-based accounts cannot access community features.</p>
@@ -78,7 +101,8 @@ export default function TractionPrivacy() {
           <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
             <li><strong className="text-ink">Crash data</strong> (crash logs and exception reports via Sentry)</li>
             <li><strong className="text-ink">Performance data</strong> (app launch time, request latency, and error rates)</li>
-            <li><strong className="text-ink">Session diagnostics</strong> (interaction and error data via LogRocket for debugging purposes, linked to your account; authentication credentials and community message content are excluded from capture)</li>
+            <li><strong className="text-ink">Session diagnostics</strong> (interaction and error data via LogRocket for debugging purposes, linked to your account; authentication credentials, community message content and Journal entries are excluded from capture)</li>
+            <li><strong className="text-ink">Goals in diagnostics</strong> (what you write in Goals can appear in session diagnostics and in error reports)</li>
             <li><strong className="text-ink">Bug report diagnostics</strong> (device model, OS version, app version, screen size, locale, timezone, and network type, collected only when you submit a bug report)</li>
           </ul>
 
@@ -106,7 +130,8 @@ export default function TractionPrivacy() {
           <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">How We Use Your Information</h2>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">We use the information we collect for the following purposes:</p>
           <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
-            <li><strong className="text-ink">App Functionality:</strong> to authenticate your account, sync your data across devices, deliver push notification reminders, and provide customer support.</li>
+            <li><strong className="text-ink">App Functionality:</strong> to authenticate your account, sync your data across devices, deliver push notification reminders, store your journal, turn your goals into suggested habits, and provide customer support.</li>
+            <li><strong className="text-ink">Keeping Goals available:</strong> to apply usage limits to Goals, and to check that a request for more goals comes from a person.</li>
             <li><strong className="text-ink">Analytics:</strong> to understand app performance, diagnose crashes and errors, and improve the user experience. Analytics data is linked to your identity to help us debug issues and understand usage patterns.</li>
             <li><strong className="text-ink">Ad measurement:</strong> to measure which of our own ads bring people to the App, through AppsFlyer, as described under <a href="#ad-measurement" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors">Ad Measurement</a>.</li>
           </ul>
@@ -126,11 +151,16 @@ export default function TractionPrivacy() {
             <li><strong className="text-ink">LogRocket</strong> - session replay and error debugging: user ID, session interaction data, error events.</li>
             <li><strong className="text-ink">Expo</strong> - push notification delivery: push notification tokens, device platform.</li>
             <li><strong className="text-ink">Anthropic</strong> - grouping in-app feedback so duplicate reports are handled together: feedback report text and the screen it was sent from, never your name, username or email.</li>
+            <li><strong className="text-ink">Anthropic</strong> - suggesting questions and drafting plans in Goals: goal text, answers, requested changes and the plan being changed, as described under <a href="#goals" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors">Goals and AI</a>, never your name, username, email or account ID.</li>
+            <li><strong className="text-ink">Cloudflare</strong> - checking that a request for more goals comes from a person: IP address, User-Agent, TLS fingerprint and the page the check is on, only when you ask for more goals.</li>
+            <li><strong className="text-ink">Render</strong> - hosting our servers and database, in Frankfurt, Germany: the data stored with your account, with Journal entries encrypted.</li>
             <li><strong className="text-ink">Resend</strong> - delivering feedback reports to our team by email: report text, diagnostics, your account email as the reply address.</li>
             <li><strong className="text-ink">GitHub</strong> - tracking bug reports in a private repository: bug report text and diagnostics, never your email.</li>
             <li><strong className="text-ink">AppsFlyer</strong> - measuring which of our ads lead to installs and use, while ad measurement is on: random install IDs, ad source, device and app details, IP address, app opens, habit created, check-in and group joined events.</li>
           </ul>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">These providers process data on our behalf and are contractually obligated to use it only for the purposes described above. The community features have not added any new third-party service providers.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]"><strong className="text-ink">Cloudflare.</strong> Cloudflare is also an independent controller for the human check data it uses to improve its bot detection, as described under <a href="#goals" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors">Goals and AI</a>.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]"><strong className="text-ink">Speech services.</strong> Where your phone cannot turn speech into text itself, the audio goes from your phone to a speech service, as described under <a href="#dictation" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors">Microphone and Dictation</a>. It never reaches our servers.</p>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]"><strong className="text-ink">Google Ads.</strong> For installs that came from a Google ad, and while ad measurement is on, AppsFlyer shares the events listed under <a href="#ad-measurement" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors">Ad Measurement</a> with Google so that Google Ads can report which of its ads worked. Google receives them as an independent controller, and we tell Google not to use them for personalized ads.</p>
           <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">Sharing With Other Users</h3>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">When you use community features, you share information directly with other people you choose to connect with. Your username, avatar, shared habit progress, comments, nudges, reactions, and group leaderboard standing are visible to your connections and the members of groups you join, and anyone you give your connection code or invite link to can view a preview of your public profile. This sharing is initiated by you and only occurs when you opt into community features. We do not make your community activity public on the open internet or to users you have not connected with.</p>
@@ -141,6 +171,11 @@ export default function TractionPrivacy() {
             <li>Your account data and habit/task data are retained as long as your account is active.</li>
             <li>When you delete your account, we initiate deletion of your data with a 14-day grace period, after which your data is permanently removed from our systems.</li>
             <li>When you delete your account, your community data — including connections, shared habits, comments, nudges, reactions, group memberships, blocks, and reports — is deleted along with your account, and your username, avatar, and connection code are removed from public view.</li>
+            <li>Journal entries are kept until you delete them or your account. Deleting an entry removes it from our database straight away.</li>
+            <li>Goals, answers and plans are kept until you delete the goal or your account. Deleting a goal erases its text, answers and plans straight away; an empty record stays until your account is deleted, so that usage limits can be applied. Its habits are kept unless you choose to delete them too.</li>
+            <li>Goal text sent to Anthropic is deleted by Anthropic within 30 days, with the exceptions described under <a href="#goals" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors">Goals and AI</a>.</li>
+            <li>When you delete your account, your Journal entries, goals, answers, plans and Goals usage records become inaccessible straight away and are permanently deleted with the account after the 14-day grace period.</li>
+            <li>Data we delete can remain in our database host&apos;s backups for up to 7 days. Journal entries in a backup remain encrypted.</li>
             <li>Daily totals synced from Apple Health or Health Connect are retained with the linked habit and deleted with the habit or the account.</li>
             <li>Crash and diagnostic logs are retained according to the retention policies of our service providers (Sentry and LogRocket).</li>
             <li>Ad measurement records are kept while you use the App and deleted with your account or when you turn ad measurement off; AppsFlyer keeps event-level data for 90 days and aggregated reports for up to 25 months.</li>
@@ -152,8 +187,10 @@ export default function TractionPrivacy() {
           <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
             <li>Authentication tokens are stored in encrypted device storage (Secure Store on iOS, encrypted preferences on Android).</li>
             <li>All data transmitted between the App and our servers is encrypted using HTTPS/TLS.</li>
+            <li>Journal entries are encrypted with AES-256-GCM before they are stored, with a separate key derived for each account. The master key is kept outside the database, so the database and its backups hold entries only in encrypted form.</li>
             <li>Passwords are never stored on your device; authentication is handled by Firebase.</li>
             <li>LogRocket sanitizes authentication request and response bodies to prevent credential exposure.</li>
+            <li>Session recording is paused on the Journal screens, and Journal requests and responses are excluded from it.</li>
           </ul>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">While we strive to protect your personal information, no method of electronic transmission or storage is completely secure. We cannot guarantee absolute security.</p>
 
@@ -166,7 +203,10 @@ export default function TractionPrivacy() {
             <li><strong className="text-ink">Push Notifications:</strong> disable push notifications at any time through your device settings.</li>
             <li><strong className="text-ink">Ad Measurement:</strong> turn ad measurement off at any time in Settings &gt; Privacy &gt; Ad measurement.</li>
             <li><strong className="text-ink">Health Data:</strong> unlink any habit, disconnect all habits under Settings &gt; Health data, or revoke access in Apple Health or Health Connect settings.</li>
-            <li><strong className="text-ink">Anonymous Use:</strong> use the App with a device-based account without providing personal contact information. Community features are not available to anonymous accounts.</li>
+            <li><strong className="text-ink">Journal:</strong> read, change or delete any entry at any time, or ask us for a copy of your entries at the address below.</li>
+            <li><strong className="text-ink">Goals and AI:</strong> Goals is optional. Choose &quot;Not now&quot; on the AI notice and nothing is sent to Anthropic. You can stop using Goals at any time, and delete a goal to erase its text, answers and plans.</li>
+            <li><strong className="text-ink">Microphone:</strong> turn off microphone access, and speech recognition on iOS, in your device settings at any time.</li>
+            <li><strong className="text-ink">Anonymous Use:</strong> use the App with a device-based account without providing personal contact information. Community features and Goals are not available to anonymous accounts.</li>
             <li><strong className="text-ink">Community Privacy:</strong> hide your statistics from the community, change or regenerate your connection code, block other users, report abusive content or behavior, and leave any group or end any share at any time from within the App.</li>
           </ul>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">To exercise any of these rights, contact us at the address listed below.</p>
@@ -183,9 +223,9 @@ export default function TractionPrivacy() {
           <h3 className="font-mono text-[11px] font-normal uppercase tracking-[0.08em] text-ink/55 mt-8 mb-3">European Residents (GDPR)</h3>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">If you are located in the European Economic Area, the United Kingdom or Switzerland, our legal bases for processing your information are:</p>
           <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
-            <li><strong className="text-ink">Contract:</strong> processing necessary to provide the App&apos;s services to you</li>
-            <li><strong className="text-ink">Legitimate Interest:</strong> processing necessary for analytics, crash reporting, and improving the App</li>
-            <li><strong className="text-ink">Consent:</strong> where required, such as for push notifications and ad measurement</li>
+            <li><strong className="text-ink">Contract:</strong> processing necessary to provide the App&apos;s services to you, including storing your journal and drafting the plans you ask for in Goals</li>
+            <li><strong className="text-ink">Legitimate Interest:</strong> processing necessary for analytics, crash reporting, improving the App, and preventing abuse of a limited feature</li>
+            <li><strong className="text-ink">Consent:</strong> where required, such as for push notifications, ad measurement and the microphone</li>
           </ul>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">You may also have the right to data portability and the right to lodge a complaint with your local data protection authority.</p>
 

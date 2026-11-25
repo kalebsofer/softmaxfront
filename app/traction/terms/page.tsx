@@ -14,7 +14,7 @@ export default function TractionTerms() {
       <main className="pt-6 md:pt-10 pb-16">
         <div className="container max-w-3xl">
           <h1 className="text-[34px] md:text-[44px] font-semibold tracking-[-0.04em] leading-[1.05] mb-2 text-ink">Traction Health — Terms of Service &amp; EULA</h1>
-          <p className="text-base text-ink/60 mb-8"><strong className="text-ink">Last Updated</strong>: June 2, 2026</p>
+          <p className="text-base text-ink/60 mb-8"><strong className="text-ink">Last Updated</strong>: November 24, 2026</p>
 
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">
             These Terms of Service and End User License Agreement (the &quot;Terms&quot;) govern your use of the Traction Health mobile application (the &quot;App&quot;), operated by <strong className="text-ink">Softmax Ltd</strong> (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). By downloading, accessing, or using the App, you agree to be bound by these Terms and by our <Link href="/traction/privacy" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors">Privacy Policy</Link>. If you do not agree, do not use the App.
@@ -25,6 +25,7 @@ export default function TractionTerms() {
 
           <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">2. Eligibility and Accounts</h2>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">You must be at least 13 years old to use the App and to use any community features. You are responsible for the activity under your account and for keeping your credentials secure. Community features (shared habits, partnerships, groups, comments, nudges, reactions, and connections) require a registered account with a claimed username and are not available to anonymous accounts.</p>
+          <p className="text-base text-ink/60 mb-4 leading-[1.65]">Some features use artificial intelligence. Their use is limited, and the limits may change, for example to manage cost, capacity or abuse. You may use one account per person for these features.</p>
 
           <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">3. User-Generated Content</h2>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">The App lets you create and share content with other users, including your username, shared habit data, comments, nudge messages, mentions, and emoji reactions (&quot;User Content&quot;). You retain ownership of your User Content. You grant us a worldwide, non-exclusive, royalty-free license to host, store, reproduce, and display your User Content solely to operate and provide the App&apos;s features to you and the users you share with. You are solely responsible for your User Content and represent that you have the rights to share it and that it does not violate these Terms or any law.</p>
