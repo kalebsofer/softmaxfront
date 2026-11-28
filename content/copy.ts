@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-// All site copy lives here. Edit the strings below and the site updates —
+// All site copy lives here. Edit the strings below and the site updates,
 // nothing else needs touching. Grouped top-to-bottom in page order.
 //
 // Not included: the legal pages (app/privacy, app/terms, app/traction/*),
@@ -116,7 +116,7 @@ export const howWeWork = {
 
 export const traction = {
   eyebrow: 'Our own product',
-  title: 'Traction — the peer-to-peer habit tracker',
+  title: 'Traction: the peer-to-peer habit tracker',
   lead: 'Designed, built and shipped in-house to iOS and Android. The shortest proof that we take products all the way, not just to a prototype.',
   // Links to the app's own page at /traction
   pageCta: 'Explore Traction',
@@ -139,85 +139,263 @@ export const traction = {
 };
 
 // softmaxco.io/traction: the app's own landing page.
+// Bracketed text is a placeholder still waiting on real copy.
 export const tractionLanding = {
   meta: {
     title: 'Traction: build better habits together',
     description:
-      "The social network for building better habits. Whether you're part of a group to keep each other accountable or on a solo mission to build consistency, Traction is a low friction interface for setting goals and tracking progress. Free on iOS and Android.",
+      "The social network for building better habits. Whether you're part of a group to keep each other accountable or on a solo mission to build consistency, Traction is a low-friction interface for setting goals and tracking progress. Free on iOS and Android.",
   },
   brand: 'traction',
+  brandMarkAria: 'Traction home',
   nav: {
-    home: 'Traction home',
+    label: 'Main',
     links: [
-      { href: '#momentum', label: 'Momentum' },
-      { href: '#groups', label: 'Groups' },
-      { href: '#widget', label: 'Widget' },
-      { href: '#sync', label: 'Device sync' },
+      { href: '#why', label: 'Why' },
+      { href: '#how', label: 'How' },
+      { href: '#faq', label: 'FAQ' },
     ],
-    cta: 'Get the app',
+    cta: 'Download',
+    openMenu: 'Open menu',
+    closeMenu: 'Close menu',
   },
-  kicker: 'Free on iOS and Android',
-  /** Rendered as two stacked lines; the break is intentional, not a wrap. */
-  headline: ['Build better habits,', 'together.'],
-  lead: 'The social network for building better habits. Solo, or in a group keeping each other accountable, Traction is a low-friction interface for setting goals and tracking progress.',
-  heroPhotoAlt: 'Traction open on a phone, held at a busy crossing',
-  /** Desktop: the hero card carries a QR code to scan with a phone. */
-  qr: {
-    title: 'Scan to get the app',
-    byline: 'Traction by Softmax',
-    aria: 'QR code linking to the Traction app store page',
+  hero: {
+    title: 'Accountability. Shared.',
+    lead: 'Traction is a free tool to plan and track your goals, and share progress with friends, family or your community.',
+    /** The three phones, left to right. */
+    screens: [
+      { src: 'android-progress', alt: 'Traction progress screen: momentum by weekday and the month in a calendar' },
+      { src: 'android-home', alt: "Traction home screen: momentum tile, milestones and today's habits" },
+      { src: 'android-community', alt: 'Traction group screen: momentum this round and the members of Physical Recovery' },
+    ],
+    milestone: 'First round complete',
+    reactions: ['👏', '🔥', '🎉'],
+    reactionCount: 5,
+    reactionsAria: 'Reactions: clap, fire and party, 5 in total',
   },
-  /** Phones: the hero card links straight to the visitor's own store. */
-  install: {
-    title: 'Get Traction',
-    ios: 'Free on the App Store',
-    android: 'Free on Google Play',
+  why: {
+    eyebrow: 'Why Traction',
+    title: 'Built for showing up, together.',
+    story: {
+      intro:
+        "Traction's creator, Kaleb, built the app while in physical rehabilitation following a career-ending football injury. Over eight months of slow physiotherapy, strict nutrition and regular hospital visits, he found two things that would have made the journey easier:",
+      points: [
+        "Celebrating small wins: progress is slow and it's hard to see in the moment, so being less self-critical about off days is super important.",
+        'Although he was incredibly grateful for the support, constantly updating friends, family and specialists on progress became repetitive.',
+      ],
+      outro: "Here's how Traction addresses those:",
+    },
+    habits: {
+      title: 'Build or break a habit',
+      body: "Some habits are ones we're trying to break. Customise how Traction handles them.",
+      toggle: ['Build', 'Break'],
+      toggleAria: 'Goal: Break',
+      rows: [
+        { name: 'Screen time', kind: 'Limit', used: 45, limit: 120, aria: '45 of 120 minutes used today' },
+        { name: 'No alcohol', kind: 'Resist', aria: 'Resisted today' },
+      ],
+    },
+    momentum: {
+      title: 'Momentum, not streaks',
+      body: 'Momentum is the share of your planned sessions you showed up for. A missed day nudges it. It never resets you to zero.',
+      figure: '10 of 14',
+      band: 'Building',
+      rampAria:
+        'Momentum ramp, from Getting going through Building and Consistent to Dedicated. Marker at 71 per cent.',
+      bands: [
+        { name: 'Getting going', rule: 'Below 50%', color: 'var(--tl-momentum-getting-going)' },
+        { name: 'Building', rule: '50% and up', color: 'var(--tl-momentum-building)' },
+        { name: 'Consistent', rule: '6 in every 7', color: 'var(--tl-momentum-consistent)' },
+        { name: 'Dedicated', rule: 'Every session', color: 'var(--tl-momentum-dedicated)' },
+      ],
+    },
+    friends: {
+      title: 'Habits with friends',
+      body: 'Start a group, share a habit and play it in rounds. Everyone sees who showed up.',
+      /** Each member's last seven sessions: 1 logged, 0 missed. */
+      members: [
+        { name: 'mayaruns', initial: 'M', series: 1, trail: [1, 1, 1, 1, 1, 1, 1] },
+        { name: 'tomk', initial: 'T', series: 2, trail: [1, 1, 0, 1, 1, 1, 1] },
+        { name: 'priya_s', initial: 'P', series: 3, trail: [1, 1, 1, 0, 1, 1, 0] },
+      ],
+    },
+    cheers: {
+      title: 'Cheers, not nags',
+      body: "React to a friend's session with an emoji, or send a gentle check-in when they have gone quiet.",
+      comment: { name: 'physio_fran', initial: 'F', series: 2, text: 'Good work this week' },
+      reactions: ['👏', '🔥', '🎉', '💪', '❤️', '🙌'],
+      trayAria: 'Reaction tray: clap, fire, party, strong, heart and raised hands, plus more',
+      checkIn: 'Check in',
+    },
+    rhythm: {
+      title: 'See your rhythm',
+      body: 'Your last fortnight and your whole year, drawn so the good days stand out.',
+      fortnightLabel: 'Last 14 days',
+      fortnightAria: 'Fortnight grid: 11 of the last 14 days logged, one rest day',
+      yearLabel: 'This year',
+      yearAria: 'Contributions graph filling in over the year',
+    },
+    milestones: {
+      title: 'Milestones',
+      body: 'Gold chips and a burst of confetti for the moments worth marking.',
+      earned: ['First week', 'First round'],
+      next: '50 sessions',
+    },
   },
-  momentum: {
-    kicker: 'Momentum',
-    title: 'Last 14 days',
-    value: '97%',
-    unit: 'avg',
-    aria: 'Daily completion over the last 14 days, averaging 97%',
+  how: {
+    eyebrow: 'How it works',
+    /**
+     * Four parts, each three captions with a crop of the app below. `image`
+     * names a file in public/images/traction/how; `visual` names one drawn in code.
+     */
+    sections: [
+      {
+        id: 'how-goals',
+        title: 'Goals.',
+        items: [
+          {
+            caption: 'Tell Traction your goal, however detailed',
+            image: 'goal-details',
+            alt: 'Your plan: the goal Knee Rehabilitation, the recovery goal and current activity',
+          },
+          {
+            caption: 'Traction works with you to design a routine',
+            image: 'goal-habits',
+            alt: 'Habits suggested for the goal: rehab exercises, good rest, protein and supplements',
+          },
+          {
+            caption: 'That plan becomes meaningful scheduled items to track',
+            image: 'goal-progress',
+            alt: 'Progress list with the new habits and how many sessions each has done this week',
+          },
+        ],
+      },
+      {
+        id: 'how-groups',
+        title: 'Groups.',
+        items: [
+          {
+            caption: 'Join or create a group around a goal or a single habit',
+            image: 'group-join',
+            alt: 'A group built around one habit, knee rehab',
+          },
+          {
+            caption: 'Celebrate progress with checkpoints and achievements',
+            image: 'group-checkpoints',
+            alt: 'The current round on a group screen, with checkpoint badges at 50% and 80% together',
+          },
+          {
+            caption: 'Check in and motivate anyone falling behind',
+            image: 'group-cheers',
+            alt: "A host's message of encouragement to the group, with reactions from members",
+            reactions: true,
+          },
+        ],
+      },
+      {
+        id: 'how-journal',
+        title: 'Journal.',
+        items: [
+          {
+            caption: 'Use Traction as your journalling app',
+            image: 'journal-header',
+            alt: 'A journal entry for Tuesday 24 November',
+          },
+          {
+            caption: 'Compare your written or spoken history against your habit patterns',
+            image: 'journal-entry',
+            alt: "A journal entry with that day's habits listed below it",
+          },
+          {
+            caption: 'Your personal entries stay private',
+            image: 'journal-private',
+            alt: 'The Journal tile on the home screen',
+          },
+        ],
+      },
+      {
+        id: 'how-routines',
+        title: 'Routines.',
+        items: [
+          {
+            caption: 'Linking habits is proven to improve permanence in habit formation',
+            visual: 'link-wireframe',
+            alt: 'Linking three habits, run, stretch and shake, into one routine',
+          },
+          {
+            caption: 'Create links between successive habits to form routines',
+            image: 'routine-home',
+            alt: 'The routine towards 10k on the home screen: run, stretch and shake',
+          },
+          {
+            caption: "Check all these items off from your device's home screen",
+            image: 'routine-widget',
+            alt: "The Traction widget on a phone home screen with the routine and the day's tasks",
+          },
+        ],
+      },
+    ],
+    linkWireframe: {
+      habits: ['Run', 'Stretch', 'Shake'],
+      days: 'Tue, Thu, Sat',
+      name: 'towards 10k',
+      cta: 'Create link',
+    },
   },
-  groups: {
-    kicker: 'Groups',
-    title: 'Shared goals',
-    titleAccent: 'keep each other accountable',
-    photoAlt: 'Two friends laughing at a shared goal on their phones',
-    screenAlt: 'Traction group screen held in hand: Read 20 pages, everyone is in',
-    members: ['Maya', 'Priya', 'Meiling'],
-    more: '+2',
-    status: 'Morning Stretch · 3/5 today',
+  proof: {
+    title: 'What people say.',
+    quotes: [
+      {
+        quote: 'Different take on a typical tracker, it actually sticks this time around.',
+        stars: 5,
+        name: 'James98829',
+        use: 'Uses it for day-to-day routine tasks',
+      },
+      {
+        quote: 'Very nice work, I now bring real data with me to check-ins.',
+        stars: 5,
+        name: 'IzaakRS',
+        use: 'Uses it with his physio to track physical rehab',
+      },
+      {
+        quote: 'Brilliant way to send gentle reminders',
+        stars: 5,
+        name: 'Jenny2k14',
+        use: 'Uses it with her book club',
+      },
+    ],
   },
-  screens: {
-    title: 'Build better habits',
-    titleAccent: 'around your life',
-    prev: 'Previous screens',
-    next: 'Next screens',
+  faq: {
+    eyebrow: 'FAQ',
+    title: 'Questions, answered.',
     items: [
-      { src: 'home', title: 'Today at a glance', accent: '', alt: "Traction home screen: today's habits, streak and completion ring" },
-      { src: 'routine', title: 'Link habits', accent: 'to form routines', alt: 'Morning Routine: meditate, stretch and take vitamins, linked' },
-      { src: 'calendar', title: 'Small steps,', accent: 'visible progress', alt: 'Progress calendar for September held in hand' },
-      { src: 'schedule', title: 'Build better habits', accent: 'around your life', alt: 'Schedule view with tasks and habits for the day' },
+      {
+        q: 'What is momentum?',
+        a: 'Momentum is the share of your planned sessions you actually did. It moves through four bands: Getting going, Building, Consistent and Dedicated.',
+      },
+      {
+        q: 'What happens if I miss a day?',
+        a: 'Nothing dramatic. There is no streak to break. Your momentum dips a little and picks back up the next time you show up.',
+      },
+      {
+        q: 'What is a round?',
+        a: 'A round is a set stretch of time a group plays together. Everyone starts fresh, and standings and momentum are counted for that round.',
+      },
+      {
+        q: 'Can I use Traction on my own?',
+        a: 'Yes. You can track habits and tasks solo and start or join a group whenever you like.',
+      },
+      {
+        q: 'Is Traction on iOS and Android?',
+        a: 'Yes. Traction is available on both the App Store and Google Play.',
+      },
+      { q: 'How much does it cost?', a: "It's free!" },
     ],
   },
-  widget: {
-    kicker: 'Widget',
-    title: 'Log from your device home screen',
-    alt: 'Traction widget on an iPhone home screen: morning run, meditate, pick up dry cleaning',
-  },
-  sync: {
-    kicker: 'Device sync',
-    title: 'It logs what your phone already knows',
-    chips: ['Health', 'Workouts', 'Steps', 'Sleep'],
-    more: 'and more',
-    alt: 'Traction progress screen: a completion calendar and per-habit streaks',
-  },
-  get: {
-    headline: ['Scan to get', 'the app.'],
-    headlinePhone: ['Start today,', "it's free."],
-    photoAlt: 'Friends at the gym checking Traction on their phones',
+  cta: {
+    eyebrow: 'Get started',
+    title: 'Start your first round.',
+    lead: 'Download Traction, pick a habit and invite someone to keep it with you.',
   },
   badges: {
     appStoreKicker: 'Download on the',
@@ -228,10 +406,12 @@ export const tractionLanding = {
     playAria: 'Get Traction on Google Play',
   },
   footer: {
-    tagline: 'The social network for building better habits',
+    label: 'Footer',
     privacy: 'Privacy',
     terms: 'Terms',
-    support: 'support@softmaxco.io',
+    support: 'Support',
+    supportEmail: 'support@softmaxco.io',
+    company: 'Softmax Ltd',
   },
 };
 
@@ -313,7 +493,7 @@ export const contact = {
     close: 'Close',
     fallback: 'Open in Google Calendar',
     // Google Calendar appointment schedule (kalebsofer@gmail.com), resolved
-    // from https://calendar.app.google/6mRQKtZEQc7xRN7X6 — gv=true makes the
+    // from https://calendar.app.google/6mRQKtZEQc7xRN7X6 - gv=true makes the
     // page embeddable. Leave empty to hide the button.
     url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ134F4T6irVswtg8zy7mfbVvdTpPqLpey-a50hf9oCpXanWyzQcf775q62kUm3j8tNXcBmh5NEj?gv=true',
   },
@@ -325,10 +505,10 @@ export const contact = {
     messageLabel: 'What needs building',
     submit: 'Send →',
     sending: 'Sending…',
-    error: 'Something went wrong — try again, or email hello@softmaxco.io.',
+    error: 'Something went wrong. Try again, or email hello@softmaxco.io.',
   },
   success: {
-    title: "Thanks — that's landed.",
+    title: "Thanks, that's landed.",
     body: "We'll come back to you soon.",
   },
 };
@@ -350,10 +530,10 @@ export const footer = {
 // ---------------------------------------------------------------------------
 
 export const studio = {
-  metaTitle: 'Studio — Softmax',
+  metaTitle: 'Studio - Softmax',
   metaDescription:
     'Senior engineers, a fixed scope, and software your team can maintain without us.',
-  eyebrow: 'Studio — capabilities & engagements',
+  eyebrow: 'Studio - capabilities & engagements',
   headline:
     'Senior engineers, a fixed scope, and software your team can maintain without us',
   lead: 'No account managers, no prolonged discovery, the people who scope the work are the people who deliver it.',
@@ -375,7 +555,7 @@ export const studio = {
       n: '01',
       title: 'Scope and strategy',
       meta: 'Capability 01',
-      body: 'A short call to frame the problem, then we read the code, talk to the team and put the plan in writing. You get an honest read on whether we are right for it — and who is, if we are not.',
+      body: 'A short call to frame the problem, then we read the code, talk to the team and put the plan in writing. You get an honest read on whether we are right for it, and who is, if we are not.',
       list: [
         { k: 'DAY 1', v: 'One call to frame the problem' },
         { k: 'WK 1', v: 'Code, data and team review' },
@@ -390,7 +570,7 @@ export const studio = {
       n: '02',
       title: 'Data and systems engineering',
       meta: 'Capability 02',
-      body: 'Your first pipeline or a lake feeding a scaling business — audit what exists, re-model around the decisions you actually make, then test and monitor every pipeline feeding it.',
+      body: 'Your first pipeline or a lake feeding a scaling business: audit what exists, re-model around the decisions you actually make, then test and monitor every pipeline feeding it.',
       list: [
         { k: 'WK 1–2', v: 'Audit and data contracts' },
         { k: 'WK 2–3', v: 'Data quality and requirements' },
@@ -421,7 +601,7 @@ export const studio = {
       n: '04',
       title: 'AI and agentic systems',
       meta: 'Capability 04',
-      body: "We've shipped RAG systems with answers you can trace to source, and harnesses for bespoke agents — and talked clients out of both. First we ask whether AI is the right tool; then we build the unglamorous parts: evals, a rollout you can switch off, then the feature.",
+      body: "We've shipped RAG systems with answers you can trace to source, and harnesses for bespoke agents, and talked clients out of both. First we ask whether AI is the right tool; then we build the unglamorous parts: evals, a rollout you can switch off, then the feature.",
       list: [
         { k: 'WK 1', v: 'Prototype in front of real data' },
         { k: 'WK 2', v: 'Eval set and baselines agreed' },
@@ -453,27 +633,27 @@ export const studio = {
     meta: 'All fixed-scope, all written down first',
     cards: [
       {
-        kicker: '01 — Sprint',
+        kicker: '01 - Sprint',
         title: 'Two-week diagnostic',
         body: 'We come in, talk to the team, review your codebase if necessary, and leave you a written plan you could hand to anyone.',
         deliverables: ['Architecture review', 'Risk register', 'Costed roadmap'],
       },
       {
-        kicker: '02 — Build',
+        kicker: '02 - Build',
         title: 'Ship it with us',
         body: 'Design and engineering through to production, with your team in every review so nothing is a black box.',
         deliverables: ['Minimum 6 weeks', 'Weekly demo', 'Handover included'],
       },
       {
-        kicker: '03 — Teach',
+        kicker: '03 - Teach',
         title: 'Curriculum & workshops',
-        body: 'We design training and run it — the way we do for Founders and Coders apprentices and the public.',
+        body: 'We design training and run it, the way we do for Founders and Coders apprentices and the public.',
         deliverables: ['Syllabus design', 'Live delivery', 'Technical screening'],
       },
     ],
   },
   caseStudy: {
-    eyebrow: 'Client — Founders and Coders',
+    eyebrow: 'Client - Founders and Coders',
     title: "We built the curriculum that trains the UK's next AI engineers",
     context:
       'Founders and Coders is a community interest company delivering training courses and apprenticeships in AI and software engineering. We work across their whole pipeline.',
@@ -496,14 +676,14 @@ export const studio = {
     ],
     link: 'foundersandcoders.com',
     imageCaptions: {
-      main: 'workshop photography — apprentices at the whiteboard',
+      main: 'workshop photography: apprentices at the whiteboard',
       left: 'curriculum spread',
       right: 'screening dashboard',
     },
   },
   cta: {
     title: 'Two slots left this quarter.',
-    lead: "One call is usually enough for us to tell you whether we're the right studio for it — and who is, if we aren't.",
+    lead: "One call is usually enough for us to tell you whether we're the right studio for it, and who is, if we aren't.",
     primary: 'Book a scoping call',
     secondary: 'hello@softmaxco.io',
   },
