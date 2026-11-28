@@ -3,7 +3,7 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Traction Health — Data Deletion',
+  title: 'Traction Health - Data Deletion',
   description: 'How to delete your Traction Health account and associated data.',
 }
 
@@ -13,7 +13,7 @@ export default function TractionDataDeletion() {
       <Navbar />
       <main className="pt-6 md:pt-10 pb-16">
         <div className="container max-w-3xl">
-          <h1 className="text-[34px] md:text-[44px] font-semibold tracking-[-0.04em] leading-[1.05] mb-2 text-ink">Traction Health — Data Deletion</h1>
+          <h1 className="text-[34px] md:text-[44px] font-semibold tracking-[-0.04em] leading-[1.05] mb-2 text-ink">Traction Health - Data Deletion</h1>
           <p className="text-base text-ink/60 mb-8"><strong className="text-ink">Last Updated</strong>: November 24, 2026</p>
 
           <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">How to Delete Your Data</h2>
@@ -36,7 +36,7 @@ export default function TractionDataDeletion() {
             <li>Completion logs and streak data</li>
             <li>Journal entries</li>
             <li>Goals, your answers, the plans drafted for you, and your Goals usage</li>
-            <li>Community data — connections, shared habits, comments, nudges, reactions, group memberships, blocks, and reports; comments, nudges, and reactions you sent to others are removed from their views</li>
+            <li>Community data: connections, shared habits, comments, nudges, reactions, group memberships, blocks, and reports; comments, nudges, and reactions you sent to others are removed from their views</li>
             <li>Push notification tokens and device profiles</li>
             <li>Settings and preferences</li>
             <li>Firebase authentication record (email/password, Google, Apple, or Facebook linked accounts)</li>

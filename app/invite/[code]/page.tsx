@@ -14,7 +14,7 @@ const CODE_REGEX = /^TRACT-[ABCDEFGHJKMNPQRSTUVWXYZ23456789]{6}$/;
 export const metadata: Metadata = {
   title: 'Open in Traction',
   description: "You've been invited to a shared habit on Traction Health.",
-  // Invite links are private — don't index them.
+  // Invite links are private, don't index them.
   robots: { index: false, follow: false },
 };
 
@@ -37,9 +37,9 @@ export default async function InvitePage({
   const platform = detectPlatform(ua);
   const inviteUrl = `https://www.softmaxco.io/invite/${code}`;
 
-  // Only generate a QR for the desktop case — saves a few ms on mobile renders
+  // Only generate a QR for the desktop case - saves a few ms on mobile renders
   // where the QR is never shown.
-  // Generate at a high width — CSS scales the SVG down on mobile, so this
+  // Generate at a high width - CSS scales the SVG down on mobile, so this
   // just keeps the encoded grid crisp at every viewport size.
   const qrSvg =
     platform === 'desktop'
@@ -177,7 +177,7 @@ function DesktopBody({ code, qrSvg }: { code: string; qrSvg: string }) {
 }
 
 function Malformed() {
-  // Still 200, per the spec — a 404 on /invite/* would penalize the Universal
+  // Still 200, per the spec - a 404 on /invite/* would penalize the Universal
   // Link / App Link verification flow.
   return (
     <Shell>

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: studio.metaDescription,
 };
 
-// Founders and Coders photography still to come — see the note in CaseStudies.tsx.
+// Founders and Coders photography still to come - see the note in CaseStudies.tsx.
 // The slots reserve their aspect ratios so nothing shifts when the images land.
 function ImageSlot({
   caption,
@@ -126,7 +126,7 @@ export default function StudioPage() {
                   {row.n}
                 </span>
                 <span className="flex-1 text-[15px] leading-[1.5]">
-                  <strong className="font-semibold">{row.title}</strong> —{' '}
+                  <strong className="font-semibold">{row.title}</strong>:{' '}
                   {row.body}
                 </span>
               </div>

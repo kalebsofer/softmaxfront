@@ -86,7 +86,7 @@ export default function Navbar() {
         </PillButton>
       </div>
 
-      {/* Full-screen mobile sheet — portalled to body: the header's backdrop-filter
+      {/* Full-screen mobile sheet, portalled to body: the header's backdrop-filter
           would otherwise become the containing block for this fixed overlay. */}
       {mobileOpen &&
         createPortal(

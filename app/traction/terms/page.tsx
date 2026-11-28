@@ -3,7 +3,7 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Traction Health — Terms of Service',
+  title: 'Traction Health - Terms of Service',
   description: 'Terms of Service and End User License Agreement for the Traction Health mobile app.',
 }
 
@@ -13,7 +13,7 @@ export default function TractionTerms() {
       <Navbar />
       <main className="pt-6 md:pt-10 pb-16">
         <div className="container max-w-3xl">
-          <h1 className="text-[34px] md:text-[44px] font-semibold tracking-[-0.04em] leading-[1.05] mb-2 text-ink">Traction Health — Terms of Service &amp; EULA</h1>
+          <h1 className="text-[34px] md:text-[44px] font-semibold tracking-[-0.04em] leading-[1.05] mb-2 text-ink">Traction Health - Terms of Service &amp; EULA</h1>
           <p className="text-base text-ink/60 mb-8"><strong className="text-ink">Last Updated</strong>: November 24, 2026</p>
 
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">
@@ -30,7 +30,7 @@ export default function TractionTerms() {
           <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">3. User-Generated Content</h2>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">The App lets you create and share content with other users, including your username, shared habit data, comments, nudge messages, mentions, and emoji reactions (&quot;User Content&quot;). You retain ownership of your User Content. You grant us a worldwide, non-exclusive, royalty-free license to host, store, reproduce, and display your User Content solely to operate and provide the App&apos;s features to you and the users you share with. You are solely responsible for your User Content and represent that you have the rights to share it and that it does not violate these Terms or any law.</p>
 
-          <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">4. Objectionable Content and Abusive Behavior — Zero Tolerance</h2>
+          <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">4. Objectionable Content and Abusive Behavior - Zero Tolerance</h2>
           <p className="text-base mb-4 leading-[1.65] font-medium text-ink">There is zero tolerance for objectionable content or abusive behavior.</p>
           <p className="text-base text-ink/60 mb-4 leading-[1.65]">You agree that you will not create, upload, post, send, or share any User Content, and will not engage in any conduct, that:</p>
           <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
