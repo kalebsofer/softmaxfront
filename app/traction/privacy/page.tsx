@@ -2,7 +2,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-  title: 'Traction Health — Privacy Policy',
+  title: 'Traction Health - Privacy Policy',
   description: 'Privacy Policy for the Traction Health mobile app.',
 }
 
@@ -12,7 +12,7 @@ export default function TractionPrivacy() {
       <Navbar />
       <main className="pt-6 md:pt-10 pb-16">
         <div className="container max-w-3xl">
-          <h1 className="text-[34px] md:text-[44px] font-semibold tracking-[-0.04em] leading-[1.05] mb-2 text-ink">Traction Health — Privacy Policy</h1>
+          <h1 className="text-[34px] md:text-[44px] font-semibold tracking-[-0.04em] leading-[1.05] mb-2 text-ink">Traction Health - Privacy Policy</h1>
           <p className="text-base text-ink/60 mb-8"><strong className="text-ink">Last Updated</strong>: November 26, 2026</p>
 
           <h2 className="font-mono text-xs font-normal uppercase tracking-[0.08em] text-ink/55 mt-12 mb-4 pt-5 border-t border-hairline">Introduction</h2>
@@ -169,7 +169,7 @@ export default function TractionPrivacy() {
           <ul className="list-disc list-outside ml-6 mb-4 space-y-2 text-base text-ink/60 leading-[1.65]">
             <li>Your account data and habit/task data are retained as long as your account is active.</li>
             <li>When you delete your account, we initiate deletion of your data with a 14-day grace period, after which your data is permanently removed from our systems.</li>
-            <li>When you delete your account, your community data — including connections, shared habits, comments, nudges, reactions, group memberships, blocks, and reports — is deleted along with your account, and your username, avatar, and connection code are removed from public view.</li>
+            <li>When you delete your account, your community data, including connections, shared habits, comments, nudges, reactions, group memberships, blocks, and reports, is deleted along with your account, and your username, avatar, and connection code are removed from public view.</li>
             <li>Journal entries are kept until you delete them or your account. Deleting an entry removes it from our database straight away.</li>
             <li>Goals, answers and plans are kept until you delete the goal or your account. Deleting a goal erases its text, answers and plans straight away; an empty record stays until your account is deleted, so that usage limits can be applied. Its habits are kept unless you choose to delete them too.</li>
             <li>Goal text sent to Anthropic is deleted by Anthropic within 30 days, with the exceptions described under <a href="#goals" className="text-ink underline underline-offset-4 hover:text-ink/60 transition-colors">Goals and AI</a>.</li>

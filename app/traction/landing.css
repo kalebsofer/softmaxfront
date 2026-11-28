@@ -1,136 +1,172 @@
 /*
- * Traction landing page (app/traction/page.tsx): the dark "liquid glass"
- * surface. The page is always dark; it does not follow the visitor's color
- * scheme. Layout and type live in Tailwind classes on the page; this file
- * holds the tokens and the effects Tailwind cannot express cleanly.
+ * Traction landing page (app/traction/page.tsx). Tokens mirror the Traction
+ * design system, whose names are the app's theme keys. The page follows the
+ * visitor's color scheme: light by default, dark when they prefer it.
+ * Layout and type live in Tailwind classes on the components; this file holds
+ * the tokens and the few effects Tailwind cannot express cleanly.
+ *
+ * `.tl-light` pins the light values inside the page, for drawn app UI that sits
+ * beside light screenshots and must not turn dark with the page.
  */
-.tl {
-  color-scheme: dark;
-  --tl-bg: #131114;
-  --tl-fg: #fffbfe;
-  --tl-body: #cfccd4;
-  --tl-soft: #e4e1e8;
-  --tl-muted: #b9b6bf;
-  --tl-accent: #4ade80;
-  --tl-accent-soft: #a4e79c;
-  --tl-mint: #e9ffeb;
-  --tl-card: #1e1c20;
-  --tl-well: #0b0a0c;
-  --tl-screen-bg: #9fd9c6;
-  /* The completion scale, 0% to 100%, shared with the app's heatmaps. */
-  --tl-scale-0: #f2bac9;
-  --tl-scale-1: #dfc5be;
-  --tl-scale-2: #cbd0b3;
-  --tl-scale-3: #b8dca7;
-  --tl-scale-4: #a4e79c;
-  --tl-scale-5: #1b998b;
-  /* Page gutter and content width, shared by every section. */
-  --tl-gutter: clamp(20px, 4vw, 56px);
-  --tl-max: 1320px;
-  /* Left inset that lines full-bleed content up with the content column. */
-  --tl-inset: max(var(--tl-gutter), calc((100vw - var(--tl-max)) / 2 + 56px));
+.tl,
+.tl-light {
+  color-scheme: light;
+  --tl-text: #1d192b;
+  --tl-text-secondary: #49454f;
+  --tl-text-muted: #78727e;
+  --tl-text-supporting: #5f5a68;
+  --tl-text-inverse: #ffffff;
+  --tl-text-display: #29263a;
+  --tl-background: #fffbfe;
+  --tl-card: #f7f2fa;
+  --tl-tertiary: #f3edf7;
+  --tl-surface: #ffffff;
+  --tl-segment-selected: #fffbfe;
+  --tl-divider: #d6d0dc;
+  --tl-divider-subtle: rgba(0, 0, 0, 0.06);
+  --tl-border: #e3dde6;
+  --tl-ring-track: #e3dde6;
+  --tl-primary: #1b998b;
+  --tl-primary-soft: rgba(27, 153, 139, 0.1);
+  --tl-primary-medium: rgba(27, 153, 139, 0.18);
+  --tl-halo-pink: rgba(242, 186, 201, 0.3);
+  --tl-peach: #f2bac9;
+  --tl-gold: #ffd700;
+  --tl-band-fill-dedicated: #f59300;
+  --tl-bezel: #1d192b;
+  --tl-series-1: #a4508b;
+  --tl-series-2: #8e7dbe;
+  --tl-series-3: #e59f71;
+  --tl-series-4: #d88c9a;
+  --tl-series-5: #656176;
+  --tl-series-6: #003554;
+  --tl-medal-gold: #d4af37;
+  --tl-medal-silver: #c0c0c0;
+  --tl-medal-bronze: #cd7f32;
+  --tl-momentum-start: #8ea1c2;
+  --tl-momentum-getting-going: #4a8fc4;
+  --tl-momentum-building: #3f9f5a;
+  --tl-momentum-consistent: #c4b522;
+  --tl-momentum-dedicated: #ffd700;
+  /* The completion ramp, pink to teal, at 0, 20, 40, 60, 80 and 100% of a plan done. */
+  --tl-completion-0: #f2bac9;
+  --tl-completion-1: #dfc5be;
+  --tl-completion-2: #cbd0b3;
+  --tl-completion-3: #b8dca7;
+  --tl-completion-4: #a4e79c;
+  --tl-completion-5: #1b998b;
+  --tl-shadow-card: 0 1px 2px rgba(30, 20, 45, 0.07);
+}
+
+@media (prefers-color-scheme: dark) {
+  .tl {
+    color-scheme: dark;
+    --tl-text: #ffffff;
+    --tl-text-secondary: #cac4d0;
+    --tl-text-muted: #9a96a5;
+    --tl-text-supporting: #9a96a5;
+    --tl-text-inverse: #000000;
+    --tl-text-display: #ffffff;
+    --tl-background: #141218;
+    --tl-card: #1d1b20;
+    --tl-tertiary: #211f26;
+    --tl-surface: #1f1f1f;
+    --tl-segment-selected: #2b2930;
+    --tl-divider: #3b3843;
+    --tl-divider-subtle: rgba(255, 255, 255, 0.08);
+    --tl-border: #49454f;
+    --tl-ring-track: #2b2930;
+    --tl-primary: #2dd4bf;
+    --tl-primary-soft: rgba(45, 212, 191, 0.12);
+    --tl-primary-medium: rgba(45, 212, 191, 0.2);
+    --tl-halo-pink: rgba(242, 186, 201, 0.22);
+    --tl-band-fill-dedicated: #ffa94d;
+    --tl-bezel: #3b3843;
+    --tl-completion-1: #dfc5c0;
+    --tl-completion-2: #c9d0b6;
+    --tl-completion-3: #aedcae;
+    --tl-completion-4: #80e2b4;
+    --tl-completion-5: #2dd4bf;
+  }
 }
 
 /* Overscroll and anchor jumps match the page rather than the site default. */
 html:has(.tl) {
-  background: #131114;
+  background: #fffbfe;
   scroll-behavior: smooth;
 }
 
-.tl a:focus-visible,
-.tl button:focus-visible {
-  outline: 2px solid var(--tl-accent);
-  outline-offset: 3px;
+@media (prefers-color-scheme: dark) {
+  html:has(.tl) {
+    background: #141218;
+  }
 }
 
-.tl-container {
-  max-width: var(--tl-max);
-  margin-inline: auto;
-  padding-inline: var(--tl-gutter);
-  box-sizing: border-box;
-}
-
-/*
- * Liquid glass: a tinted, saturated backdrop blur with a specular top edge.
- * On Chromium the backdrop is also refracted through #tl-lens (see
- * GlassLens.tsx), which pulls it inward at the edges like a lens.
- */
-.tl-glass {
-  --tl-glass-filter: blur(10px) saturate(190%) brightness(1.1);
+/* The page sits in a framed panel on a soft teal-to-pink wash. */
+.tl-wash {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02) 60%),
-    rgba(28, 26, 30, 0.3);
-  -webkit-backdrop-filter: var(--tl-glass-filter);
-  backdrop-filter: var(--tl-glass-filter);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.6),
-    inset 0 0 0 0.5px rgba(255, 255, 255, 0.18),
-    inset 0 -10px 18px -12px rgba(255, 255, 255, 0.22),
-    0 0 0 0.5px rgba(0, 0, 0, 0.5),
-    0 12px 32px rgba(0, 0, 0, 0.28);
+    linear-gradient(165deg, var(--tl-primary-medium), var(--tl-halo-pink) 55%, var(--tl-primary-soft)),
+    var(--tl-background);
 }
 
-.tl-lens .tl-glass {
-  -webkit-backdrop-filter: url(#tl-lens) var(--tl-glass-filter);
-  backdrop-filter: url(#tl-lens) var(--tl-glass-filter);
+.tl-hero-wash {
+  background: linear-gradient(160deg, var(--tl-primary-soft), var(--tl-halo-pink));
 }
 
-/*
- * Progressive blur: stacked backdrop blurs, each masked to a band, so the
- * blur ramps up smoothly instead of starting at a hard edge. Layers are
- * rendered by ProgressiveBlur.tsx with their radius and mask as variables.
- */
-.tl-blur-layer {
+.tl-cta-wash {
+  background: linear-gradient(160deg, var(--tl-primary-medium), var(--tl-primary-soft));
+}
+
+.tl a:focus-visible,
+.tl button:focus-visible,
+.tl summary:focus-visible {
+  outline: 2px solid var(--tl-primary);
+  outline-offset: 2px;
+}
+
+/* A colour drawn as a 16% wash: band pills, chips, avatars. Set --c. */
+.tl-tint {
+  background: color-mix(in srgb, var(--c) 16%, transparent);
+}
+
+/* The momentum ramp, sampled from the app's band colours. */
+.tl-ramp {
+  background: linear-gradient(
+    90deg,
+    var(--tl-momentum-start),
+    var(--tl-momentum-getting-going) 25%,
+    var(--tl-momentum-building) 68%,
+    var(--tl-momentum-consistent) 93%,
+    var(--tl-momentum-dedicated)
+  );
+}
+
+/* A rest day in the fortnight grid: an empty cell with a short dash. */
+.tl-rest::after {
+  content: '';
   position: absolute;
-  inset: 0;
-  -webkit-backdrop-filter: blur(var(--tl-blur));
-  backdrop-filter: blur(var(--tl-blur));
-  -webkit-mask-image: var(--tl-mask);
-  mask-image: var(--tl-mask);
+  left: 30%;
+  right: 30%;
+  top: calc(50% - 1px);
+  height: 2px;
+  background: var(--tl-text-muted);
 }
 
-/* The screens rail scrolls sideways without a visible scrollbar. */
-.tl-rail {
-  scrollbar-width: none;
-  padding-inline: var(--tl-inset);
-  scroll-padding-inline: var(--tl-inset);
+/* FAQ rows draw their own chevron, which turns when open. */
+.tl summary {
+  list-style: none;
 }
 
-.tl-rail::-webkit-scrollbar {
+.tl summary::-webkit-details-marker {
   display: none;
 }
 
-.tl-rail-prev {
-  left: max(12px, calc((100vw - var(--tl-max)) / 2 + 24px));
-}
-
-.tl-rail-next {
-  right: max(12px, calc((100vw - var(--tl-max)) / 2 + 24px));
-}
-
-/* The QR is an inline SVG from `qrcode`; make it fill its padded frame. */
-.tl-qr svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-/* Motion: the hero rises in. */
-@keyframes tl-rise {
-  from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.tl-rise {
-  animation: tl-rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+.tl details[open] > summary .tl-chevron {
+  transform: rotate(180deg);
 }
 
 @media (prefers-reduced-motion: reduce) {
   html:has(.tl) {
     scroll-behavior: auto;
-  }
-
-  .tl-rise {
-    animation: none;
   }
 }

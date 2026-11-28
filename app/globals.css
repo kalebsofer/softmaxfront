@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    /* Legacy HSL tokens kept for shared UI (invite flow, ui/button) — recoloured to the
+    /* Legacy HSL tokens kept for shared UI (invite flow, ui/button), recoloured to the
        paper/ink monochrome scheme. New components use the paper/ink/wash colours directly. */
     --background: 40 27% 98%;
     --foreground: 0 0% 4%;
@@ -67,7 +67,7 @@
     text-wrap: balance;
   }
 
-  /* Team accordion bio reveal — 0.4s on mobile, 0.45s from md up */
+  /* Team accordion bio reveal - 0.4s on mobile, 0.45s from md up */
   .accordion-bio {
     transition: max-height 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
       opacity 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),

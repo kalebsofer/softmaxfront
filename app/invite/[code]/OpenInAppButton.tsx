@@ -6,7 +6,7 @@ import { useCallback } from 'react';
  * Best-effort "open the native app" button.
  *
  * On iOS/Android, if the app is installed AND the Universal Link / App Link
- * has been verified, the user never sees this page — iOS/Android intercepts
+ * has been verified, the user never sees this page - iOS/Android intercepts
  * the HTTPS URL before the browser is asked to render anything. So this
  * button mostly exists for the edge cases where verification hasn't
  * propagated yet, or where the user explicitly chose "open in browser" from

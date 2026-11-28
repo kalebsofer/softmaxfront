@@ -12,43 +12,38 @@ export function storesFor(platform: MobilePlatform) {
   return { apple: platform !== 'android', play: platform !== 'ios' };
 }
 
-const button = 'flex h-[60px] items-center gap-3 rounded-[30px] pl-[22px] pr-[26px] transition-colors';
-const solid = 'bg-tl-fg text-tl-bg hover:bg-tl-mint';
+/** The solid button: `text` fill, `text-inverse` label, snappy press. */
+export const solidButton =
+  'inline-flex min-h-11 items-center gap-2 rounded-lg bg-tl-text px-[18px] text-base font-medium leading-6 text-tl-text-inverse transition-[transform,opacity] duration-100 hover:opacity-90 active:scale-[0.97]';
 
-/**
- * The App Store as the solid primary button with Google Play beside it in
- * glass; a lone Google Play button is the only call to action, so it takes
- * the solid style instead.
- */
-export default function StoreButtons({ platform, className }: { platform: MobilePlatform; className: string }) {
-  const stores = storesFor(platform);
-  const playSolid = !stores.apple;
+const store =`${solidButton} min-h-[52px] justify-center md:justify-start`;
+
+function StoreLabel({ kicker, name }: { kicker: string; name: string }) {
   return (
-    <div className={`flex flex-wrap gap-3 ${className}`}>
+    <span className="flex flex-col text-left text-base font-semibold leading-5">
+      <small className="text-[11px] font-normal leading-[14px]">{kicker}</small>
+      {name}
+    </span>
+  );
+}
+
+/** Both stores side by side; on a phone, only its own. They stack on phones. */
+export default function StoreButtons({ platform, className = '' }: { platform: MobilePlatform; className?: string }) {
+  const stores = storesFor(platform);
+  return (
+    <div
+      className={`flex flex-col gap-3 self-stretch md:flex-row md:flex-wrap md:justify-center md:self-auto ${className}`}
+    >
       {stores.apple && (
-        <a href={APP_STORE_URL} aria-label={badges.appStoreAria} className={`${button} ${solid}`}>
-          <AppleIcon size={24} />
-          <span className="flex flex-col leading-[1.15]">
-            <span className="text-[11px]">{badges.appStoreKicker}</span>
-            <span className="text-lg font-bold tracking-[-0.01em]">{badges.appStoreName}</span>
-          </span>
+        <a href={APP_STORE_URL} aria-label={badges.appStoreAria} className={store}>
+          <AppleIcon size={20} />
+          <StoreLabel kicker={badges.appStoreKicker} name={badges.appStoreName} />
         </a>
       )}
       {stores.play && (
-        <a
-          href={PLAY_URL}
-          aria-label={badges.playAria}
-          className={`${button} ${playSolid ? solid : 'tl-glass text-tl-fg'}`}
-        >
-          <PlayIcon size={22} />
-          <span className="flex flex-col leading-[1.15]">
-            <span
-              className={`text-[11px] uppercase tracking-[0.06em] ${playSolid ? 'text-[rgba(19,17,20,0.64)]' : 'text-tl-body'}`}
-            >
-              {badges.playKicker}
-            </span>
-            <span className="text-lg font-bold tracking-[-0.01em]">{badges.playName}</span>
-          </span>
+        <a href={PLAY_URL} aria-label={badges.playAria} className={store}>
+          <PlayIcon size={18} />
+          <StoreLabel kicker={badges.playKicker} name={badges.playName} />
         </a>
       )}
     </div>
